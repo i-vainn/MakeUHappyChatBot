@@ -6,7 +6,7 @@ import torch
 
 class EmbeddingCreator:
     def __init__(self, model_name_or_path="sberbank-ai/rugpt3small_based_on_gpt2"):
-        '''For usage examples go to ~/junk/Ivan/run_this_all.ipynb'''
+        '''For usage examples go to ~/junk/run_this_all.ipynb'''
 
         self.words = None
 
@@ -73,7 +73,7 @@ class EmbeddingCreator:
 
 class QuestionFinder:
     def __init__(self, embeddings_path_or_matrix):
-        '''For usage examples go to ~/junk/Ivan/run_this_all.ipynb'''
+        '''For usage examples go to ~/junk/run_this_all.ipynb'''
         self.embeddings = None
         if type(embeddings_path_or_matrix) == str:
             self.embeddings = np.load(
