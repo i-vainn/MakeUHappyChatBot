@@ -12,7 +12,7 @@ api_url = 'https://api.telegram.org/bot1853926901:AAHs-iYO-hp559x52L67egfEZ8FzLo
 """
 def get_updates(offset):
     get_updates_url = f'{api_url}getUpdates?offset={offset}'
-    return requests.get(get_url).json()
+    return requests.get(get_updates_url).json()
 
 """
 Отправляет сообщение в чат.
@@ -23,4 +23,4 @@ def get_updates(offset):
 """
 def send_message(chat_id, text):
     send_message_url = f'{api_url}sendMessage?chat_id={chat_id}&text={text}'
-    requests.get(send_url)
+    requests.get(send_message_url)

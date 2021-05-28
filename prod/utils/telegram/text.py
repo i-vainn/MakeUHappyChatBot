@@ -1,4 +1,4 @@
-from translate_emoji import de_emojify
+from .translate_emoji import de_emojify
 
 
 """

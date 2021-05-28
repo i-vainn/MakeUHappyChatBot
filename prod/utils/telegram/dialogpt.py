@@ -50,7 +50,7 @@ class DialoGPT:
             pad_token_id=tokenizer.pad_token_id,
             device='cuda',
         )
-        print(len(self.chat_history[chat_id]))
+        #print('Length of chat history id:', len(self.chat_history[chat_id]))
         
         result = tokenizer.decode(self.chat_history[chat_id][:, bot_input_ids.shape[-1]:][0], skip_special_tokens=True)
         if chat_id == -1:
