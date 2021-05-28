@@ -3,3 +3,4 @@ hnswlib
 numpy
 tqdm
 torch
+pymystem3
