@@ -1,6 +1,10 @@
-transformers
+emoji
+google_trans_new
 hnswlib
 numpy
-tqdm
-torch
 pymystem3
+requests
+torch
+tqdm
+transformers
+unicodedata
