@@ -2,6 +2,7 @@ import requests
 
 api_url = 'https://api.telegram.org/bot1853926901:AAHs-iYO-hp559x52L67egfEZ8FzLo26WAk/'
 
+
 """
 Получает новые сообщения с сервера.
 Если сообщений нет, то возвращает пустой массив.
@@ -13,6 +14,7 @@ api_url = 'https://api.telegram.org/bot1853926901:AAHs-iYO-hp559x52L67egfEZ8FzLo
 def get_updates(offset):
     get_updates_url = f'{api_url}getUpdates?offset={offset}'
     return requests.get(get_updates_url).json()
+
 
 """
 Отправляет сообщение в чат.

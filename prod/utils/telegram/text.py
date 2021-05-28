@@ -24,27 +24,3 @@ def extract_text(message):
 """
 def get_text(message):
     return de_emojify(extract_text(message))
-
-
-"""
-Обрабатывает команду
-@param text Текст, в котором может содержаться команда
-@param chat_id id чата
-@param chat_bot Чат-бот
-
-@returns Пару (итоговый текст, отправлять ли этот текст на обработку ботом)
-"""
-def process_command(text, chat_id, chat_bot):
-    start = '/start'
-    restart = '/restart'
-    ref = '/make_u_happy_bot'
-    
-    if text.startswith(start):
-        return 'Привет! Хочешь о чём-нибудь поговорить?', False
-    elif text.startswith(restart):
-        chat_bot.restart(chat_id)
-        return 'История диалога очищена', False
-    elif text.startswith(ref):
-        return text[len(ref):], True
-    else:
-        return text, True

@@ -2,12 +2,18 @@ import emoji
 import unicodedata
 from google_trans_new import google_translator
 
+
 translator = google_translator()  
 def eng_to_rus(text):
-    return translator.translate(text,lang_tgt='ru')
+    return translator.translate(text, lang_tgt='ru')
+
 
 def emoji_to_text(emoji):
-    return eng_to_rus(unicodedata.name(emoji).lower())
+    try:
+        return eng_to_rus(unicodedata.name(emoji).lower())
+    except:
+        return ''
+
 
 def de_emojify(text):
     result = ''
