@@ -8,6 +8,9 @@ class ToxicClassifier:
     def __init__(self, model_path='sismetanin/rubert-toxic-pikabu-2ch'):
         self.toxic_tokenizer = BertTokenizer.from_pretrained(model_path)
         self.toxic_bert = BertForSequenceClassification.from_pretrained(model_path)
+
+    def __call__(self, message):
+        return self.is_toxic(message)
     
     def is_toxic(self, message):
         return self.how_toxic(message).argmax()
@@ -31,6 +34,9 @@ class SwearDetector:
             assert type(path_or_list) == list, "Wrong path_or_list type: expected str or list, found {}".format(type(path_or_list))
             self.blocklist = path_or_list
 
+    def __call__(self, sentence):
+        return self.has_swear(sentence)
+
     def clear(self, sentence):
         return re.sub(f'[{string.punctuation}]', '', sentence)
         
@@ -53,3 +59,17 @@ class SwearDetector:
             if lemmatized in self.blocklist:
                 swear.append(word)
         return swear
+
+class Merger:
+    def __init__(self, classifiers=[ToxicClassifier(), SwearDetector()], is_soft=False):
+        self.classifiers = classifiers
+        self.is_soft = is_soft
+
+    def __call__(self, sentence):
+        decision = not self.is_soft
+        for clf in self.classifiers:
+            if self.is_soft:
+                decision |= clf(sentence)
+            else:
+                decision &= clf(sentence)
+        return decision
