@@ -18,7 +18,7 @@ class ToxicClassifier:
         return torch.softmax(res['logits'].detach(), 1)
 
 class SwearDetector:
-    def __init__(self, path_or_list='data/swear.txt', use_stemming=True):
+    def __init__(self, path_or_list='../data/swear.txt', use_stemming=True):
         self.lemmatizer = None
         if use_stemming:
             self.lemmatizer = Mystem()
@@ -26,7 +26,7 @@ class SwearDetector:
         self.blocklist = None
         if type(path_or_list) == str:
             with open(path_or_list, 'r') as f:
-                self.blocklist = f.readlines
+                self.blocklist = [x[:-1] for x in f.readlines()]
         else:
             assert type(path_or_list) == list, "Wrong path_or_list type: expected str or list, found {}".format(type(path_or_list))
             self.blocklist = path_or_list
@@ -45,10 +45,11 @@ class SwearDetector:
 
     def find_swear(self, sentence):
         clean = self.clear(sentence)
+        swear = []
         for word in clean.lower().split():
             lemmatized = word
             if self.lemmatizer:
                 lemmatized = self.lemmatizer.lemmatize(word)[0]
             if lemmatized in self.blocklist:
-                return word
-        return None
+                swear.append(word)
+        return swear
