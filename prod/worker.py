@@ -4,12 +4,13 @@ from utils.telegram.text import *
 
 
 class Worker:
-    def __init__(self):
+    def __init__(self, token):
         self.chat_bots = {}
         self.offset = 0
+        self.token = token
 
     def work_once(self):
-        result = get_updates(self.offset)
+        result = get_updates(self.token, self.offset)
         if len(result['result']) == 0:
             return
 
@@ -28,7 +29,7 @@ class Worker:
             
             to_send = chat_bot.get_response(text)
             if len(to_send) > 0:
-                send_message(chat_id, to_send)
+                send_message(self.token, chat_id, to_send)
                 print('Sent message:', to_send)
             print()
         self.offset = int(result['update_id']) + 1

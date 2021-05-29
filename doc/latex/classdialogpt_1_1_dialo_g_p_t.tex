@@ -1,0 +1,164 @@
+\hypertarget{classdialogpt_1_1_dialo_g_p_t}{}\doxysection{Класс dialogpt.\+Dialo\+G\+PT}
+\label{classdialogpt_1_1_dialo_g_p_t}\index{dialogpt.DialoGPT@{dialogpt.DialoGPT}}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a9f7e85ba1eb378df1bf57bbeef151e35}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a530bab86aab98e328ddb7f4bc18dce98}{window\+\_\+size}}=10)
+\item 
+str \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a9030169428af69ffd3bde4d88fa1db94}{get\+\_\+length\+\_\+param}} (self, str text)
+\item 
+def \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a710d7e40d32e1571a54c06414632cfee}{generate}} (self, bot\+\_\+input\+\_\+ids, num\+\_\+return\+\_\+sequences=1, max\+\_\+length=512, no\+\_\+repeat\+\_\+ngram\+\_\+size=3, do\+\_\+sample=True, top\+\_\+k=50, top\+\_\+p=0.\+9, temperature=0.\+6, mask\+\_\+token\+\_\+id=tokenizer.\+mask\+\_\+token\+\_\+id, eos\+\_\+token\+\_\+id=tokenizer.\+eos\+\_\+token\+\_\+id, unk\+\_\+token\+\_\+id=tokenizer.\+unk\+\_\+token\+\_\+id, pad\+\_\+token\+\_\+id=tokenizer.\+pad\+\_\+token\+\_\+id, device=\textquotesingle{}cuda\textquotesingle{})
+\item 
+def \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a553fdc4a504f537e23191399b46f0209}{process\+\_\+text}} (self, input\+\_\+user)
+\item 
+def \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_af125e54ecf1b927033c723046c82f7a2}{get\+\_\+response}} (self, text)
+\item 
+def \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a15964d6becb1f994fadb54fed7e00814}{restart}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a0f98d39513cc558c9a33ed89675e610f}{chat\+\_\+history}}
+\item 
+\mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_ae554b8aa68bce5de3e6138b172201aeb}{user\+\_\+input\+\_\+size}}
+\item 
+\mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a530bab86aab98e328ddb7f4bc18dce98}{window\+\_\+size}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Статические открытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a027a43bc2a377fcdf0537e78a9c72277}{tokenizer}} = Auto\+Tokenizer.\+from\+\_\+pretrained(\char`\"{}Grossmend/rudialogpt3\+\_\+medium\+\_\+based\+\_\+on\+\_\+gpt2\char`\"{})
+\item 
+\mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a9603b216b1ed4304e674f872f2c4a995}{model}} = Auto\+Model\+For\+Causal\+L\+M.\+from\+\_\+pretrained(\char`\"{}Grossmend/rudialogpt3\+\_\+medium\+\_\+based\+\_\+on\+\_\+gpt2\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле dialogpt.\+py строка 3
+
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classdialogpt_1_1_dialo_g_p_t_a9f7e85ba1eb378df1bf57bbeef151e35}\label{classdialogpt_1_1_dialo_g_p_t_a9f7e85ba1eb378df1bf57bbeef151e35}} 
+\index{dialogpt.DialoGPT@{dialogpt.DialoGPT}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!dialogpt.DialoGPT@{dialogpt.DialoGPT}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def dialogpt.\+Dialo\+G\+P\+T.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{window\+\_\+size = {\ttfamily 10} }\end{DoxyParamCaption})}
+
+
+
+См. определение в файле dialogpt.\+py строка 10
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classdialogpt_1_1_dialo_g_p_t_a710d7e40d32e1571a54c06414632cfee}\label{classdialogpt_1_1_dialo_g_p_t_a710d7e40d32e1571a54c06414632cfee}} 
+\index{dialogpt.DialoGPT@{dialogpt.DialoGPT}!generate@{generate}}
+\index{generate@{generate}!dialogpt.DialoGPT@{dialogpt.DialoGPT}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily def dialogpt.\+Dialo\+G\+P\+T.\+generate (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{bot\+\_\+input\+\_\+ids,  }\item[{}]{num\+\_\+return\+\_\+sequences = {\ttfamily 1},  }\item[{}]{max\+\_\+length = {\ttfamily 512},  }\item[{}]{no\+\_\+repeat\+\_\+ngram\+\_\+size = {\ttfamily 3},  }\item[{}]{do\+\_\+sample = {\ttfamily True},  }\item[{}]{top\+\_\+k = {\ttfamily 50},  }\item[{}]{top\+\_\+p = {\ttfamily 0.9},  }\item[{}]{temperature = {\ttfamily 0.6},  }\item[{}]{mask\+\_\+token\+\_\+id = {\ttfamily tokenizer.mask\+\_\+token\+\_\+id},  }\item[{}]{eos\+\_\+token\+\_\+id = {\ttfamily tokenizer.eos\+\_\+token\+\_\+id},  }\item[{}]{unk\+\_\+token\+\_\+id = {\ttfamily tokenizer.unk\+\_\+token\+\_\+id},  }\item[{}]{pad\+\_\+token\+\_\+id = {\ttfamily tokenizer.pad\+\_\+token\+\_\+id},  }\item[{}]{device = {\ttfamily \textquotesingle{}cuda\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+См. определение в файле dialogpt.\+py строка 27
+
+\mbox{\Hypertarget{classdialogpt_1_1_dialo_g_p_t_a9030169428af69ffd3bde4d88fa1db94}\label{classdialogpt_1_1_dialo_g_p_t_a9030169428af69ffd3bde4d88fa1db94}} 
+\index{dialogpt.DialoGPT@{dialogpt.DialoGPT}!get\_length\_param@{get\_length\_param}}
+\index{get\_length\_param@{get\_length\_param}!dialogpt.DialoGPT@{dialogpt.DialoGPT}}
+\doxysubsubsection{\texorpdfstring{get\_length\_param()}{get\_length\_param()}}
+{\footnotesize\ttfamily  str dialogpt.\+Dialo\+G\+P\+T.\+get\+\_\+length\+\_\+param (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{text }\end{DoxyParamCaption})}
+
+
+
+См. определение в файле dialogpt.\+py строка 15
+
+\mbox{\Hypertarget{classdialogpt_1_1_dialo_g_p_t_af125e54ecf1b927033c723046c82f7a2}\label{classdialogpt_1_1_dialo_g_p_t_af125e54ecf1b927033c723046c82f7a2}} 
+\index{dialogpt.DialoGPT@{dialogpt.DialoGPT}!get\_response@{get\_response}}
+\index{get\_response@{get\_response}!dialogpt.DialoGPT@{dialogpt.DialoGPT}}
+\doxysubsubsection{\texorpdfstring{get\_response()}{get\_response()}}
+{\footnotesize\ttfamily def dialogpt.\+Dialo\+G\+P\+T.\+get\+\_\+response (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{text }\end{DoxyParamCaption})}
+
+
+
+См. определение в файле dialogpt.\+py строка 91
+
+\mbox{\Hypertarget{classdialogpt_1_1_dialo_g_p_t_a553fdc4a504f537e23191399b46f0209}\label{classdialogpt_1_1_dialo_g_p_t_a553fdc4a504f537e23191399b46f0209}} 
+\index{dialogpt.DialoGPT@{dialogpt.DialoGPT}!process\_text@{process\_text}}
+\index{process\_text@{process\_text}!dialogpt.DialoGPT@{dialogpt.DialoGPT}}
+\doxysubsubsection{\texorpdfstring{process\_text()}{process\_text()}}
+{\footnotesize\ttfamily def dialogpt.\+Dialo\+G\+P\+T.\+process\+\_\+text (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{input\+\_\+user }\end{DoxyParamCaption})}
+
+
+
+См. определение в файле dialogpt.\+py строка 61
+
+\mbox{\Hypertarget{classdialogpt_1_1_dialo_g_p_t_a15964d6becb1f994fadb54fed7e00814}\label{classdialogpt_1_1_dialo_g_p_t_a15964d6becb1f994fadb54fed7e00814}} 
+\index{dialogpt.DialoGPT@{dialogpt.DialoGPT}!restart@{restart}}
+\index{restart@{restart}!dialogpt.DialoGPT@{dialogpt.DialoGPT}}
+\doxysubsubsection{\texorpdfstring{restart()}{restart()}}
+{\footnotesize\ttfamily def dialogpt.\+Dialo\+G\+P\+T.\+restart (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+См. определение в файле dialogpt.\+py строка 121
+
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classdialogpt_1_1_dialo_g_p_t_a0f98d39513cc558c9a33ed89675e610f}\label{classdialogpt_1_1_dialo_g_p_t_a0f98d39513cc558c9a33ed89675e610f}} 
+\index{dialogpt.DialoGPT@{dialogpt.DialoGPT}!chat\_history@{chat\_history}}
+\index{chat\_history@{chat\_history}!dialogpt.DialoGPT@{dialogpt.DialoGPT}}
+\doxysubsubsection{\texorpdfstring{chat\_history}{chat\_history}}
+{\footnotesize\ttfamily dialogpt.\+Dialo\+G\+P\+T.\+chat\+\_\+history}
+
+
+
+См. определение в файле dialogpt.\+py строка 11
+
+\mbox{\Hypertarget{classdialogpt_1_1_dialo_g_p_t_a9603b216b1ed4304e674f872f2c4a995}\label{classdialogpt_1_1_dialo_g_p_t_a9603b216b1ed4304e674f872f2c4a995}} 
+\index{dialogpt.DialoGPT@{dialogpt.DialoGPT}!model@{model}}
+\index{model@{model}!dialogpt.DialoGPT@{dialogpt.DialoGPT}}
+\doxysubsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily dialogpt.\+Dialo\+G\+P\+T.\+model = Auto\+Model\+For\+Causal\+L\+M.\+from\+\_\+pretrained(\char`\"{}Grossmend/rudialogpt3\+\_\+medium\+\_\+based\+\_\+on\+\_\+gpt2\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+См. определение в файле dialogpt.\+py строка 5
+
+\mbox{\Hypertarget{classdialogpt_1_1_dialo_g_p_t_a027a43bc2a377fcdf0537e78a9c72277}\label{classdialogpt_1_1_dialo_g_p_t_a027a43bc2a377fcdf0537e78a9c72277}} 
+\index{dialogpt.DialoGPT@{dialogpt.DialoGPT}!tokenizer@{tokenizer}}
+\index{tokenizer@{tokenizer}!dialogpt.DialoGPT@{dialogpt.DialoGPT}}
+\doxysubsubsection{\texorpdfstring{tokenizer}{tokenizer}}
+{\footnotesize\ttfamily dialogpt.\+Dialo\+G\+P\+T.\+tokenizer = Auto\+Tokenizer.\+from\+\_\+pretrained(\char`\"{}Grossmend/rudialogpt3\+\_\+medium\+\_\+based\+\_\+on\+\_\+gpt2\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+См. определение в файле dialogpt.\+py строка 4
+
+\mbox{\Hypertarget{classdialogpt_1_1_dialo_g_p_t_ae554b8aa68bce5de3e6138b172201aeb}\label{classdialogpt_1_1_dialo_g_p_t_ae554b8aa68bce5de3e6138b172201aeb}} 
+\index{dialogpt.DialoGPT@{dialogpt.DialoGPT}!user\_input\_size@{user\_input\_size}}
+\index{user\_input\_size@{user\_input\_size}!dialogpt.DialoGPT@{dialogpt.DialoGPT}}
+\doxysubsubsection{\texorpdfstring{user\_input\_size}{user\_input\_size}}
+{\footnotesize\ttfamily dialogpt.\+Dialo\+G\+P\+T.\+user\+\_\+input\+\_\+size}
+
+
+
+См. определение в файле dialogpt.\+py строка 12
+
+\mbox{\Hypertarget{classdialogpt_1_1_dialo_g_p_t_a530bab86aab98e328ddb7f4bc18dce98}\label{classdialogpt_1_1_dialo_g_p_t_a530bab86aab98e328ddb7f4bc18dce98}} 
+\index{dialogpt.DialoGPT@{dialogpt.DialoGPT}!window\_size@{window\_size}}
+\index{window\_size@{window\_size}!dialogpt.DialoGPT@{dialogpt.DialoGPT}}
+\doxysubsubsection{\texorpdfstring{window\_size}{window\_size}}
+{\footnotesize\ttfamily dialogpt.\+Dialo\+G\+P\+T.\+window\+\_\+size}
+
+
+
+См. определение в файле dialogpt.\+py строка 13
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+prod/utils/telegram/\mbox{\hyperlink{dialogpt_8py}{dialogpt.\+py}}\end{DoxyCompactItemize}

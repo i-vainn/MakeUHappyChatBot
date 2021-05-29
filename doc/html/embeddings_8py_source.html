@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MakeUHappy Chat-bot: Исходный файл prod/utils/embeddings.py</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">MakeUHappy Chat-bot
+   </div>
+   <div id="projectbrief">Чат-бот для улучшения настроения клиента</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_45bc9e24154575f783458642a53cae39.html">prod</a></li><li class="navelem"><a class="el" href="dir_d535b3f4fd1c271eb1ec47d7eb057a81.html">utils</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">embeddings.py</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="embeddings_8py.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespaceembeddings.html">    1</a></span>&#160;<span class="keyword">from</span> transformers <span class="keyword">import</span> GPT2Model, GPT2Tokenizer</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">from</span> tqdm <span class="keyword">import</span> tqdm_notebook</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> numpy <span class="keyword">as</span> np</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> hnswlib <span class="keyword">as</span> hnsw</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">import</span> torch</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classembeddings_1_1_embedding_creator.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="classembeddings_1_1_embedding_creator.html">EmbeddingCreator</a>:</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classembeddings_1_1_embedding_creator.html#a3308ded891a9532a02f57f8bda43bc81">    8</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classembeddings_1_1_embedding_creator.html#a3308ded891a9532a02f57f8bda43bc81">__init__</a>(self, model_name_or_path=&quot;sberbank-ai/rugpt3small_based_on_gpt2&quot;):</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="stringliteral">&#39;&#39;&#39;For usage examples go to ~/junk/run_this_all.ipynb&#39;&#39;&#39;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classembeddings_1_1_embedding_creator.html#afc4ada7a7c27e9e2f72b35652e0f1f6c">   11</a></span>&#160;        self.<a class="code" href="classembeddings_1_1_embedding_creator.html#afc4ada7a7c27e9e2f72b35652e0f1f6c">words</a> = <span class="keywordtype">None</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classembeddings_1_1_embedding_creator.html#a87849dd4643d62b15311fb6ad4ae657f">   13</a></span>&#160;        self.<a class="code" href="classembeddings_1_1_embedding_creator.html#a87849dd4643d62b15311fb6ad4ae657f">device</a> = torch.device(<span class="stringliteral">&#39;cuda:0&#39;</span>) <span class="keywordflow">if</span> torch.cuda.is_available() <span class="keywordflow">else</span> torch.device(<span class="stringliteral">&#39;cpu&#39;</span>)</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classembeddings_1_1_embedding_creator.html#a87aa14336945b0390fa7985fd8e4399c">   14</a></span>&#160;        self.<a class="code" href="classembeddings_1_1_embedding_creator.html#a87aa14336945b0390fa7985fd8e4399c">tokenizer</a> = GPT2Tokenizer.from_pretrained(model_name_or_path)</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classembeddings_1_1_embedding_creator.html#ae466127192fa166a92f7a320a005b606">   15</a></span>&#160;        self.<a class="code" href="classembeddings_1_1_embedding_creator.html#ae466127192fa166a92f7a320a005b606">model</a> = GPT2Model.from_pretrained(model_name_or_path).to(self.<a class="code" href="classembeddings_1_1_embedding_creator.html#a87849dd4643d62b15311fb6ad4ae657f">device</a>)</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classembeddings_1_1_embedding_creator.html#a4099097743d8138750aa3be31a57e425">   17</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classembeddings_1_1_embedding_creator.html#a4099097743d8138750aa3be31a57e425">tokenize</a>(self, data):</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        tokenized = [self.<a class="code" href="classembeddings_1_1_embedding_creator.html#a87aa14336945b0390fa7985fd8e4399c">tokenizer</a>.encode(x, return_tensors=<span class="stringliteral">&quot;pt&quot;</span>).to(self.<a class="code" href="classembeddings_1_1_embedding_creator.html#a87849dd4643d62b15311fb6ad4ae657f">device</a>) <span class="keywordflow">for</span> x <span class="keywordflow">in</span> data]</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">return</span> tokenized</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classembeddings_1_1_embedding_creator.html#ab1fb8bf29ea8192866bbfa56383bb4be">   21</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classembeddings_1_1_embedding_creator.html#ab1fb8bf29ea8192866bbfa56383bb4be">make_embeddings</a>(self, tokenized_data):</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        result = []</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">for</span> sent <span class="keywordflow">in</span> tqdm_notebook(tokenized_data):</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            result.append(self.<a class="code" href="classembeddings_1_1_embedding_creator.html#ae466127192fa166a92f7a320a005b606">model</a>(sent)[0].mean(dim=1).detach().cpu())</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">return</span> result</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classembeddings_1_1_embedding_creator.html#a220a73b92bc0d89eb7082c96c5f59b6f">   29</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classembeddings_1_1_embedding_creator.html#a220a73b92bc0d89eb7082c96c5f59b6f">write_matrix</a>(self, data, filename=&#39;embeddings&#39;):</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        mat = np.matrix([x.tolist()[0] <span class="keywordflow">for</span> x <span class="keywordflow">in</span> data])</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        mat.dump(f<span class="stringliteral">&#39;drive/MyDrive/competitions/generate_phrases/data/{filename}.dat&#39;</span>)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classembeddings_1_1_embedding_creator.html#ac3075bd32dca5f630de5fac10ee2d047">   33</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classembeddings_1_1_embedding_creator.html#ac3075bd32dca5f630de5fac10ee2d047">run</a>(self, path_or_word_list, output_filename=&#39;embeddings&#39;):</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">if</span> type(path_or_word_list) == list:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keyword">assert</span> len(path_or_word_list) &gt; 0, <span class="stringliteral">&quot;Empty list of words&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keyword">assert</span> type(path_or_word_list[0]) == str, <span class="stringliteral">&quot;Wrong type: str expected, found {}&quot;</span>.format(type(path_or_word_list[0]))</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            self.<a class="code" href="classembeddings_1_1_embedding_creator.html#afc4ada7a7c27e9e2f72b35652e0f1f6c">words</a> = path_or_word_list</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">else</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keyword">assert</span> type(path_or_word_list) == str, <span class="stringliteral">&quot;Wrong type: str expected, found {}&quot;</span>.format(type(path_or_word_list))</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keyword">with</span> open(f<span class="stringliteral">&quot;drive/MyDrive/competitions/generate_phrases/data/{path_or_word_list}&quot;</span>, <span class="stringliteral">&quot;r&quot;</span>) <span class="keyword">as</span> f:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                self.<a class="code" href="classembeddings_1_1_embedding_creator.html#afc4ada7a7c27e9e2f72b35652e0f1f6c">words</a> = [x[:-1] <span class="keywordflow">for</span> x <span class="keywordflow">in</span> f.readlines()]</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        print(<span class="stringliteral">&quot;Process started&quot;</span>)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classembeddings_1_1_embedding_creator.html#a2a95d62132c6de50e8407ca3ea901b66">   45</a></span>&#160;        self.<a class="code" href="classembeddings_1_1_embedding_creator.html#a2a95d62132c6de50e8407ca3ea901b66">tokenized</a> = self.<a class="code" href="classembeddings_1_1_embedding_creator.html#a4099097743d8138750aa3be31a57e425">tokenize</a>(self.<a class="code" href="classembeddings_1_1_embedding_creator.html#afc4ada7a7c27e9e2f72b35652e0f1f6c">words</a>)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        print(<span class="stringliteral">&quot;Tokenized successfully&quot;</span>)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        print(<span class="stringliteral">&quot;Counting embeddings...&quot;</span>)</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classembeddings_1_1_embedding_creator.html#ac3d8a5a91b4aa5ba3bf4a72df64ef04b">   49</a></span>&#160;        self.<a class="code" href="classembeddings_1_1_embedding_creator.html#ac3d8a5a91b4aa5ba3bf4a72df64ef04b">embeddings</a> = self.<a class="code" href="classembeddings_1_1_embedding_creator.html#ab1fb8bf29ea8192866bbfa56383bb4be">make_embeddings</a>(self.<a class="code" href="classembeddings_1_1_embedding_creator.html#a2a95d62132c6de50e8407ca3ea901b66">tokenized</a>)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        print(<span class="stringliteral">&quot;Counted successfully&quot;</span>)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        print(<span class="stringliteral">&quot;Saving matrix...&quot;</span>)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        self.<a class="code" href="classembeddings_1_1_embedding_creator.html#a220a73b92bc0d89eb7082c96c5f59b6f">write_matrix</a>(self.<a class="code" href="classembeddings_1_1_embedding_creator.html#ac3d8a5a91b4aa5ba3bf4a72df64ef04b">embeddings</a>, output_filename)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        print(<span class="stringliteral">&quot;Done&quot;</span>)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classembeddings_1_1_embedding_creator.html#abd3a16d8a1a140967906a65de615818c">   57</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classembeddings_1_1_embedding_creator.html#abd3a16d8a1a140967906a65de615818c">get_phrase_embedding</a>(self, phrase):</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        tokenized = self.<a class="code" href="classembeddings_1_1_embedding_creator.html#a4099097743d8138750aa3be31a57e425">tokenize</a>([phrase])</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        embedding = self.<a class="code" href="classembeddings_1_1_embedding_creator.html#ab1fb8bf29ea8192866bbfa56383bb4be">make_embeddings</a>(tokenized)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">return</span> embedding[0]</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classembeddings_1_1_embedding_creator.html#ac90a61fd92da3e805f4479f42295df8b">   63</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classembeddings_1_1_embedding_creator.html#ac90a61fd92da3e805f4479f42295df8b">get_by_index</a>(self, index):</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">assert</span> self.<a class="code" href="classembeddings_1_1_embedding_creator.html#afc4ada7a7c27e9e2f72b35652e0f1f6c">words</a> <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>, <span class="stringliteral">&quot;First specify `words`&quot;</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">if</span> type(index) == int:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            index = [index]</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        result = []</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">for</span> idx <span class="keywordflow">in</span> index:</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            result.append(self.<a class="code" href="classembeddings_1_1_embedding_creator.html#afc4ada7a7c27e9e2f72b35652e0f1f6c">words</a>[idx])</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">return</span> result</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classembeddings_1_1_question_finder.html">   74</a></span>&#160;<span class="keyword">class </span><a class="code" href="classembeddings_1_1_question_finder.html">QuestionFinder</a>:</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classembeddings_1_1_question_finder.html#a32ad5815bc06b334719ffd178d4cd7df">   75</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classembeddings_1_1_question_finder.html#a32ad5815bc06b334719ffd178d4cd7df">__init__</a>(self, embeddings_path_or_matrix):</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="stringliteral">&#39;&#39;&#39;For usage examples go to ~/junk/run_this_all.ipynb&#39;&#39;&#39;</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classembeddings_1_1_question_finder.html#aacc42c38ea3331cda2cba726429f90ba">   77</a></span>&#160;        self.<a class="code" href="classembeddings_1_1_question_finder.html#aacc42c38ea3331cda2cba726429f90ba">embeddings</a> = <span class="keywordtype">None</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">if</span> type(embeddings_path_or_matrix) == str:</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            self.<a class="code" href="classembeddings_1_1_question_finder.html#aacc42c38ea3331cda2cba726429f90ba">embeddings</a> = np.load(</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                f<span class="stringliteral">&#39;drive/MyDrive/competitions/generate_phrases/data/{embeddings_path_or_matrix}.dat&#39;</span>,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                 allow_pickle=<span class="keyword">True</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            )</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">else</span>:</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            self.<a class="code" href="classembeddings_1_1_question_finder.html#aacc42c38ea3331cda2cba726429f90ba">embeddings</a> = embeddings_path_or_matrix</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classembeddings_1_1_question_finder.html#af3bc1e6f12c1047f979e76ef64e04ee6">   86</a></span>&#160;        self.<a class="code" href="classembeddings_1_1_question_finder.html#af3bc1e6f12c1047f979e76ef64e04ee6">num</a> = self.<a class="code" href="classembeddings_1_1_question_finder.html#aacc42c38ea3331cda2cba726429f90ba">embeddings</a>.shape[0]</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classembeddings_1_1_question_finder.html#a18f748e76db87cca2acafefc428298db">   87</a></span>&#160;        self.<a class="code" href="classembeddings_1_1_question_finder.html#a18f748e76db87cca2acafefc428298db">dim</a> = self.<a class="code" href="classembeddings_1_1_question_finder.html#aacc42c38ea3331cda2cba726429f90ba">embeddings</a>.shape[1]</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classembeddings_1_1_question_finder.html#a18530c73b2ba54c28be6987021c1e975">   89</a></span>&#160;        self.<a class="code" href="classembeddings_1_1_question_finder.html#a18530c73b2ba54c28be6987021c1e975">labels</a> = np.arange(self.<a class="code" href="classembeddings_1_1_question_finder.html#af3bc1e6f12c1047f979e76ef64e04ee6">num</a>)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classembeddings_1_1_question_finder.html#a64af479b44ee3df7675ff7b3f504312b">   91</a></span>&#160;        self.<a class="code" href="classembeddings_1_1_question_finder.html#a64af479b44ee3df7675ff7b3f504312b">p</a> = hnsw.Index(space=<span class="stringliteral">&#39;cosine&#39;</span>, dim=self.<a class="code" href="classembeddings_1_1_question_finder.html#a18f748e76db87cca2acafefc428298db">dim</a>)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="comment"># Initializing index - the maximum number of elements should be known beforehand</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        self.<a class="code" href="classembeddings_1_1_question_finder.html#a64af479b44ee3df7675ff7b3f504312b">p</a>.init_index(max_elements=self.<a class="code" href="classembeddings_1_1_question_finder.html#af3bc1e6f12c1047f979e76ef64e04ee6">num</a>)</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="comment"># Element insertion (can be called several times):</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        self.<a class="code" href="classembeddings_1_1_question_finder.html#a64af479b44ee3df7675ff7b3f504312b">p</a>.add_items(self.<a class="code" href="classembeddings_1_1_question_finder.html#aacc42c38ea3331cda2cba726429f90ba">embeddings</a>, self.<a class="code" href="classembeddings_1_1_question_finder.html#a18530c73b2ba54c28be6987021c1e975">labels</a>)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="comment"># Controlling the recall by setting ef:</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        self.<a class="code" href="classembeddings_1_1_question_finder.html#a64af479b44ee3df7675ff7b3f504312b">p</a>.set_ef(50) <span class="comment"># ef should always be &gt; k</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="comment"># self.closest, self.distances = self.p.knn_query(self.embeddings, k=self.num_neighbours)</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    </div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classembeddings_1_1_question_finder.html#a12b72d95914716a5062ac4b578f826d3">  104</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classembeddings_1_1_question_finder.html#a12b72d95914716a5062ac4b578f826d3">find_closest</a>(self, embedding, num_neighbours=1, remoteness=0):</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        closest, distances = self.<a class="code" href="classembeddings_1_1_question_finder.html#a64af479b44ee3df7675ff7b3f504312b">p</a>.knn_query(embedding, k=num_neighbours + remoteness)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">return</span> closest[0][remoteness:num_neighbours + remoteness]</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassembeddings_1_1_question_finder_html_a18530c73b2ba54c28be6987021c1e975"><div class="ttname"><a href="classembeddings_1_1_question_finder.html#a18530c73b2ba54c28be6987021c1e975">embeddings.QuestionFinder.labels</a></div><div class="ttdeci">labels</div><div class="ttdef"><b>Definition:</b> <a href="embeddings_8py_source.html#l00089">embeddings.py:89</a></div></div>
+<div class="ttc" id="aclassembeddings_1_1_question_finder_html_af3bc1e6f12c1047f979e76ef64e04ee6"><div class="ttname"><a href="classembeddings_1_1_question_finder.html#af3bc1e6f12c1047f979e76ef64e04ee6">embeddings.QuestionFinder.num</a></div><div class="ttdeci">num</div><div class="ttdef"><b>Definition:</b> <a href="embeddings_8py_source.html#l00086">embeddings.py:86</a></div></div>
+<div class="ttc" id="aclassembeddings_1_1_embedding_creator_html_ae466127192fa166a92f7a320a005b606"><div class="ttname"><a href="classembeddings_1_1_embedding_creator.html#ae466127192fa166a92f7a320a005b606">embeddings.EmbeddingCreator.model</a></div><div class="ttdeci">model</div><div class="ttdef"><b>Definition:</b> <a href="embeddings_8py_source.html#l00015">embeddings.py:15</a></div></div>
+<div class="ttc" id="aclassembeddings_1_1_question_finder_html_a12b72d95914716a5062ac4b578f826d3"><div class="ttname"><a href="classembeddings_1_1_question_finder.html#a12b72d95914716a5062ac4b578f826d3">embeddings.QuestionFinder.find_closest</a></div><div class="ttdeci">def find_closest(self, embedding, num_neighbours=1, remoteness=0)</div><div class="ttdef"><b>Definition:</b> <a href="embeddings_8py_source.html#l00104">embeddings.py:104</a></div></div>
+<div class="ttc" id="aclassembeddings_1_1_embedding_creator_html_a87aa14336945b0390fa7985fd8e4399c"><div class="ttname"><a href="classembeddings_1_1_embedding_creator.html#a87aa14336945b0390fa7985fd8e4399c">embeddings.EmbeddingCreator.tokenizer</a></div><div class="ttdeci">tokenizer</div><div class="ttdef"><b>Definition:</b> <a href="embeddings_8py_source.html#l00014">embeddings.py:14</a></div></div>
+<div class="ttc" id="aclassembeddings_1_1_embedding_creator_html_a2a95d62132c6de50e8407ca3ea901b66"><div class="ttname"><a href="classembeddings_1_1_embedding_creator.html#a2a95d62132c6de50e8407ca3ea901b66">embeddings.EmbeddingCreator.tokenized</a></div><div class="ttdeci">tokenized</div><div class="ttdef"><b>Definition:</b> <a href="embeddings_8py_source.html#l00045">embeddings.py:45</a></div></div>
+<div class="ttc" id="aclassembeddings_1_1_embedding_creator_html_ac3d8a5a91b4aa5ba3bf4a72df64ef04b"><div class="ttname"><a href="classembeddings_1_1_embedding_creator.html#ac3d8a5a91b4aa5ba3bf4a72df64ef04b">embeddings.EmbeddingCreator.embeddings</a></div><div class="ttdeci">embeddings</div><div class="ttdef"><b>Definition:</b> <a href="embeddings_8py_source.html#l00049">embeddings.py:49</a></div></div>
+<div class="ttc" id="aclassembeddings_1_1_question_finder_html_a18f748e76db87cca2acafefc428298db"><div class="ttname"><a href="classembeddings_1_1_question_finder.html#a18f748e76db87cca2acafefc428298db">embeddings.QuestionFinder.dim</a></div><div class="ttdeci">dim</div><div class="ttdef"><b>Definition:</b> <a href="embeddings_8py_source.html#l00087">embeddings.py:87</a></div></div>
+<div class="ttc" id="aclassembeddings_1_1_question_finder_html_a64af479b44ee3df7675ff7b3f504312b"><div class="ttname"><a href="classembeddings_1_1_question_finder.html#a64af479b44ee3df7675ff7b3f504312b">embeddings.QuestionFinder.p</a></div><div class="ttdeci">p</div><div class="ttdef"><b>Definition:</b> <a href="embeddings_8py_source.html#l00091">embeddings.py:91</a></div></div>
+<div class="ttc" id="aclassembeddings_1_1_question_finder_html_aacc42c38ea3331cda2cba726429f90ba"><div class="ttname"><a href="classembeddings_1_1_question_finder.html#aacc42c38ea3331cda2cba726429f90ba">embeddings.QuestionFinder.embeddings</a></div><div class="ttdeci">embeddings</div><div class="ttdef"><b>Definition:</b> <a href="embeddings_8py_source.html#l00077">embeddings.py:77</a></div></div>
+<div class="ttc" id="aclassembeddings_1_1_embedding_creator_html_a220a73b92bc0d89eb7082c96c5f59b6f"><div class="ttname"><a href="classembeddings_1_1_embedding_creator.html#a220a73b92bc0d89eb7082c96c5f59b6f">embeddings.EmbeddingCreator.write_matrix</a></div><div class="ttdeci">def write_matrix(self, data, filename='embeddings')</div><div class="ttdef"><b>Definition:</b> <a href="embeddings_8py_source.html#l00029">embeddings.py:29</a></div></div>
+<div class="ttc" id="aclassembeddings_1_1_embedding_creator_html_ac3075bd32dca5f630de5fac10ee2d047"><div class="ttname"><a href="classembeddings_1_1_embedding_creator.html#ac3075bd32dca5f630de5fac10ee2d047">embeddings.EmbeddingCreator.run</a></div><div class="ttdeci">def run(self, path_or_word_list, output_filename='embeddings')</div><div class="ttdef"><b>Definition:</b> <a href="embeddings_8py_source.html#l00033">embeddings.py:33</a></div></div>
+<div class="ttc" id="aclassembeddings_1_1_question_finder_html"><div class="ttname"><a href="classembeddings_1_1_question_finder.html">embeddings.QuestionFinder</a></div><div class="ttdef"><b>Definition:</b> <a href="embeddings_8py_source.html#l00074">embeddings.py:74</a></div></div>
+<div class="ttc" id="aclassembeddings_1_1_embedding_creator_html_abd3a16d8a1a140967906a65de615818c"><div class="ttname"><a href="classembeddings_1_1_embedding_creator.html#abd3a16d8a1a140967906a65de615818c">embeddings.EmbeddingCreator.get_phrase_embedding</a></div><div class="ttdeci">def get_phrase_embedding(self, phrase)</div><div class="ttdef"><b>Definition:</b> <a href="embeddings_8py_source.html#l00057">embeddings.py:57</a></div></div>
+<div class="ttc" id="aclassembeddings_1_1_embedding_creator_html_afc4ada7a7c27e9e2f72b35652e0f1f6c"><div class="ttname"><a href="classembeddings_1_1_embedding_creator.html#afc4ada7a7c27e9e2f72b35652e0f1f6c">embeddings.EmbeddingCreator.words</a></div><div class="ttdeci">words</div><div class="ttdef"><b>Definition:</b> <a href="embeddings_8py_source.html#l00011">embeddings.py:11</a></div></div>
+<div class="ttc" id="aclassembeddings_1_1_embedding_creator_html_ab1fb8bf29ea8192866bbfa56383bb4be"><div class="ttname"><a href="classembeddings_1_1_embedding_creator.html#ab1fb8bf29ea8192866bbfa56383bb4be">embeddings.EmbeddingCreator.make_embeddings</a></div><div class="ttdeci">def make_embeddings(self, tokenized_data)</div><div class="ttdef"><b>Definition:</b> <a href="embeddings_8py_source.html#l00021">embeddings.py:21</a></div></div>
+<div class="ttc" id="aclassembeddings_1_1_embedding_creator_html"><div class="ttname"><a href="classembeddings_1_1_embedding_creator.html">embeddings.EmbeddingCreator</a></div><div class="ttdef"><b>Definition:</b> <a href="embeddings_8py_source.html#l00007">embeddings.py:7</a></div></div>
+<div class="ttc" id="aclassembeddings_1_1_question_finder_html_a32ad5815bc06b334719ffd178d4cd7df"><div class="ttname"><a href="classembeddings_1_1_question_finder.html#a32ad5815bc06b334719ffd178d4cd7df">embeddings.QuestionFinder.__init__</a></div><div class="ttdeci">def __init__(self, embeddings_path_or_matrix)</div><div class="ttdef"><b>Definition:</b> <a href="embeddings_8py_source.html#l00075">embeddings.py:75</a></div></div>
+<div class="ttc" id="aclassembeddings_1_1_embedding_creator_html_a4099097743d8138750aa3be31a57e425"><div class="ttname"><a href="classembeddings_1_1_embedding_creator.html#a4099097743d8138750aa3be31a57e425">embeddings.EmbeddingCreator.tokenize</a></div><div class="ttdeci">def tokenize(self, data)</div><div class="ttdef"><b>Definition:</b> <a href="embeddings_8py_source.html#l00017">embeddings.py:17</a></div></div>
+<div class="ttc" id="aclassembeddings_1_1_embedding_creator_html_ac90a61fd92da3e805f4479f42295df8b"><div class="ttname"><a href="classembeddings_1_1_embedding_creator.html#ac90a61fd92da3e805f4479f42295df8b">embeddings.EmbeddingCreator.get_by_index</a></div><div class="ttdeci">def get_by_index(self, index)</div><div class="ttdef"><b>Definition:</b> <a href="embeddings_8py_source.html#l00063">embeddings.py:63</a></div></div>
+<div class="ttc" id="aclassembeddings_1_1_embedding_creator_html_a87849dd4643d62b15311fb6ad4ae657f"><div class="ttname"><a href="classembeddings_1_1_embedding_creator.html#a87849dd4643d62b15311fb6ad4ae657f">embeddings.EmbeddingCreator.device</a></div><div class="ttdeci">device</div><div class="ttdef"><b>Definition:</b> <a href="embeddings_8py_source.html#l00013">embeddings.py:13</a></div></div>
+<div class="ttc" id="aclassembeddings_1_1_embedding_creator_html_a3308ded891a9532a02f57f8bda43bc81"><div class="ttname"><a href="classembeddings_1_1_embedding_creator.html#a3308ded891a9532a02f57f8bda43bc81">embeddings.EmbeddingCreator.__init__</a></div><div class="ttdeci">def __init__(self, model_name_or_path=&quot;sberbank-ai/rugpt3small_based_on_gpt2&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="embeddings_8py_source.html#l00008">embeddings.py:8</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

@@ -1,0 +1,186 @@
+\hypertarget{classembeddings_1_1_embedding_creator}{}\doxysection{Класс embeddings.\+Embedding\+Creator}
+\label{classembeddings_1_1_embedding_creator}\index{embeddings.EmbeddingCreator@{embeddings.EmbeddingCreator}}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classembeddings_1_1_embedding_creator_a3308ded891a9532a02f57f8bda43bc81}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, model\+\_\+name\+\_\+or\+\_\+path=\char`\"{}sberbank-\/ai/rugpt3small\+\_\+based\+\_\+on\+\_\+gpt2\char`\"{})
+\item 
+def \mbox{\hyperlink{classembeddings_1_1_embedding_creator_a4099097743d8138750aa3be31a57e425}{tokenize}} (self, data)
+\item 
+def \mbox{\hyperlink{classembeddings_1_1_embedding_creator_ab1fb8bf29ea8192866bbfa56383bb4be}{make\+\_\+embeddings}} (self, tokenized\+\_\+data)
+\item 
+def \mbox{\hyperlink{classembeddings_1_1_embedding_creator_a220a73b92bc0d89eb7082c96c5f59b6f}{write\+\_\+matrix}} (self, data, filename=\textquotesingle{}\mbox{\hyperlink{classembeddings_1_1_embedding_creator_ac3d8a5a91b4aa5ba3bf4a72df64ef04b}{embeddings}}\textquotesingle{})
+\item 
+def \mbox{\hyperlink{classembeddings_1_1_embedding_creator_ac3075bd32dca5f630de5fac10ee2d047}{run}} (self, path\+\_\+or\+\_\+word\+\_\+list, output\+\_\+filename=\textquotesingle{}\mbox{\hyperlink{classembeddings_1_1_embedding_creator_ac3d8a5a91b4aa5ba3bf4a72df64ef04b}{embeddings}}\textquotesingle{})
+\item 
+def \mbox{\hyperlink{classembeddings_1_1_embedding_creator_abd3a16d8a1a140967906a65de615818c}{get\+\_\+phrase\+\_\+embedding}} (self, phrase)
+\item 
+def \mbox{\hyperlink{classembeddings_1_1_embedding_creator_ac90a61fd92da3e805f4479f42295df8b}{get\+\_\+by\+\_\+index}} (self, index)
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classembeddings_1_1_embedding_creator_afc4ada7a7c27e9e2f72b35652e0f1f6c}{words}}
+\item 
+\mbox{\hyperlink{classembeddings_1_1_embedding_creator_a87849dd4643d62b15311fb6ad4ae657f}{device}}
+\item 
+\mbox{\hyperlink{classembeddings_1_1_embedding_creator_a87aa14336945b0390fa7985fd8e4399c}{tokenizer}}
+\item 
+\mbox{\hyperlink{classembeddings_1_1_embedding_creator_ae466127192fa166a92f7a320a005b606}{model}}
+\item 
+\mbox{\hyperlink{classembeddings_1_1_embedding_creator_a2a95d62132c6de50e8407ca3ea901b66}{tokenized}}
+\item 
+\mbox{\hyperlink{classembeddings_1_1_embedding_creator_ac3d8a5a91b4aa5ba3bf4a72df64ef04b}{embeddings}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+См. определение в файле embeddings.\+py строка 7
+
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classembeddings_1_1_embedding_creator_a3308ded891a9532a02f57f8bda43bc81}\label{classembeddings_1_1_embedding_creator_a3308ded891a9532a02f57f8bda43bc81}} 
+\index{embeddings.EmbeddingCreator@{embeddings.EmbeddingCreator}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!embeddings.EmbeddingCreator@{embeddings.EmbeddingCreator}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def embeddings.\+Embedding\+Creator.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{model\+\_\+name\+\_\+or\+\_\+path = {\ttfamily \char`\"{}sberbank-\/ai/rugpt3small\+\_\+based\+\_\+on\+\_\+gpt2\char`\"{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}For usage examples go to ~/junk/run_this_all.ipynb\end{DoxyVerb}
+ 
+
+См. определение в файле embeddings.\+py строка 8
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classembeddings_1_1_embedding_creator_ac90a61fd92da3e805f4479f42295df8b}\label{classembeddings_1_1_embedding_creator_ac90a61fd92da3e805f4479f42295df8b}} 
+\index{embeddings.EmbeddingCreator@{embeddings.EmbeddingCreator}!get\_by\_index@{get\_by\_index}}
+\index{get\_by\_index@{get\_by\_index}!embeddings.EmbeddingCreator@{embeddings.EmbeddingCreator}}
+\doxysubsubsection{\texorpdfstring{get\_by\_index()}{get\_by\_index()}}
+{\footnotesize\ttfamily def embeddings.\+Embedding\+Creator.\+get\+\_\+by\+\_\+index (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{index }\end{DoxyParamCaption})}
+
+
+
+См. определение в файле embeddings.\+py строка 63
+
+\mbox{\Hypertarget{classembeddings_1_1_embedding_creator_abd3a16d8a1a140967906a65de615818c}\label{classembeddings_1_1_embedding_creator_abd3a16d8a1a140967906a65de615818c}} 
+\index{embeddings.EmbeddingCreator@{embeddings.EmbeddingCreator}!get\_phrase\_embedding@{get\_phrase\_embedding}}
+\index{get\_phrase\_embedding@{get\_phrase\_embedding}!embeddings.EmbeddingCreator@{embeddings.EmbeddingCreator}}
+\doxysubsubsection{\texorpdfstring{get\_phrase\_embedding()}{get\_phrase\_embedding()}}
+{\footnotesize\ttfamily def embeddings.\+Embedding\+Creator.\+get\+\_\+phrase\+\_\+embedding (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{phrase }\end{DoxyParamCaption})}
+
+
+
+См. определение в файле embeddings.\+py строка 57
+
+\mbox{\Hypertarget{classembeddings_1_1_embedding_creator_ab1fb8bf29ea8192866bbfa56383bb4be}\label{classembeddings_1_1_embedding_creator_ab1fb8bf29ea8192866bbfa56383bb4be}} 
+\index{embeddings.EmbeddingCreator@{embeddings.EmbeddingCreator}!make\_embeddings@{make\_embeddings}}
+\index{make\_embeddings@{make\_embeddings}!embeddings.EmbeddingCreator@{embeddings.EmbeddingCreator}}
+\doxysubsubsection{\texorpdfstring{make\_embeddings()}{make\_embeddings()}}
+{\footnotesize\ttfamily def embeddings.\+Embedding\+Creator.\+make\+\_\+embeddings (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{tokenized\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+См. определение в файле embeddings.\+py строка 21
+
+\mbox{\Hypertarget{classembeddings_1_1_embedding_creator_ac3075bd32dca5f630de5fac10ee2d047}\label{classembeddings_1_1_embedding_creator_ac3075bd32dca5f630de5fac10ee2d047}} 
+\index{embeddings.EmbeddingCreator@{embeddings.EmbeddingCreator}!run@{run}}
+\index{run@{run}!embeddings.EmbeddingCreator@{embeddings.EmbeddingCreator}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily def embeddings.\+Embedding\+Creator.\+run (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path\+\_\+or\+\_\+word\+\_\+list,  }\item[{}]{output\+\_\+filename = {\ttfamily \textquotesingle{}\mbox{\hyperlink{classembeddings_1_1_embedding_creator_ac3d8a5a91b4aa5ba3bf4a72df64ef04b}{embeddings}}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+См. определение в файле embeddings.\+py строка 33
+
+\mbox{\Hypertarget{classembeddings_1_1_embedding_creator_a4099097743d8138750aa3be31a57e425}\label{classembeddings_1_1_embedding_creator_a4099097743d8138750aa3be31a57e425}} 
+\index{embeddings.EmbeddingCreator@{embeddings.EmbeddingCreator}!tokenize@{tokenize}}
+\index{tokenize@{tokenize}!embeddings.EmbeddingCreator@{embeddings.EmbeddingCreator}}
+\doxysubsubsection{\texorpdfstring{tokenize()}{tokenize()}}
+{\footnotesize\ttfamily def embeddings.\+Embedding\+Creator.\+tokenize (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+
+
+См. определение в файле embeddings.\+py строка 17
+
+\mbox{\Hypertarget{classembeddings_1_1_embedding_creator_a220a73b92bc0d89eb7082c96c5f59b6f}\label{classembeddings_1_1_embedding_creator_a220a73b92bc0d89eb7082c96c5f59b6f}} 
+\index{embeddings.EmbeddingCreator@{embeddings.EmbeddingCreator}!write\_matrix@{write\_matrix}}
+\index{write\_matrix@{write\_matrix}!embeddings.EmbeddingCreator@{embeddings.EmbeddingCreator}}
+\doxysubsubsection{\texorpdfstring{write\_matrix()}{write\_matrix()}}
+{\footnotesize\ttfamily def embeddings.\+Embedding\+Creator.\+write\+\_\+matrix (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data,  }\item[{}]{filename = {\ttfamily \textquotesingle{}\mbox{\hyperlink{classembeddings_1_1_embedding_creator_ac3d8a5a91b4aa5ba3bf4a72df64ef04b}{embeddings}}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+См. определение в файле embeddings.\+py строка 29
+
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classembeddings_1_1_embedding_creator_a87849dd4643d62b15311fb6ad4ae657f}\label{classembeddings_1_1_embedding_creator_a87849dd4643d62b15311fb6ad4ae657f}} 
+\index{embeddings.EmbeddingCreator@{embeddings.EmbeddingCreator}!device@{device}}
+\index{device@{device}!embeddings.EmbeddingCreator@{embeddings.EmbeddingCreator}}
+\doxysubsubsection{\texorpdfstring{device}{device}}
+{\footnotesize\ttfamily embeddings.\+Embedding\+Creator.\+device}
+
+
+
+См. определение в файле embeddings.\+py строка 13
+
+\mbox{\Hypertarget{classembeddings_1_1_embedding_creator_ac3d8a5a91b4aa5ba3bf4a72df64ef04b}\label{classembeddings_1_1_embedding_creator_ac3d8a5a91b4aa5ba3bf4a72df64ef04b}} 
+\index{embeddings.EmbeddingCreator@{embeddings.EmbeddingCreator}!embeddings@{embeddings}}
+\index{embeddings@{embeddings}!embeddings.EmbeddingCreator@{embeddings.EmbeddingCreator}}
+\doxysubsubsection{\texorpdfstring{embeddings}{embeddings}}
+{\footnotesize\ttfamily embeddings.\+Embedding\+Creator.\+embeddings}
+
+
+
+См. определение в файле embeddings.\+py строка 49
+
+\mbox{\Hypertarget{classembeddings_1_1_embedding_creator_ae466127192fa166a92f7a320a005b606}\label{classembeddings_1_1_embedding_creator_ae466127192fa166a92f7a320a005b606}} 
+\index{embeddings.EmbeddingCreator@{embeddings.EmbeddingCreator}!model@{model}}
+\index{model@{model}!embeddings.EmbeddingCreator@{embeddings.EmbeddingCreator}}
+\doxysubsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily embeddings.\+Embedding\+Creator.\+model}
+
+
+
+См. определение в файле embeddings.\+py строка 15
+
+\mbox{\Hypertarget{classembeddings_1_1_embedding_creator_a2a95d62132c6de50e8407ca3ea901b66}\label{classembeddings_1_1_embedding_creator_a2a95d62132c6de50e8407ca3ea901b66}} 
+\index{embeddings.EmbeddingCreator@{embeddings.EmbeddingCreator}!tokenized@{tokenized}}
+\index{tokenized@{tokenized}!embeddings.EmbeddingCreator@{embeddings.EmbeddingCreator}}
+\doxysubsubsection{\texorpdfstring{tokenized}{tokenized}}
+{\footnotesize\ttfamily embeddings.\+Embedding\+Creator.\+tokenized}
+
+
+
+См. определение в файле embeddings.\+py строка 45
+
+\mbox{\Hypertarget{classembeddings_1_1_embedding_creator_a87aa14336945b0390fa7985fd8e4399c}\label{classembeddings_1_1_embedding_creator_a87aa14336945b0390fa7985fd8e4399c}} 
+\index{embeddings.EmbeddingCreator@{embeddings.EmbeddingCreator}!tokenizer@{tokenizer}}
+\index{tokenizer@{tokenizer}!embeddings.EmbeddingCreator@{embeddings.EmbeddingCreator}}
+\doxysubsubsection{\texorpdfstring{tokenizer}{tokenizer}}
+{\footnotesize\ttfamily embeddings.\+Embedding\+Creator.\+tokenizer}
+
+
+
+См. определение в файле embeddings.\+py строка 14
+
+\mbox{\Hypertarget{classembeddings_1_1_embedding_creator_afc4ada7a7c27e9e2f72b35652e0f1f6c}\label{classembeddings_1_1_embedding_creator_afc4ada7a7c27e9e2f72b35652e0f1f6c}} 
+\index{embeddings.EmbeddingCreator@{embeddings.EmbeddingCreator}!words@{words}}
+\index{words@{words}!embeddings.EmbeddingCreator@{embeddings.EmbeddingCreator}}
+\doxysubsubsection{\texorpdfstring{words}{words}}
+{\footnotesize\ttfamily embeddings.\+Embedding\+Creator.\+words}
+
+
+
+См. определение в файле embeddings.\+py строка 11
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+prod/utils/\mbox{\hyperlink{embeddings_8py}{embeddings.\+py}}\end{DoxyCompactItemize}

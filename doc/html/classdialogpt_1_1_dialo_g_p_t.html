@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MakeUHappy Chat-bot: Класс dialogpt.DialoGPT</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">MakeUHappy Chat-bot
+   </div>
+   <div id="projectbrief">Чат-бот для улучшения настроения клиента</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacedialogpt.html">dialogpt</a></li><li class="navelem"><a class="el" href="classdialogpt_1_1_dialo_g_p_t.html">DialoGPT</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="#pub-static-attribs">Статические открытые данные</a> &#124;
+<a href="classdialogpt_1_1_dialo_g_p_t-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс dialogpt.DialoGPT</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a9f7e85ba1eb378df1bf57bbeef151e35"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdialogpt_1_1_dialo_g_p_t.html#a9f7e85ba1eb378df1bf57bbeef151e35">__init__</a> (self, <a class="el" href="classdialogpt_1_1_dialo_g_p_t.html#a530bab86aab98e328ddb7f4bc18dce98">window_size</a>=10)</td></tr>
+<tr class="separator:a9f7e85ba1eb378df1bf57bbeef151e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9030169428af69ffd3bde4d88fa1db94"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdialogpt_1_1_dialo_g_p_t.html#a9030169428af69ffd3bde4d88fa1db94">get_length_param</a> (self, str text)</td></tr>
+<tr class="separator:a9030169428af69ffd3bde4d88fa1db94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a710d7e40d32e1571a54c06414632cfee"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdialogpt_1_1_dialo_g_p_t.html#a710d7e40d32e1571a54c06414632cfee">generate</a> (self, bot_input_ids, num_return_sequences=1, max_length=512, no_repeat_ngram_size=3, do_sample=True, top_k=50, top_p=0.9, temperature=0.6, mask_token_id=tokenizer.mask_token_id, eos_token_id=tokenizer.eos_token_id, unk_token_id=tokenizer.unk_token_id, pad_token_id=tokenizer.pad_token_id, device='cuda')</td></tr>
+<tr class="separator:a710d7e40d32e1571a54c06414632cfee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a553fdc4a504f537e23191399b46f0209"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdialogpt_1_1_dialo_g_p_t.html#a553fdc4a504f537e23191399b46f0209">process_text</a> (self, input_user)</td></tr>
+<tr class="separator:a553fdc4a504f537e23191399b46f0209"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af125e54ecf1b927033c723046c82f7a2"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdialogpt_1_1_dialo_g_p_t.html#af125e54ecf1b927033c723046c82f7a2">get_response</a> (self, text)</td></tr>
+<tr class="separator:af125e54ecf1b927033c723046c82f7a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15964d6becb1f994fadb54fed7e00814"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdialogpt_1_1_dialo_g_p_t.html#a15964d6becb1f994fadb54fed7e00814">restart</a> (self)</td></tr>
+<tr class="separator:a15964d6becb1f994fadb54fed7e00814"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a0f98d39513cc558c9a33ed89675e610f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdialogpt_1_1_dialo_g_p_t.html#a0f98d39513cc558c9a33ed89675e610f">chat_history</a></td></tr>
+<tr class="separator:a0f98d39513cc558c9a33ed89675e610f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae554b8aa68bce5de3e6138b172201aeb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdialogpt_1_1_dialo_g_p_t.html#ae554b8aa68bce5de3e6138b172201aeb">user_input_size</a></td></tr>
+<tr class="separator:ae554b8aa68bce5de3e6138b172201aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a530bab86aab98e328ddb7f4bc18dce98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdialogpt_1_1_dialo_g_p_t.html#a530bab86aab98e328ddb7f4bc18dce98">window_size</a></td></tr>
+<tr class="separator:a530bab86aab98e328ddb7f4bc18dce98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Статические открытые данные</h2></td></tr>
+<tr class="memitem:a027a43bc2a377fcdf0537e78a9c72277"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdialogpt_1_1_dialo_g_p_t.html#a027a43bc2a377fcdf0537e78a9c72277">tokenizer</a> = AutoTokenizer.from_pretrained(&quot;Grossmend/rudialogpt3_medium_based_on_gpt2&quot;)</td></tr>
+<tr class="separator:a027a43bc2a377fcdf0537e78a9c72277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9603b216b1ed4304e674f872f2c4a995"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdialogpt_1_1_dialo_g_p_t.html#a9603b216b1ed4304e674f872f2c4a995">model</a> = AutoModelForCausalLM.from_pretrained(&quot;Grossmend/rudialogpt3_medium_based_on_gpt2&quot;)</td></tr>
+<tr class="separator:a9603b216b1ed4304e674f872f2c4a995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00003">3</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a9f7e85ba1eb378df1bf57bbeef151e35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f7e85ba1eb378df1bf57bbeef151e35">&#9670;&nbsp;</a></span>__init__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def dialogpt.DialoGPT.__init__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>window_size</em> = <code>10</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00010">10</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a710d7e40d32e1571a54c06414632cfee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a710d7e40d32e1571a54c06414632cfee">&#9670;&nbsp;</a></span>generate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def dialogpt.DialoGPT.generate </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>bot_input_ids</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>num_return_sequences</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>max_length</em> = <code>512</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>no_repeat_ngram_size</em> = <code>3</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>do_sample</em> = <code>True</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>top_k</em> = <code>50</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>top_p</em> = <code>0.9</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>temperature</em> = <code>0.6</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mask_token_id</em> = <code>tokenizer.mask_token_id</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>eos_token_id</em> = <code>tokenizer.eos_token_id</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>unk_token_id</em> = <code>tokenizer.unk_token_id</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>pad_token_id</em> = <code>tokenizer.pad_token_id</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>device</em> = <code>'cuda'</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00027">27</a></p>
+
+</div>
+</div>
+<a id="a9030169428af69ffd3bde4d88fa1db94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9030169428af69ffd3bde4d88fa1db94">&#9670;&nbsp;</a></span>get_length_param()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"> str dialogpt.DialoGPT.get_length_param </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str&#160;</td>
+          <td class="paramname"><em>text</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00015">15</a></p>
+
+</div>
+</div>
+<a id="af125e54ecf1b927033c723046c82f7a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af125e54ecf1b927033c723046c82f7a2">&#9670;&nbsp;</a></span>get_response()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def dialogpt.DialoGPT.get_response </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>text</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00091">91</a></p>
+
+</div>
+</div>
+<a id="a553fdc4a504f537e23191399b46f0209"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a553fdc4a504f537e23191399b46f0209">&#9670;&nbsp;</a></span>process_text()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def dialogpt.DialoGPT.process_text </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>input_user</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00061">61</a></p>
+
+</div>
+</div>
+<a id="a15964d6becb1f994fadb54fed7e00814"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15964d6becb1f994fadb54fed7e00814">&#9670;&nbsp;</a></span>restart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def dialogpt.DialoGPT.restart </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00121">121</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a0f98d39513cc558c9a33ed89675e610f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f98d39513cc558c9a33ed89675e610f">&#9670;&nbsp;</a></span>chat_history</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dialogpt.DialoGPT.chat_history</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00011">11</a></p>
+
+</div>
+</div>
+<a id="a9603b216b1ed4304e674f872f2c4a995"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9603b216b1ed4304e674f872f2c4a995">&#9670;&nbsp;</a></span>model</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dialogpt.DialoGPT.model = AutoModelForCausalLM.from_pretrained(&quot;Grossmend/rudialogpt3_medium_based_on_gpt2&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00005">5</a></p>
+
+</div>
+</div>
+<a id="a027a43bc2a377fcdf0537e78a9c72277"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a027a43bc2a377fcdf0537e78a9c72277">&#9670;&nbsp;</a></span>tokenizer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dialogpt.DialoGPT.tokenizer = AutoTokenizer.from_pretrained(&quot;Grossmend/rudialogpt3_medium_based_on_gpt2&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00004">4</a></p>
+
+</div>
+</div>
+<a id="ae554b8aa68bce5de3e6138b172201aeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae554b8aa68bce5de3e6138b172201aeb">&#9670;&nbsp;</a></span>user_input_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dialogpt.DialoGPT.user_input_size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00012">12</a></p>
+
+</div>
+</div>
+<a id="a530bab86aab98e328ddb7f4bc18dce98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a530bab86aab98e328ddb7f4bc18dce98">&#9670;&nbsp;</a></span>window_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dialogpt.DialoGPT.window_size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00013">13</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>prod/utils/telegram/<a class="el" href="dialogpt_8py_source.html">dialogpt.py</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

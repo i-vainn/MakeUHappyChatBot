@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MakeUHappy Chat-bot: Исходный файл prod/utils/telegram/dialogpt.py</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">MakeUHappy Chat-bot
+   </div>
+   <div id="projectbrief">Чат-бот для улучшения настроения клиента</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_45bc9e24154575f783458642a53cae39.html">prod</a></li><li class="navelem"><a class="el" href="dir_d535b3f4fd1c271eb1ec47d7eb057a81.html">utils</a></li><li class="navelem"><a class="el" href="dir_0bbe9cc6face6dba04ba23700628295d.html">telegram</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">dialogpt.py</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="dialogpt_8py.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespacedialogpt.html">    1</a></span>&#160;<span class="keyword">import</span> torch</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">from</span> transformers <span class="keyword">import</span> AutoModelForCausalLM, AutoTokenizer</div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="classdialogpt_1_1_dialo_g_p_t.html">    3</a></span>&#160;<span class="keyword">class </span><a class="code" href="classdialogpt_1_1_dialo_g_p_t.html">DialoGPT</a>:</div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="classdialogpt_1_1_dialo_g_p_t.html#a027a43bc2a377fcdf0537e78a9c72277">    4</a></span>&#160;    tokenizer = AutoTokenizer.from_pretrained(<span class="stringliteral">&quot;Grossmend/rudialogpt3_medium_based_on_gpt2&quot;</span>)</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classdialogpt_1_1_dialo_g_p_t.html#a9603b216b1ed4304e674f872f2c4a995">    5</a></span>&#160;    model = AutoModelForCausalLM.from_pretrained(<span class="stringliteral">&quot;Grossmend/rudialogpt3_medium_based_on_gpt2&quot;</span>)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="stringliteral">    @param window_size Размер окна диалогов</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classdialogpt_1_1_dialo_g_p_t.html#a9f7e85ba1eb378df1bf57bbeef151e35">   10</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#a9f7e85ba1eb378df1bf57bbeef151e35">__init__</a>(self, window_size=10):</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classdialogpt_1_1_dialo_g_p_t.html#a0f98d39513cc558c9a33ed89675e610f">   11</a></span>&#160;        self.<a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#a0f98d39513cc558c9a33ed89675e610f">chat_history</a> = []</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classdialogpt_1_1_dialo_g_p_t.html#ae554b8aa68bce5de3e6138b172201aeb">   12</a></span>&#160;        self.<a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#ae554b8aa68bce5de3e6138b172201aeb">user_input_size</a> = []</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classdialogpt_1_1_dialo_g_p_t.html#a530bab86aab98e328ddb7f4bc18dce98">   13</a></span>&#160;        self.<a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#a530bab86aab98e328ddb7f4bc18dce98">window_size</a> = window_size</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classdialogpt_1_1_dialo_g_p_t.html#a9030169428af69ffd3bde4d88fa1db94">   15</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#a9030169428af69ffd3bde4d88fa1db94">get_length_param</a>(self, text: str) -&gt; str:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        tokens_count = len(self.<a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#a027a43bc2a377fcdf0537e78a9c72277">tokenizer</a>.encode(text))</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordflow">if</span> tokens_count &lt;= 15:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            len_param = <span class="stringliteral">&#39;1&#39;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">elif</span> tokens_count &lt;= 50:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            len_param = <span class="stringliteral">&#39;2&#39;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">elif</span> tokens_count &lt;= 256:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            len_param = <span class="stringliteral">&#39;3&#39;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">else</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            len_param = <span class="stringliteral">&#39;-&#39;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">return</span> len_param</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classdialogpt_1_1_dialo_g_p_t.html#a710d7e40d32e1571a54c06414632cfee">   27</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#a710d7e40d32e1571a54c06414632cfee">generate</a>(self, bot_input_ids,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                num_return_sequences=1,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                max_length=512,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                no_repeat_ngram_size=3,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                do_sample=True,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                top_k=50,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                top_p=0.9,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                temperature = 0.6,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                mask_token_id=tokenizer.mask_token_id,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                eos_token_id=tokenizer.eos_token_id,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                unk_token_id=tokenizer.unk_token_id,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                pad_token_id=tokenizer.pad_token_id,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                device=&#39;cuda&#39;):</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span> self.<a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#a9603b216b1ed4304e674f872f2c4a995">model</a>.<a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#a710d7e40d32e1571a54c06414632cfee">generate</a>(</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                bot_input_ids,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                num_return_sequences=num_return_sequences,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                max_length=max_length,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                no_repeat_ngram_size=no_repeat_ngram_size,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                do_sample=do_sample,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                top_k=top_k,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                top_p=top_p,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                temperature = temperature,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                mask_token_id=mask_token_id,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                eos_token_id=eos_token_id,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                unk_token_id=unk_token_id,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                pad_token_id=pad_token_id,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                device=<span class="stringliteral">&#39;cuda&#39;</span>,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            )</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="stringliteral">    Обрабатывает текст без команды</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="stringliteral">    @param input_user Текст без команды</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="stringliteral">    @returns Ответ на текст</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classdialogpt_1_1_dialo_g_p_t.html#a553fdc4a504f537e23191399b46f0209">   61</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#a553fdc4a504f537e23191399b46f0209">process_text</a>(self, input_user):</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        input_user = input_user[:256]</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        tokenizer = self.<a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#a027a43bc2a377fcdf0537e78a9c72277">tokenizer</a></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment"># encode the new user input, add parameters and return a tensor in Pytorch</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        new_user_input = f<span class="stringliteral">&quot;|0|{self.get_length_param(input_user)}|&quot;</span> + input_user + tokenizer.eos_token +  <span class="stringliteral">&quot;|1|1|&quot;</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        new_user_input_ids = tokenizer.encode(new_user_input, return_tensors=<span class="stringliteral">&quot;pt&quot;</span>)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment"># append the new user input tokens to the chat history</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        bot_input_ids = torch.cat([self.<a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#a0f98d39513cc558c9a33ed89675e610f">chat_history</a>, new_user_input_ids], dim=-1) <span class="keywordflow">if</span> len(self.<a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#a0f98d39513cc558c9a33ed89675e610f">chat_history</a>) <span class="keywordflow">else</span> new_user_input_ids</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="comment"># generated a response</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        self.<a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#a0f98d39513cc558c9a33ed89675e610f">chat_history</a> = self.<a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#a710d7e40d32e1571a54c06414632cfee">generate</a>(bot_input_ids)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        result = tokenizer.decode(self.<a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#a0f98d39513cc558c9a33ed89675e610f">chat_history</a>[:, bot_input_ids.shape[-1]:][0], skip_special_tokens=<span class="keyword">True</span>)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        self.<a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#ae554b8aa68bce5de3e6138b172201aeb">user_input_size</a>.append(new_user_input_ids.shape[-1])</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">if</span> len(self.<a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#ae554b8aa68bce5de3e6138b172201aeb">user_input_size</a>) &gt; self.<a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#a530bab86aab98e328ddb7f4bc18dce98">window_size</a>:</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            self.<a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#a0f98d39513cc558c9a33ed89675e610f">chat_history</a> = self.<a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#a0f98d39513cc558c9a33ed89675e610f">chat_history</a>[:, self.<a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#ae554b8aa68bce5de3e6138b172201aeb">user_input_size</a>[0]:]</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            self.<a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#ae554b8aa68bce5de3e6138b172201aeb">user_input_size</a> = self.<a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#ae554b8aa68bce5de3e6138b172201aeb">user_input_size</a>[-self.<a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#a530bab86aab98e328ddb7f4bc18dce98">window_size</a>:]</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        print(<span class="stringliteral">&#39;Length of current chat history:&#39;</span>, self.<a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#a0f98d39513cc558c9a33ed89675e610f">chat_history</a>.shape[-1])</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">return</span> result</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="stringliteral">    Обрабатывает текст с возможной командой</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="stringliteral">    @param text Текст, в котором может содержаться команда</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="stringliteral">    @returns Итоговый текст</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classdialogpt_1_1_dialo_g_p_t.html#af125e54ecf1b927033c723046c82f7a2">   91</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#af125e54ecf1b927033c723046c82f7a2">get_response</a>(self, text):</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        start = <span class="stringliteral">&#39;/start&#39;</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        restart = <span class="stringliteral">&#39;/restart&#39;</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        meme = <span class="stringliteral">&#39;/meme&#39;</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        ref = <span class="stringliteral">&#39;/make_u_happy_bot&#39;</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        help_cmd = <span class="stringliteral">&#39;/help&#39;</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">if</span> text.startswith(start):</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&#39;Привет! Хочешь о чём-нибудь поговорить?&#39;</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">elif</span> text.startswith(restart):</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            self.<a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#a15964d6becb1f994fadb54fed7e00814">restart</a>()</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&#39;Предыдущие сообщения забыты&#39;</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">elif</span> text.startswith(meme):</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&#39;Учёные доказали, что сначала появились чёрные, а потом люди\n- Lorem Ipsum&#39;</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">elif</span> text.startswith(ref):</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">return</span> self.<a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#a553fdc4a504f537e23191399b46f0209">process_text</a>(text[len(ref):])</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">elif</span> text.startswith(help_cmd):</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&#39;&#39;&#39;</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="stringliteral">Привет!</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="stringliteral">Я чат-бот, который улучшает людям настроение)</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="stringliteral">Со мной легко работать: ты пишешь сообщение, а я на него отвечаю.</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="stringliteral">Список полезных команд:</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="stringliteral">/restart - Забыть предыдущие сообщения</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="stringliteral">/meme - Скинуть случайный мем на английском</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="stringliteral">/help - Вывести это сообщение</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="stringliteral">&#39;&#39;&#39;</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">else</span>:</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keywordflow">return</span> self.<a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#a553fdc4a504f537e23191399b46f0209">process_text</a>(text)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    </div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="classdialogpt_1_1_dialo_g_p_t.html#a15964d6becb1f994fadb54fed7e00814">  121</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#a15964d6becb1f994fadb54fed7e00814">restart</a>(self):</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        self.<a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#a0f98d39513cc558c9a33ed89675e610f">chat_history</a> = []</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        self.<a class="code" href="classdialogpt_1_1_dialo_g_p_t.html#ae554b8aa68bce5de3e6138b172201aeb">user_input_size</a> = []</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassdialogpt_1_1_dialo_g_p_t_html_a530bab86aab98e328ddb7f4bc18dce98"><div class="ttname"><a href="classdialogpt_1_1_dialo_g_p_t.html#a530bab86aab98e328ddb7f4bc18dce98">dialogpt.DialoGPT.window_size</a></div><div class="ttdeci">window_size</div><div class="ttdef"><b>Definition:</b> <a href="dialogpt_8py_source.html#l00013">dialogpt.py:13</a></div></div>
+<div class="ttc" id="aclassdialogpt_1_1_dialo_g_p_t_html_ae554b8aa68bce5de3e6138b172201aeb"><div class="ttname"><a href="classdialogpt_1_1_dialo_g_p_t.html#ae554b8aa68bce5de3e6138b172201aeb">dialogpt.DialoGPT.user_input_size</a></div><div class="ttdeci">user_input_size</div><div class="ttdef"><b>Definition:</b> <a href="dialogpt_8py_source.html#l00012">dialogpt.py:12</a></div></div>
+<div class="ttc" id="aclassdialogpt_1_1_dialo_g_p_t_html_a710d7e40d32e1571a54c06414632cfee"><div class="ttname"><a href="classdialogpt_1_1_dialo_g_p_t.html#a710d7e40d32e1571a54c06414632cfee">dialogpt.DialoGPT.generate</a></div><div class="ttdeci">def generate(self, bot_input_ids, num_return_sequences=1, max_length=512, no_repeat_ngram_size=3, do_sample=True, top_k=50, top_p=0.9, temperature=0.6, mask_token_id=tokenizer.mask_token_id, eos_token_id=tokenizer.eos_token_id, unk_token_id=tokenizer.unk_token_id, pad_token_id=tokenizer.pad_token_id, device='cuda')</div><div class="ttdef"><b>Definition:</b> <a href="dialogpt_8py_source.html#l00027">dialogpt.py:27</a></div></div>
+<div class="ttc" id="aclassdialogpt_1_1_dialo_g_p_t_html_a553fdc4a504f537e23191399b46f0209"><div class="ttname"><a href="classdialogpt_1_1_dialo_g_p_t.html#a553fdc4a504f537e23191399b46f0209">dialogpt.DialoGPT.process_text</a></div><div class="ttdeci">def process_text(self, input_user)</div><div class="ttdef"><b>Definition:</b> <a href="dialogpt_8py_source.html#l00061">dialogpt.py:61</a></div></div>
+<div class="ttc" id="aclassdialogpt_1_1_dialo_g_p_t_html_a027a43bc2a377fcdf0537e78a9c72277"><div class="ttname"><a href="classdialogpt_1_1_dialo_g_p_t.html#a027a43bc2a377fcdf0537e78a9c72277">dialogpt.DialoGPT.tokenizer</a></div><div class="ttdeci">tokenizer</div><div class="ttdef"><b>Definition:</b> <a href="dialogpt_8py_source.html#l00004">dialogpt.py:4</a></div></div>
+<div class="ttc" id="aclassdialogpt_1_1_dialo_g_p_t_html_a0f98d39513cc558c9a33ed89675e610f"><div class="ttname"><a href="classdialogpt_1_1_dialo_g_p_t.html#a0f98d39513cc558c9a33ed89675e610f">dialogpt.DialoGPT.chat_history</a></div><div class="ttdeci">chat_history</div><div class="ttdef"><b>Definition:</b> <a href="dialogpt_8py_source.html#l00011">dialogpt.py:11</a></div></div>
+<div class="ttc" id="aclassdialogpt_1_1_dialo_g_p_t_html_a9f7e85ba1eb378df1bf57bbeef151e35"><div class="ttname"><a href="classdialogpt_1_1_dialo_g_p_t.html#a9f7e85ba1eb378df1bf57bbeef151e35">dialogpt.DialoGPT.__init__</a></div><div class="ttdeci">def __init__(self, window_size=10)</div><div class="ttdef"><b>Definition:</b> <a href="dialogpt_8py_source.html#l00010">dialogpt.py:10</a></div></div>
+<div class="ttc" id="aclassdialogpt_1_1_dialo_g_p_t_html_a15964d6becb1f994fadb54fed7e00814"><div class="ttname"><a href="classdialogpt_1_1_dialo_g_p_t.html#a15964d6becb1f994fadb54fed7e00814">dialogpt.DialoGPT.restart</a></div><div class="ttdeci">def restart(self)</div><div class="ttdef"><b>Definition:</b> <a href="dialogpt_8py_source.html#l00121">dialogpt.py:121</a></div></div>
+<div class="ttc" id="aclassdialogpt_1_1_dialo_g_p_t_html_af125e54ecf1b927033c723046c82f7a2"><div class="ttname"><a href="classdialogpt_1_1_dialo_g_p_t.html#af125e54ecf1b927033c723046c82f7a2">dialogpt.DialoGPT.get_response</a></div><div class="ttdeci">def get_response(self, text)</div><div class="ttdef"><b>Definition:</b> <a href="dialogpt_8py_source.html#l00091">dialogpt.py:91</a></div></div>
+<div class="ttc" id="aclassdialogpt_1_1_dialo_g_p_t_html"><div class="ttname"><a href="classdialogpt_1_1_dialo_g_p_t.html">dialogpt.DialoGPT</a></div><div class="ttdef"><b>Definition:</b> <a href="dialogpt_8py_source.html#l00003">dialogpt.py:3</a></div></div>
+<div class="ttc" id="aclassdialogpt_1_1_dialo_g_p_t_html_a9030169428af69ffd3bde4d88fa1db94"><div class="ttname"><a href="classdialogpt_1_1_dialo_g_p_t.html#a9030169428af69ffd3bde4d88fa1db94">dialogpt.DialoGPT.get_length_param</a></div><div class="ttdeci">str get_length_param(self, str text)</div><div class="ttdef"><b>Definition:</b> <a href="dialogpt_8py_source.html#l00015">dialogpt.py:15</a></div></div>
+<div class="ttc" id="aclassdialogpt_1_1_dialo_g_p_t_html_a9603b216b1ed4304e674f872f2c4a995"><div class="ttname"><a href="classdialogpt_1_1_dialo_g_p_t.html#a9603b216b1ed4304e674f872f2c4a995">dialogpt.DialoGPT.model</a></div><div class="ttdeci">model</div><div class="ttdef"><b>Definition:</b> <a href="dialogpt_8py_source.html#l00005">dialogpt.py:5</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

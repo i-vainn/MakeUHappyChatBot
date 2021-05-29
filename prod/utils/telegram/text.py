@@ -1,11 +1,11 @@
 from .translate_emoji import de_emojify
 
+## @package text
+# Данное пространство имен содержит функции для обработки текстов, полученных по Telegram API.
 
-"""
-Извлекает текст из сообщения
-@param message Получаемое сообщение из Telegram API
-@returns Текст из сообщения
-"""
+## Извлекает текст из сообщения
+# @param message Получаемое сообщение из Telegram API
+# @returns Текст из сообщения
 def extract_text(message):
     if 'text' in message:
         return message['text']
@@ -16,11 +16,9 @@ def extract_text(message):
     else:
         return ''
 
-    
-"""
-Получает и обрабатывает текст из сообщения
-@param message Получаемое сообщение из Telegram API
-@returns Обработанный текст
-"""
+
+## Получает и обрабатывает текст из сообщения
+# @param message Получаемое сообщение из Telegram API
+# @returns Обработанный текст
 def get_text(message):
     return de_emojify(extract_text(message))

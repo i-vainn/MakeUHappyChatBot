@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MakeUHappy Chat-bot: Исходный файл prod/worker.py</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">MakeUHappy Chat-bot
+   </div>
+   <div id="projectbrief">Чат-бот для улучшения настроения клиента</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_45bc9e24154575f783458642a53cae39.html">prod</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">worker.py</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="worker_8py.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespaceprod_1_1worker.html">    1</a></span>&#160;<span class="keyword">from</span> utils.telegram.dialogpt <span class="keyword">import</span> DialoGPT</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">from</span> <a class="code" href="namespaceutils_1_1telegram_1_1web.html">utils.telegram.web</a> <span class="keyword">import</span> *</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">from</span> <a class="code" href="namespaceutils_1_1telegram_1_1text.html">utils.telegram.text</a> <span class="keyword">import</span> *</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classprod_1_1worker_1_1_worker.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="classprod_1_1worker_1_1_worker.html">Worker</a>:</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classprod_1_1worker_1_1_worker.html#afd1d65a664b721b4e334c1a56bc55930">    7</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classprod_1_1worker_1_1_worker.html#afd1d65a664b721b4e334c1a56bc55930">__init__</a>(self, token):</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classprod_1_1worker_1_1_worker.html#a4aa3870b1e5e57da762f7c3061491567">    8</a></span>&#160;        self.<a class="code" href="classprod_1_1worker_1_1_worker.html#a4aa3870b1e5e57da762f7c3061491567">chat_bots</a> = {}</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classprod_1_1worker_1_1_worker.html#a080626801b43f3eb72a862b4daf3462d">    9</a></span>&#160;        self.<a class="code" href="classprod_1_1worker_1_1_worker.html#a080626801b43f3eb72a862b4daf3462d">offset</a> = 0</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classprod_1_1worker_1_1_worker.html#a3ee94778ab40140bcd295deaf4a4d476">   10</a></span>&#160;        self.<a class="code" href="classprod_1_1worker_1_1_worker.html#a3ee94778ab40140bcd295deaf4a4d476">token</a> = token</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classprod_1_1worker_1_1_worker.html#a2a1183fd24624339b4e50e66925b5b42">   12</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classprod_1_1worker_1_1_worker.html#a2a1183fd24624339b4e50e66925b5b42">work_once</a>(self):</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        result = <a class="code" href="namespaceweb.html#a1a102b66c78b7857d6e70eb2cc4a751c">get_updates</a>(self.<a class="code" href="classprod_1_1worker_1_1_worker.html#a3ee94778ab40140bcd295deaf4a4d476">token</a>, self.<a class="code" href="classprod_1_1worker_1_1_worker.html#a080626801b43f3eb72a862b4daf3462d">offset</a>)</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordflow">if</span> len(result[<span class="stringliteral">&#39;result&#39;</span>]) == 0:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keywordflow">return</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        result = result[<span class="stringliteral">&#39;result&#39;</span>][0]</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordflow">if</span> <span class="stringliteral">&#39;message&#39;</span> <span class="keywordflow">in</span> result:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            message = result[<span class="stringliteral">&#39;message&#39;</span>]</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            chat_id = message[<span class="stringliteral">&#39;chat&#39;</span>][<span class="stringliteral">&#39;id&#39;</span>]</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordflow">if</span> chat_id <span class="keywordflow">not</span> <span class="keywordflow">in</span> self.<a class="code" href="classprod_1_1worker_1_1_worker.html#a4aa3870b1e5e57da762f7c3061491567">chat_bots</a>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                self.<a class="code" href="classprod_1_1worker_1_1_worker.html#a4aa3870b1e5e57da762f7c3061491567">chat_bots</a>[chat_id] = DialoGPT()</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            chat_bot = self.<a class="code" href="classprod_1_1worker_1_1_worker.html#a4aa3870b1e5e57da762f7c3061491567">chat_bots</a>[chat_id]</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            text = <a class="code" href="namespacetext.html#a68c3c7d336638d9970123c3d53bff67a">get_text</a>(message)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            print(<span class="stringliteral">&#39;Working with chat:&#39;</span>, chat_id)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            print(<span class="stringliteral">&#39;Received message:&#39;</span>, text)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            to_send = chat_bot.get_response(text)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">if</span> len(to_send) &gt; 0:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <a class="code" href="namespaceweb.html#a6d4dd83110ade714b30fee8005cb9301">send_message</a>(self.<a class="code" href="classprod_1_1worker_1_1_worker.html#a3ee94778ab40140bcd295deaf4a4d476">token</a>, chat_id, to_send)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                print(<span class="stringliteral">&#39;Sent message:&#39;</span>, to_send)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            print()</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        self.<a class="code" href="classprod_1_1worker_1_1_worker.html#a080626801b43f3eb72a862b4daf3462d">offset</a> = int(result[<span class="stringliteral">&#39;update_id&#39;</span>]) + 1</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classprod_1_1worker_1_1_worker.html#a8751539d166f4a21a0fce4ef600cdb3e">   37</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classprod_1_1worker_1_1_worker.html#a8751539d166f4a21a0fce4ef600cdb3e">work</a>(self):</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">try</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            print(<span class="stringliteral">&#39;Chat-bot started&#39;</span>)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordflow">while</span> <span class="keyword">True</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                self.<a class="code" href="classprod_1_1worker_1_1_worker.html#a2a1183fd24624339b4e50e66925b5b42">work_once</a>()</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">except</span> KeyboardInterrupt:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            print(<span class="stringliteral">&#39;Chat-bot stopped&#39;</span>)</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassprod_1_1worker_1_1_worker_html_a8751539d166f4a21a0fce4ef600cdb3e"><div class="ttname"><a href="classprod_1_1worker_1_1_worker.html#a8751539d166f4a21a0fce4ef600cdb3e">prod.worker.Worker.work</a></div><div class="ttdeci">def work(self)</div><div class="ttdef"><b>Definition:</b> <a href="worker_8py_source.html#l00037">worker.py:37</a></div></div>
+<div class="ttc" id="anamespaceutils_1_1telegram_1_1text_html"><div class="ttname"><a href="namespaceutils_1_1telegram_1_1text.html">text</a></div></div>
+<div class="ttc" id="aclassprod_1_1worker_1_1_worker_html_a4aa3870b1e5e57da762f7c3061491567"><div class="ttname"><a href="classprod_1_1worker_1_1_worker.html#a4aa3870b1e5e57da762f7c3061491567">prod.worker.Worker.chat_bots</a></div><div class="ttdeci">chat_bots</div><div class="ttdef"><b>Definition:</b> <a href="worker_8py_source.html#l00008">worker.py:8</a></div></div>
+<div class="ttc" id="anamespaceweb_html_a1a102b66c78b7857d6e70eb2cc4a751c"><div class="ttname"><a href="namespaceweb.html#a1a102b66c78b7857d6e70eb2cc4a751c">web.get_updates</a></div><div class="ttdeci">def get_updates(token, offset)</div><div class="ttdoc">Получает новые сообщения с сервера.</div><div class="ttdef"><b>Definition:</b> <a href="web_8py_source.html#l00015">web.py:15</a></div></div>
+<div class="ttc" id="anamespacetext_html_a68c3c7d336638d9970123c3d53bff67a"><div class="ttname"><a href="namespacetext.html#a68c3c7d336638d9970123c3d53bff67a">text.get_text</a></div><div class="ttdeci">def get_text(message)</div><div class="ttdoc">Получает и обрабатывает текст из сообщения</div><div class="ttdef"><b>Definition:</b> <a href="text_8py_source.html#l00023">text.py:23</a></div></div>
+<div class="ttc" id="aclassprod_1_1worker_1_1_worker_html"><div class="ttname"><a href="classprod_1_1worker_1_1_worker.html">prod.worker.Worker</a></div><div class="ttdef"><b>Definition:</b> <a href="worker_8py_source.html#l00006">worker.py:6</a></div></div>
+<div class="ttc" id="aclassprod_1_1worker_1_1_worker_html_a2a1183fd24624339b4e50e66925b5b42"><div class="ttname"><a href="classprod_1_1worker_1_1_worker.html#a2a1183fd24624339b4e50e66925b5b42">prod.worker.Worker.work_once</a></div><div class="ttdeci">def work_once(self)</div><div class="ttdef"><b>Definition:</b> <a href="worker_8py_source.html#l00012">worker.py:12</a></div></div>
+<div class="ttc" id="aclassprod_1_1worker_1_1_worker_html_afd1d65a664b721b4e334c1a56bc55930"><div class="ttname"><a href="classprod_1_1worker_1_1_worker.html#afd1d65a664b721b4e334c1a56bc55930">prod.worker.Worker.__init__</a></div><div class="ttdeci">def __init__(self, token)</div><div class="ttdef"><b>Definition:</b> <a href="worker_8py_source.html#l00007">worker.py:7</a></div></div>
+<div class="ttc" id="anamespaceutils_1_1telegram_1_1web_html"><div class="ttname"><a href="namespaceutils_1_1telegram_1_1web.html">web</a></div></div>
+<div class="ttc" id="aclassprod_1_1worker_1_1_worker_html_a080626801b43f3eb72a862b4daf3462d"><div class="ttname"><a href="classprod_1_1worker_1_1_worker.html#a080626801b43f3eb72a862b4daf3462d">prod.worker.Worker.offset</a></div><div class="ttdeci">offset</div><div class="ttdef"><b>Definition:</b> <a href="worker_8py_source.html#l00009">worker.py:9</a></div></div>
+<div class="ttc" id="aclassprod_1_1worker_1_1_worker_html_a3ee94778ab40140bcd295deaf4a4d476"><div class="ttname"><a href="classprod_1_1worker_1_1_worker.html#a3ee94778ab40140bcd295deaf4a4d476">prod.worker.Worker.token</a></div><div class="ttdeci">token</div><div class="ttdef"><b>Definition:</b> <a href="worker_8py_source.html#l00010">worker.py:10</a></div></div>
+<div class="ttc" id="anamespaceweb_html_a6d4dd83110ade714b30fee8005cb9301"><div class="ttname"><a href="namespaceweb.html#a6d4dd83110ade714b30fee8005cb9301">web.send_message</a></div><div class="ttdeci">def send_message(token, chat_id, text)</div><div class="ttdoc">Отправляет сообщение в чат.</div><div class="ttdef"><b>Definition:</b> <a href="web_8py_source.html#l00025">web.py:25</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>
