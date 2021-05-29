@@ -75,20 +75,29 @@ $(function() {
 <div class="title">Класс dialogpt.DialoGPT</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Класс, содержащий в себе интерфейс работы с <a class="el" href="classdialogpt_1_1_dialo_g_p_t.html" title="Класс, содержащий в себе интерфейс работы с DialoGPT.">DialoGPT</a>.  
+ <a href="classdialogpt_1_1_dialo_g_p_t.html#details">Подробнее...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Открытые члены</h2></td></tr>
 <tr class="memitem:a9f7e85ba1eb378df1bf57bbeef151e35"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdialogpt_1_1_dialo_g_p_t.html#a9f7e85ba1eb378df1bf57bbeef151e35">__init__</a> (self, <a class="el" href="classdialogpt_1_1_dialo_g_p_t.html#a530bab86aab98e328ddb7f4bc18dce98">window_size</a>=10)</td></tr>
+<tr class="memdesc:a9f7e85ba1eb378df1bf57bbeef151e35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаёт объект класса <a class="el" href="classdialogpt_1_1_dialo_g_p_t.html" title="Класс, содержащий в себе интерфейс работы с DialoGPT.">DialoGPT</a> для отдельного чата  <a href="classdialogpt_1_1_dialo_g_p_t.html#a9f7e85ba1eb378df1bf57bbeef151e35">Подробнее...</a><br /></td></tr>
 <tr class="separator:a9f7e85ba1eb378df1bf57bbeef151e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9030169428af69ffd3bde4d88fa1db94"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdialogpt_1_1_dialo_g_p_t.html#a9030169428af69ffd3bde4d88fa1db94">get_length_param</a> (self, str text)</td></tr>
+<tr class="memdesc:a9030169428af69ffd3bde4d88fa1db94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает длину текста, которую стоит сгенерировать боту  <a href="classdialogpt_1_1_dialo_g_p_t.html#a9030169428af69ffd3bde4d88fa1db94">Подробнее...</a><br /></td></tr>
 <tr class="separator:a9030169428af69ffd3bde4d88fa1db94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a710d7e40d32e1571a54c06414632cfee"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdialogpt_1_1_dialo_g_p_t.html#a710d7e40d32e1571a54c06414632cfee">generate</a> (self, bot_input_ids, num_return_sequences=1, max_length=512, no_repeat_ngram_size=3, do_sample=True, top_k=50, top_p=0.9, temperature=0.6, mask_token_id=tokenizer.mask_token_id, eos_token_id=tokenizer.eos_token_id, unk_token_id=tokenizer.unk_token_id, pad_token_id=tokenizer.pad_token_id, device='cuda')</td></tr>
+<tr class="memdesc:a710d7e40d32e1571a54c06414632cfee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Передаёт агрументы в функцию self.model.generate и вызывает её  <a href="classdialogpt_1_1_dialo_g_p_t.html#a710d7e40d32e1571a54c06414632cfee">Подробнее...</a><br /></td></tr>
 <tr class="separator:a710d7e40d32e1571a54c06414632cfee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a553fdc4a504f537e23191399b46f0209"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdialogpt_1_1_dialo_g_p_t.html#a553fdc4a504f537e23191399b46f0209">process_text</a> (self, input_user)</td></tr>
+<tr class="memdesc:a553fdc4a504f537e23191399b46f0209"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает текст без команды  <a href="classdialogpt_1_1_dialo_g_p_t.html#a553fdc4a504f537e23191399b46f0209">Подробнее...</a><br /></td></tr>
 <tr class="separator:a553fdc4a504f537e23191399b46f0209"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af125e54ecf1b927033c723046c82f7a2"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdialogpt_1_1_dialo_g_p_t.html#af125e54ecf1b927033c723046c82f7a2">get_response</a> (self, text)</td></tr>
+<tr class="memdesc:af125e54ecf1b927033c723046c82f7a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает текст с возможной командой  <a href="classdialogpt_1_1_dialo_g_p_t.html#af125e54ecf1b927033c723046c82f7a2">Подробнее...</a><br /></td></tr>
 <tr class="separator:af125e54ecf1b927033c723046c82f7a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15964d6becb1f994fadb54fed7e00814"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdialogpt_1_1_dialo_g_p_t.html#a15964d6becb1f994fadb54fed7e00814">restart</a> (self)</td></tr>
+<tr class="memdesc:a15964d6becb1f994fadb54fed7e00814"><td class="mdescLeft">&#160;</td><td class="mdescRight">Забывает предыдущий диалог  <a href="classdialogpt_1_1_dialo_g_p_t.html#a15964d6becb1f994fadb54fed7e00814">Подробнее...</a><br /></td></tr>
 <tr class="separator:a15964d6becb1f994fadb54fed7e00814"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -103,13 +112,16 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Статические открытые данные</h2></td></tr>
 <tr class="memitem:a027a43bc2a377fcdf0537e78a9c72277"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdialogpt_1_1_dialo_g_p_t.html#a027a43bc2a377fcdf0537e78a9c72277">tokenizer</a> = AutoTokenizer.from_pretrained(&quot;Grossmend/rudialogpt3_medium_based_on_gpt2&quot;)</td></tr>
+<tr class="memdesc:a027a43bc2a377fcdf0537e78a9c72277"><td class="mdescLeft">&#160;</td><td class="mdescRight">Токенайзер модели <a class="el" href="classdialogpt_1_1_dialo_g_p_t.html" title="Класс, содержащий в себе интерфейс работы с DialoGPT.">DialoGPT</a>.  <a href="classdialogpt_1_1_dialo_g_p_t.html#a027a43bc2a377fcdf0537e78a9c72277">Подробнее...</a><br /></td></tr>
 <tr class="separator:a027a43bc2a377fcdf0537e78a9c72277"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9603b216b1ed4304e674f872f2c4a995"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdialogpt_1_1_dialo_g_p_t.html#a9603b216b1ed4304e674f872f2c4a995">model</a> = AutoModelForCausalLM.from_pretrained(&quot;Grossmend/rudialogpt3_medium_based_on_gpt2&quot;)</td></tr>
+<tr class="memdesc:a9603b216b1ed4304e674f872f2c4a995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Токенайзер модели <a class="el" href="classdialogpt_1_1_dialo_g_p_t.html" title="Класс, содержащий в себе интерфейс работы с DialoGPT.">DialoGPT</a>.  <a href="classdialogpt_1_1_dialo_g_p_t.html#a9603b216b1ed4304e674f872f2c4a995">Подробнее...</a><br /></td></tr>
 <tr class="separator:a9603b216b1ed4304e674f872f2c4a995"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock">
-<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00003">3</a></p>
+<div class="textblock"><p>Класс, содержащий в себе интерфейс работы с <a class="el" href="classdialogpt_1_1_dialo_g_p_t.html" title="Класс, содержащий в себе интерфейс работы с DialoGPT.">DialoGPT</a>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00010">10</a></p>
 </div><h2 class="groupheader">Конструктор(ы)</h2>
 <a id="a9f7e85ba1eb378df1bf57bbeef151e35"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9f7e85ba1eb378df1bf57bbeef151e35">&#9670;&nbsp;</a></span>__init__()</h2>
@@ -137,7 +149,15 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00010">10</a></p>
+<p>Создаёт объект класса <a class="el" href="classdialogpt_1_1_dialo_g_p_t.html" title="Класс, содержащий в себе интерфейс работы с DialoGPT.">DialoGPT</a> для отдельного чата </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window_size</td><td>Число диалогов, которых запоминает бот </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00020">20</a></p>
 
 </div>
 </div>
@@ -240,7 +260,16 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00027">27</a></p>
+<p>Передаёт агрументы в функцию self.model.generate и вызывает её </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bot_input_ids</td><td>Токены, подаваемые self.model.generate на вход </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Токены, сгенерированные моделью </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00043">43</a></p>
 
 </div>
 </div>
@@ -270,7 +299,16 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00015">15</a></p>
+<p>Возвращает длину текста, которую стоит сгенерировать боту </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>Текст пользователя без команды </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Длину текста, которую стоит сгенерировать боту, или - если она безгранична </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00028">28</a></p>
 
 </div>
 </div>
@@ -300,7 +338,16 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00091">91</a></p>
+<p>Обрабатывает текст с возможной командой </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>Текст, в котором может содержаться команда </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Итоговый текст </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00102">102</a></p>
 
 </div>
 </div>
@@ -330,7 +377,16 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00061">61</a></p>
+<p>Обрабатывает текст без команды </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input_user</td><td>Текст без команды </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Ответ на текст </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00075">75</a></p>
 
 </div>
 </div>
@@ -350,7 +406,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00121">121</a></p>
+<p>Забывает предыдущий диалог </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00133">133</a></p>
 
 </div>
 </div>
@@ -367,7 +425,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00011">11</a></p>
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00021">21</a></p>
 
 </div>
 </div>
@@ -391,7 +449,9 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00005">5</a></p>
+<p>Токенайзер модели <a class="el" href="classdialogpt_1_1_dialo_g_p_t.html" title="Класс, содержащий в себе интерфейс работы с DialoGPT.">DialoGPT</a>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00016">16</a></p>
 
 </div>
 </div>
@@ -415,7 +475,9 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00004">4</a></p>
+<p>Токенайзер модели <a class="el" href="classdialogpt_1_1_dialo_g_p_t.html" title="Класс, содержащий в себе интерфейс работы с DialoGPT.">DialoGPT</a>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00013">13</a></p>
 
 </div>
 </div>
@@ -431,7 +493,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00012">12</a></p>
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00022">22</a></p>
 
 </div>
 </div>
@@ -447,7 +509,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00013">13</a></p>
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00023">23</a></p>
 
 </div>
 </div>

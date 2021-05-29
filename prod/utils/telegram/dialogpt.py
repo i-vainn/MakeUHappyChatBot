@@ -1,17 +1,30 @@
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
+from utils.telegram.web import *
+
+## @package dialogpt
+# Содержит класс чат-бота DialoGPT
+
+## @class DialoGPT
+# Класс, содержащий в себе интерфейс работы с DialoGPT
 class DialoGPT:
+    ## @var tokenizer
+    # Токенайзер модели DialoGPT
     tokenizer = AutoTokenizer.from_pretrained("Grossmend/rudialogpt3_medium_based_on_gpt2")
+    ## @var model
+    # Токенайзер модели DialoGPT
     model = AutoModelForCausalLM.from_pretrained("Grossmend/rudialogpt3_medium_based_on_gpt2")
     
-    """
-    @param window_size Размер окна диалогов
-    """
+    ## Создаёт объект класса DialoGPT для отдельного чата
+    # @param window_size Число диалогов, которых запоминает бот
     def __init__(self, window_size=10):
         self.chat_history = []
         self.user_input_size = []
         self.window_size = window_size
 
+    ## Возвращает длину текста, которую стоит сгенерировать боту
+    # @param text Текст пользователя без команды
+    # @returns Длину текста, которую стоит сгенерировать боту, или - если она безгранична
     def get_length_param(self, text: str) -> str:
         tokens_count = len(self.tokenizer.encode(text))
         if tokens_count <= 15:
@@ -24,6 +37,9 @@ class DialoGPT:
             len_param = '-'
         return len_param
     
+    ## Передаёт агрументы в функцию self.model.generate и вызывает её
+    # @param bot_input_ids Токены, подаваемые self.model.generate на вход
+    # @returns Токены, сгенерированные моделью
     def generate(self, bot_input_ids,
                 num_return_sequences=1,
                 max_length=512,
@@ -50,14 +66,12 @@ class DialoGPT:
                 eos_token_id=eos_token_id,
                 unk_token_id=unk_token_id,
                 pad_token_id=pad_token_id,
-                device='cuda',
+                device=device,
             )
     
-    """
-    Обрабатывает текст без команды
-    @param input_user Текст без команды
-    @returns Ответ на текст
-    """
+    ## Обрабатывает текст без команды
+    # @param input_user Текст без команды
+    # @returns Ответ на текст
     def process_text(self, input_user):
         input_user = input_user[:256]
         tokenizer = self.tokenizer
@@ -82,16 +96,13 @@ class DialoGPT:
         print('Length of current chat history:', self.chat_history.shape[-1])
         return result
     
-    """
-    Обрабатывает текст с возможной командой
-    @param text Текст, в котором может содержаться команда
-
-    @returns Итоговый текст
-    """
+    ## Обрабатывает текст с возможной командой
+    # @param text Текст, в котором может содержаться команда
+    # @returns Итоговый текст
     def get_response(self, text):
         start = '/start'
         restart = '/restart'
-        meme = '/meme'
+        advice = '/advice'
         ref = '/make_u_happy_bot'
         help_cmd = '/help'
 
@@ -100,8 +111,8 @@ class DialoGPT:
         elif text.startswith(restart):
             self.restart()
             return 'Предыдущие сообщения забыты'
-        elif text.startswith(meme):
-            return 'Учёные доказали, что сначала появились чёрные, а потом люди\n- Lorem Ipsum'
+        elif text.startswith(advice):
+            return get_advice()
         elif text.startswith(ref):
             return self.process_text(text[len(ref):])
         elif text.startswith(help_cmd):
@@ -111,13 +122,14 @@ class DialoGPT:
 Со мной легко работать: ты пишешь сообщение, а я на него отвечаю.
 
 Список полезных команд:
+/advice - Вывести случайный совет
 /restart - Забыть предыдущие сообщения
-/meme - Скинуть случайный мем на английском
 /help - Вывести это сообщение
 '''
         else:
             return self.process_text(text)
     
+    ## Забывает предыдущий диалог
     def restart(self):
         self.chat_history = []
         self.user_input_size = []

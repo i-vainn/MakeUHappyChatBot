@@ -1,20 +1,25 @@
 \hypertarget{classdialogpt_1_1_dialo_g_p_t}{}\doxysection{Класс dialogpt.\+Dialo\+G\+PT}
 \label{classdialogpt_1_1_dialo_g_p_t}\index{dialogpt.DialoGPT@{dialogpt.DialoGPT}}
+
+
+Класс, содержащий в себе интерфейс работы с \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t}{Dialo\+G\+PT}}.  
+
+
 \doxysubsection*{Открытые члены}
 \begin{DoxyCompactItemize}
 \item 
 def \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a9f7e85ba1eb378df1bf57bbeef151e35}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a530bab86aab98e328ddb7f4bc18dce98}{window\+\_\+size}}=10)
-\item 
+\begin{DoxyCompactList}\small\item\em Создаёт объект класса \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t}{Dialo\+G\+PT}} для отдельного чата \end{DoxyCompactList}\item 
 str \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a9030169428af69ffd3bde4d88fa1db94}{get\+\_\+length\+\_\+param}} (self, str text)
-\item 
+\begin{DoxyCompactList}\small\item\em Возвращает длину текста, которую стоит сгенерировать боту \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a710d7e40d32e1571a54c06414632cfee}{generate}} (self, bot\+\_\+input\+\_\+ids, num\+\_\+return\+\_\+sequences=1, max\+\_\+length=512, no\+\_\+repeat\+\_\+ngram\+\_\+size=3, do\+\_\+sample=True, top\+\_\+k=50, top\+\_\+p=0.\+9, temperature=0.\+6, mask\+\_\+token\+\_\+id=tokenizer.\+mask\+\_\+token\+\_\+id, eos\+\_\+token\+\_\+id=tokenizer.\+eos\+\_\+token\+\_\+id, unk\+\_\+token\+\_\+id=tokenizer.\+unk\+\_\+token\+\_\+id, pad\+\_\+token\+\_\+id=tokenizer.\+pad\+\_\+token\+\_\+id, device=\textquotesingle{}cuda\textquotesingle{})
-\item 
+\begin{DoxyCompactList}\small\item\em Передаёт агрументы в функцию self.\+model.\+generate и вызывает её \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a553fdc4a504f537e23191399b46f0209}{process\+\_\+text}} (self, input\+\_\+user)
-\item 
+\begin{DoxyCompactList}\small\item\em Обрабатывает текст без команды \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_af125e54ecf1b927033c723046c82f7a2}{get\+\_\+response}} (self, text)
-\item 
+\begin{DoxyCompactList}\small\item\em Обрабатывает текст с возможной командой \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a15964d6becb1f994fadb54fed7e00814}{restart}} (self)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Забывает предыдущий диалог \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Открытые атрибуты}
 \begin{DoxyCompactItemize}
 \item 
@@ -28,15 +33,15 @@ def \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a15964d6becb1f994fadb54fed7e0
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a027a43bc2a377fcdf0537e78a9c72277}{tokenizer}} = Auto\+Tokenizer.\+from\+\_\+pretrained(\char`\"{}Grossmend/rudialogpt3\+\_\+medium\+\_\+based\+\_\+on\+\_\+gpt2\char`\"{})
-\item 
+\begin{DoxyCompactList}\small\item\em Токенайзер модели \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t}{Dialo\+G\+PT}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a9603b216b1ed4304e674f872f2c4a995}{model}} = Auto\+Model\+For\+Causal\+L\+M.\+from\+\_\+pretrained(\char`\"{}Grossmend/rudialogpt3\+\_\+medium\+\_\+based\+\_\+on\+\_\+gpt2\char`\"{})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Токенайзер модели \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t}{Dialo\+G\+PT}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Подробное описание}
+Класс, содержащий в себе интерфейс работы с \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t}{Dialo\+G\+PT}}. 
 
-
-См. определение в файле dialogpt.\+py строка 3
+См. определение в файле dialogpt.\+py строка 10
 
 
 
@@ -49,7 +54,16 @@ def \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a15964d6becb1f994fadb54fed7e0
 
 
 
-См. определение в файле dialogpt.\+py строка 10
+Создаёт объект класса \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t}{Dialo\+G\+PT}} для отдельного чата 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em window\+\_\+size} & Число диалогов, которых запоминает бот \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле dialogpt.\+py строка 20
 
 
 
@@ -62,7 +76,19 @@ def \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a15964d6becb1f994fadb54fed7e0
 
 
 
-См. определение в файле dialogpt.\+py строка 27
+Передаёт агрументы в функцию self.\+model.\+generate и вызывает её 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em bot\+\_\+input\+\_\+ids} & Токены, подаваемые self.\+model.\+generate на вход \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Токены, сгенерированные моделью 
+\end{DoxyReturn}
+
+
+См. определение в файле dialogpt.\+py строка 43
 
 \mbox{\Hypertarget{classdialogpt_1_1_dialo_g_p_t_a9030169428af69ffd3bde4d88fa1db94}\label{classdialogpt_1_1_dialo_g_p_t_a9030169428af69ffd3bde4d88fa1db94}} 
 \index{dialogpt.DialoGPT@{dialogpt.DialoGPT}!get\_length\_param@{get\_length\_param}}
@@ -72,7 +98,19 @@ def \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a15964d6becb1f994fadb54fed7e0
 
 
 
-См. определение в файле dialogpt.\+py строка 15
+Возвращает длину текста, которую стоит сгенерировать боту 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em text} & Текст пользователя без команды \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Длину текста, которую стоит сгенерировать боту, или -\/ если она безгранична 
+\end{DoxyReturn}
+
+
+См. определение в файле dialogpt.\+py строка 28
 
 \mbox{\Hypertarget{classdialogpt_1_1_dialo_g_p_t_af125e54ecf1b927033c723046c82f7a2}\label{classdialogpt_1_1_dialo_g_p_t_af125e54ecf1b927033c723046c82f7a2}} 
 \index{dialogpt.DialoGPT@{dialogpt.DialoGPT}!get\_response@{get\_response}}
@@ -82,7 +120,19 @@ def \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a15964d6becb1f994fadb54fed7e0
 
 
 
-См. определение в файле dialogpt.\+py строка 91
+Обрабатывает текст с возможной командой 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em text} & Текст, в котором может содержаться команда \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Итоговый текст 
+\end{DoxyReturn}
+
+
+См. определение в файле dialogpt.\+py строка 102
 
 \mbox{\Hypertarget{classdialogpt_1_1_dialo_g_p_t_a553fdc4a504f537e23191399b46f0209}\label{classdialogpt_1_1_dialo_g_p_t_a553fdc4a504f537e23191399b46f0209}} 
 \index{dialogpt.DialoGPT@{dialogpt.DialoGPT}!process\_text@{process\_text}}
@@ -92,7 +142,19 @@ def \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a15964d6becb1f994fadb54fed7e0
 
 
 
-См. определение в файле dialogpt.\+py строка 61
+Обрабатывает текст без команды 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em input\+\_\+user} & Текст без команды \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ответ на текст 
+\end{DoxyReturn}
+
+
+См. определение в файле dialogpt.\+py строка 75
 
 \mbox{\Hypertarget{classdialogpt_1_1_dialo_g_p_t_a15964d6becb1f994fadb54fed7e00814}\label{classdialogpt_1_1_dialo_g_p_t_a15964d6becb1f994fadb54fed7e00814}} 
 \index{dialogpt.DialoGPT@{dialogpt.DialoGPT}!restart@{restart}}
@@ -102,7 +164,11 @@ def \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a15964d6becb1f994fadb54fed7e0
 
 
 
-См. определение в файле dialogpt.\+py строка 121
+Забывает предыдущий диалог 
+
+
+
+См. определение в файле dialogpt.\+py строка 133
 
 
 
@@ -115,7 +181,7 @@ def \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a15964d6becb1f994fadb54fed7e0
 
 
 
-См. определение в файле dialogpt.\+py строка 11
+См. определение в файле dialogpt.\+py строка 21
 
 \mbox{\Hypertarget{classdialogpt_1_1_dialo_g_p_t_a9603b216b1ed4304e674f872f2c4a995}\label{classdialogpt_1_1_dialo_g_p_t_a9603b216b1ed4304e674f872f2c4a995}} 
 \index{dialogpt.DialoGPT@{dialogpt.DialoGPT}!model@{model}}
@@ -125,7 +191,11 @@ def \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a15964d6becb1f994fadb54fed7e0
 
 
 
-См. определение в файле dialogpt.\+py строка 5
+Токенайзер модели \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t}{Dialo\+G\+PT}}. 
+
+
+
+См. определение в файле dialogpt.\+py строка 16
 
 \mbox{\Hypertarget{classdialogpt_1_1_dialo_g_p_t_a027a43bc2a377fcdf0537e78a9c72277}\label{classdialogpt_1_1_dialo_g_p_t_a027a43bc2a377fcdf0537e78a9c72277}} 
 \index{dialogpt.DialoGPT@{dialogpt.DialoGPT}!tokenizer@{tokenizer}}
@@ -135,7 +205,11 @@ def \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a15964d6becb1f994fadb54fed7e0
 
 
 
-См. определение в файле dialogpt.\+py строка 4
+Токенайзер модели \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t}{Dialo\+G\+PT}}. 
+
+
+
+См. определение в файле dialogpt.\+py строка 13
 
 \mbox{\Hypertarget{classdialogpt_1_1_dialo_g_p_t_ae554b8aa68bce5de3e6138b172201aeb}\label{classdialogpt_1_1_dialo_g_p_t_ae554b8aa68bce5de3e6138b172201aeb}} 
 \index{dialogpt.DialoGPT@{dialogpt.DialoGPT}!user\_input\_size@{user\_input\_size}}
@@ -145,7 +219,7 @@ def \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a15964d6becb1f994fadb54fed7e0
 
 
 
-См. определение в файле dialogpt.\+py строка 12
+См. определение в файле dialogpt.\+py строка 22
 
 \mbox{\Hypertarget{classdialogpt_1_1_dialo_g_p_t_a530bab86aab98e328ddb7f4bc18dce98}\label{classdialogpt_1_1_dialo_g_p_t_a530bab86aab98e328ddb7f4bc18dce98}} 
 \index{dialogpt.DialoGPT@{dialogpt.DialoGPT}!window\_size@{window\_size}}
@@ -155,7 +229,7 @@ def \mbox{\hyperlink{classdialogpt_1_1_dialo_g_p_t_a15964d6becb1f994fadb54fed7e0
 
 
 
-См. определение в файле dialogpt.\+py строка 13
+См. определение в файле dialogpt.\+py строка 23
 
 
 

@@ -1,7 +1,7 @@
 from .translate_emoji import de_emojify
 
 ## @package text
-# Данное пространство имен содержит функции для обработки текстов, полученных по Telegram API.
+# Cодержит функции для обработки текстов, полученных по Telegram API.
 
 ## Извлекает текст из сообщения
 # @param message Получаемое сообщение из Telegram API

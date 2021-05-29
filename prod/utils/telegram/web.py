@@ -3,6 +3,8 @@ import requests
 ## @namespace web
 # Содержит функции для взаимодействия с веб-сервисами
 
+## @var api_url
+# Ссылка на Telegram API
 api_url = 'https://api.telegram.org/'
 
 
@@ -25,3 +27,17 @@ def get_updates(token, offset):
 def send_message(token, chat_id, text):
     send_message_url = f'{api_url}{token}/sendMessage?chat_id={chat_id}&text={text}'
     requests.get(send_message_url)
+    
+
+## Достаёт случайный совет
+# @see https://fucking-great-advice.ru/api
+# @returns Случайный совет в виде строки
+def get_advice():
+    magic_word = 'блять'
+    while True:
+        possible_advice = requests.get('http://fucking-great-advice.ru/api/random').json()
+        advice = possible_advice['text']
+        if magic_word in advice:
+            advice = ''.join(advice.split(magic_word))
+            advice = ' '.join(filter(bool, advice.split()))
+            return advice

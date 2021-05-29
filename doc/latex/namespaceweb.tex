@@ -11,18 +11,40 @@
 def \mbox{\hyperlink{namespaceweb_a1a102b66c78b7857d6e70eb2cc4a751c}{get\+\_\+updates}} (token, offset)
 \begin{DoxyCompactList}\small\item\em Получает новые сообщения с сервера. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{namespaceweb_a6d4dd83110ade714b30fee8005cb9301}{send\+\_\+message}} (token, chat\+\_\+id, text)
-\begin{DoxyCompactList}\small\item\em Отправляет сообщение в чат. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Отправляет сообщение в чат. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceweb_a5c5d91e6fad937a40882d72bb7486061}{get\+\_\+advice}} ()
+\begin{DoxyCompactList}\small\item\em Достаёт случайный совет \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Переменные}
 \begin{DoxyCompactItemize}
 \item 
-string \mbox{\hyperlink{namespaceweb_a7a0d7f5b7e7a09e965f882c5beae52b7}{api\+\_\+url}} = \textquotesingle{}https\+://api.\+telegram.\+org/\textquotesingle{}
-\end{DoxyCompactItemize}
+string \mbox{\hyperlink{namespaceweb_ac8dccd8cd6b81c6cfcdd2caf43001995}{api\+\_\+url}} = \textquotesingle{}https\+://api.\+telegram.\+org/\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Ссылка на Telegram A\+PI. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Подробное описание}
 Содержит функции для взаимодействия с веб-\/сервисами 
 
 \doxysubsection{Функции}
+\mbox{\Hypertarget{namespaceweb_a5c5d91e6fad937a40882d72bb7486061}\label{namespaceweb_a5c5d91e6fad937a40882d72bb7486061}} 
+\index{web@{web}!get\_advice@{get\_advice}}
+\index{get\_advice@{get\_advice}!web@{web}}
+\doxysubsubsection{\texorpdfstring{get\_advice()}{get\_advice()}}
+{\footnotesize\ttfamily def web.\+get\+\_\+advice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Достаёт случайный совет 
+
+\begin{DoxySeeAlso}{См. также}
+\href{https://fucking-great-advice.ru/api}{\texttt{ https\+://fucking-\/great-\/advice.\+ru/api}} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Возвращает}
+Случайный совет в виде строки 
+\end{DoxyReturn}
+
+
+См. определение в файле web.\+py строка 35
+
 \mbox{\Hypertarget{namespaceweb_a1a102b66c78b7857d6e70eb2cc4a751c}\label{namespaceweb_a1a102b66c78b7857d6e70eb2cc4a751c}} 
 \index{web@{web}!get\_updates@{get\_updates}}
 \index{get\_updates@{get\_updates}!web@{web}}
@@ -48,7 +70,7 @@ string \mbox{\hyperlink{namespaceweb_a7a0d7f5b7e7a09e965f882c5beae52b7}{api\+\_\
 \end{DoxyReturn}
 
 
-См. определение в файле web.\+py строка 15
+См. определение в файле web.\+py строка 17
 
 \mbox{\Hypertarget{namespaceweb_a6d4dd83110ade714b30fee8005cb9301}\label{namespaceweb_a6d4dd83110ade714b30fee8005cb9301}} 
 \index{web@{web}!send\_message@{send\_message}}
@@ -74,18 +96,22 @@ string \mbox{\hyperlink{namespaceweb_a7a0d7f5b7e7a09e965f882c5beae52b7}{api\+\_\
 \end{DoxyParams}
 
 
-См. определение в файле web.\+py строка 25
+См. определение в файле web.\+py строка 27
 
 
 
 \doxysubsection{Переменные}
-\mbox{\Hypertarget{namespaceweb_a7a0d7f5b7e7a09e965f882c5beae52b7}\label{namespaceweb_a7a0d7f5b7e7a09e965f882c5beae52b7}} 
+\mbox{\Hypertarget{namespaceweb_ac8dccd8cd6b81c6cfcdd2caf43001995}\label{namespaceweb_ac8dccd8cd6b81c6cfcdd2caf43001995}} 
 \index{web@{web}!api\_url@{api\_url}}
 \index{api\_url@{api\_url}!web@{web}}
 \doxysubsubsection{\texorpdfstring{api\_url}{api\_url}}
-{\footnotesize\ttfamily string web.\+api\+\_\+url = \textquotesingle{}https\+://api.\+telegram.\+org/\textquotesingle{}}
+{\footnotesize\ttfamily web.\+api\+\_\+url = \textquotesingle{}https\+://api.\+telegram.\+org/\textquotesingle{}}
 
 
 
-См. определение в файле web.\+py строка 6
+Ссылка на Telegram A\+PI. 
+
+
+
+См. определение в файле web.\+py строка 8
 
