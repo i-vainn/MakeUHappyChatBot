@@ -1,6 +1,7 @@
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from utils.telegram.web import *
+from utils.telegram.text import get_joke
 
 ## @package dialogpt
 # Содержит класс чат-бота DialoGPT
@@ -12,19 +13,21 @@ class DialoGPT:
     # Токенайзер модели DialoGPT
     tokenizer = AutoTokenizer.from_pretrained("Grossmend/rudialogpt3_medium_based_on_gpt2")
     ## @var model
-    # Токенайзер модели DialoGPT
+    # Сама модель DialoGPT
     model = AutoModelForCausalLM.from_pretrained("Grossmend/rudialogpt3_medium_based_on_gpt2")
+    
     
     ## Создаёт объект класса DialoGPT для отдельного чата
     # @param window_size Число диалогов, которых запоминает бот
     def __init__(self, window_size=10):
+        ## @var chat_history
+        # Содержимое текущего диалога
         self.chat_history = []
+        ## @var user_input_size
+        # Размеры каждой фразы диалога
         self.user_input_size = []
         self.window_size = window_size
 
-    ## Возвращает длину текста, которую стоит сгенерировать боту
-    # @param text Текст пользователя без команды
-    # @returns Длину текста, которую стоит сгенерировать боту, или - если она безгранична
     def get_length_param(self, text: str) -> str:
         tokens_count = len(self.tokenizer.encode(text))
         if tokens_count <= 15:
@@ -103,6 +106,7 @@ class DialoGPT:
         start = '/start'
         restart = '/restart'
         advice = '/advice'
+        joke = '/joke'
         ref = '/make_u_happy_bot'
         help_cmd = '/help'
 
@@ -113,6 +117,8 @@ class DialoGPT:
             return 'Предыдущие сообщения забыты'
         elif text.startswith(advice):
             return get_advice()
+        elif text.startswith(joke):
+            return get_joke()
         elif text.startswith(ref):
             return self.process_text(text[len(ref):])
         elif text.startswith(help_cmd):
@@ -123,13 +129,13 @@ class DialoGPT:
 
 Список полезных команд:
 /advice - Вывести случайный совет
-/restart - Забыть предыдущие сообщения
+/joke - Рассказать возможно нецензурный случайный анекдот
 /help - Вывести это сообщение
+/restart - Забыть предыдущие сообщения
 '''
         else:
             return self.process_text(text)
     
-    ## Забывает предыдущий диалог
     def restart(self):
         self.chat_history = []
         self.user_input_size = []

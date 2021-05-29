@@ -1,7 +1,8 @@
 from .translate_emoji import de_emojify
+import random
 
-## @package text
-# Cодержит функции для обработки текстов, полученных по Telegram API.
+## @namespace text
+# Содержит функции для работы с текстами и с Telegram
 
 ## Извлекает текст из сообщения
 # @param message Получаемое сообщение из Telegram API
@@ -16,9 +17,16 @@ def extract_text(message):
     else:
         return ''
 
-
+    
 ## Получает и обрабатывает текст из сообщения
 # @param message Получаемое сообщение из Telegram API
 # @returns Обработанный текст
 def get_text(message):
     return de_emojify(extract_text(message))
+
+
+## Выводит случайный анекдот из набора случайных анекдотов
+# @returns Случайный анекдот
+def get_joke():
+    jokes = open('../data/jokes_good.txt').readlines()
+    return random.choice(jokes).strip()
