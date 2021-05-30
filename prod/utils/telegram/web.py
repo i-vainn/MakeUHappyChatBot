@@ -27,7 +27,22 @@ def get_updates(token, offset):
 def send_message(token, chat_id, text):
     send_message_url = f'{api_url}{token}/sendMessage?chat_id={chat_id}&text={text}'
     requests.get(send_message_url)
-    
+
+
+## Отправляет фотографию в чат.
+# @param token Токен для чат-бота
+# @param chat_id id чата
+# @param url Ссылка на фотографию
+def send_photo(token, chat_id, url):
+    send_photo_url = f'{api_url}{token}/sendPhoto?chat_id={chat_id}&photo={photo}'
+    requests.get(send_photo_url)
+
+
+## Вовзращает ссылку на случайную картинку с котиком
+# @returns Ссылка на картинку с котиком
+def get_cat():
+    return 'https://i.redd.it/yzwguryrul421.jpg'
+
 
 ## Достаёт случайный совет
 # @see https://fucking-great-advice.ru/api
@@ -41,3 +56,4 @@ def get_advice():
             advice = ''.join(advice.split(magic_word))
             advice = ' '.join(filter(bool, advice.split()))
             return advice
+

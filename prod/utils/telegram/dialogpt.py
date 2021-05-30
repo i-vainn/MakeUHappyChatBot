@@ -134,6 +134,7 @@ class DialoGPT:
         restart = '/restart'
         advice = '/advice'
         joke = '/joke'
+        cat = '/cat'
         ref = '/make_u_happy_bot'
         help_cmd = '/help'
 
@@ -144,6 +145,9 @@ class DialoGPT:
             return 'Предыдущие сообщения забыты'
         elif text.startswith(advice):
             return get_advice()
+        elif text.startswith(cat):
+            send_cat()
+            return ''
         elif text.startswith(joke):
             return get_joke()
         elif text.startswith(help_cmd):
@@ -154,6 +158,7 @@ class DialoGPT:
 
 Список полезных команд:
 /advice - Дать совет
+/cat - Выдать фотографию котика
 /joke - Рассказать возможно нецензурный анекдот
 /help - Вывести это сообщение
 /restart - Забыть предыдущие сообщения
