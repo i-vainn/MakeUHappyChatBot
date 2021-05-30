@@ -1,3 +1,4 @@
+import torch
 from transformers import BertTokenizer
 from transformers import BertForSequenceClassification
 
@@ -14,6 +15,7 @@ class JokeClassifier:
         ## @var tokenizer
         # Токенайзер
         self.tokenizer = BertTokenizer.from_pretrained(tokenizer_path)
+        
         ## @var model
         # Модель классификатора 
         self.model = BertForSequenceClassification.from_pretrained(bert_path)

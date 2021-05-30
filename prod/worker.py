@@ -29,7 +29,7 @@ class Worker:
         self.token = token
         
         Path('models/joke_classifier').mkdir(parents=True, exist_ok=True)
-        url = 'https://drive.google.com/uc?id-1-3IxKzOlWu32uZ-mk2OI7mF6S4101b8n'
+        url = 'https://drive.google.com/uc?id=1-3IxKzOlWu32uZ-mk2OI7mF6S4101b8n'
         gdown.download(url, 'models/joke_classifier/config.json', quiet=False)
         url = 'https://drive.google.com/uc?id=1-6AN-3KbLHNH6w0Kmy3Hbp2WEWdCfhdA'
         gdown.download(url, 'models/joke_classifier/pytorch_model.bin', quiet=False)
@@ -50,6 +50,7 @@ class Worker:
             chat_bot = self.chat_bots[chat_id]
 
             text = get_text(message)
+            print('Received message from:', message['from']['first_name'], message['from']['last_name'])
             print('Working with chat:', chat_id)
             print('Received message:', text)
             
