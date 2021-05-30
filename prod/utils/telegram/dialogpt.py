@@ -2,6 +2,7 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from utils.telegram.web import *
 from utils.telegram.text import get_joke
+from utils.JokeClassifier import JokeClassifier
 
 ## @package dialogpt
 # Содержит класс чат-бота DialoGPT
@@ -15,6 +16,9 @@ class DialoGPT:
     ## @var model
     # Сама модель DialoGPT
     model = AutoModelForCausalLM.from_pretrained("Grossmend/rudialogpt3_medium_based_on_gpt2")
+    ## @var joke_classifier
+    # Модель JokeClassifier
+    joke_classifier = JokeClassifier(bert_path='../../models/JokeClassifier')
     
     
     ## Создаёт объект класса DialoGPT для отдельного чата
@@ -78,8 +82,9 @@ class DialoGPT:
     
     ## Обрабатывает текст без команды
     # @param input_user Текст без команды
+    # @param cnt_JokeClassifier Число итераций для поиска ответа, 0 - не использовать классификатор
     # @returns Ответ на текст
-    def process_text(self, input_user):
+    def process_text(self, input_user, cnt_JokeClassifier=0):
         input_user = input_user[:256]
         tokenizer = self.tokenizer
         
@@ -91,9 +96,23 @@ class DialoGPT:
         bot_input_ids = torch.cat([self.chat_history, new_user_input_ids], dim=-1) if len(self.chat_history) else new_user_input_ids
         
         # generated a response
-        self.chat_history = self.generate(bot_input_ids)
-        
-        result = tokenizer.decode(self.chat_history[:, bot_input_ids.shape[-1]:][0], skip_special_tokens=True)
+        if (cnt_JokeClassifier > 0):
+            results = []
+            for iter in range(cnt_JokeClassifier):
+                cur_chat_history = self.generate(bot_input_ids)
+                cur_result = tokenizer.decode(cur_chat_history[:, bot_input_ids.shape[-1]:][0], skip_special_tokens=True)
+                cur_score = self.joke_classifier(cur_result)
+                results.append([cur_chat_history, cur_result, cur_score])
+            results.sort(key=lambda x:x[2])
+            
+            self.chat_history = results[-1][0]
+            result = results[-1][1]
+            worst_score = results[0][2]
+            best_score = results[-1][2]
+            print('Best score:', best_score * 100, 'Worst score:', worst_score * 100)
+        else:
+            self.chat_history = self.generate(bot_input_ids)
+            result = tokenizer.decode(self.chat_history[:, bot_input_ids.shape[-1]:][0], skip_special_tokens=True)
         
         self.user_input_size.append(new_user_input_ids.shape[-1])
         if len(self.user_input_size) > self.window_size:
