@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['make_5fembeddings_40',['make_embeddings',['../classembeddings_1_1_embedding_creator.html#ab1fb8bf29ea8192866bbfa56383bb4be',1,'embeddings::EmbeddingCreator']]],
-  ['makeuhappychatbot_41',['MakeUHappyChatBot',['../md__r_e_a_d_m_e.html',1,'']]],
-  ['merger_42',['Merger',['../classbad__language_1_1_merger.html',1,'bad_language']]],
-  ['model_43',['model',['../classembeddings_1_1_embedding_creator.html#ae466127192fa166a92f7a320a005b606',1,'embeddings.EmbeddingCreator.model()'],['../classdialogpt_1_1_dialo_g_p_t.html#a9603b216b1ed4304e674f872f2c4a995',1,'dialogpt.DialoGPT.model()']]]
+  ['labels_41',['labels',['../classembeddings_1_1_question_finder.html#a18530c73b2ba54c28be6987021c1e975',1,'embeddings::QuestionFinder']]],
+  ['lemmatizer_42',['lemmatizer',['../classbad__language_1_1_swear_detector.html#a9647a224573466f0e36aa3cf25344b35',1,'bad_language::SwearDetector']]]
 ];

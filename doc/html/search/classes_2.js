@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['merger_85',['Merger',['../classbad__language_1_1_merger.html',1,'bad_language']]]
+  ['jokeclassifier_84',['JokeClassifier',['../class_joke_classifier.html',1,'JokeClassifier'],['../class_joke_classifier_1_1_joke_classifier.html',1,'JokeClassifier.JokeClassifier']]]
 ];

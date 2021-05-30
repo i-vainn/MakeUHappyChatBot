@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['prod_93',['prod',['../namespaceprod.html',1,'']]],
-  ['worker_94',['worker',['../namespaceprod_1_1worker.html',1,'prod']]]
+  ['jokeclassifier_93',['JokeClassifier',['../namespace_joke_classifier.html',1,'']]]
 ];

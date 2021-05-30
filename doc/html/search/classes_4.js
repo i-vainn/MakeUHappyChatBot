@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sweardetector_87',['SwearDetector',['../classbad__language_1_1_swear_detector.html',1,'bad_language']]]
+  ['questionfinder_86',['QuestionFinder',['../classembeddings_1_1_question_finder.html',1,'embeddings']]]
 ];

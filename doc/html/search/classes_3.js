@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['questionfinder_86',['QuestionFinder',['../classembeddings_1_1_question_finder.html',1,'embeddings']]]
+  ['merger_85',['Merger',['../classbad__language_1_1_merger.html',1,'bad_language']]]
 ];

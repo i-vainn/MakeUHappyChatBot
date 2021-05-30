@@ -1,20 +1,28 @@
 \hypertarget{namespacetranslate__emoji}{}\doxysection{Пространство имен translate\+\_\+emoji}
 \label{namespacetranslate__emoji}\index{translate\_emoji@{translate\_emoji}}
+
+
+Содержит материалы для обработки эмоджи  
+
+
 \doxysubsection*{Функции}
 \begin{DoxyCompactItemize}
 \item 
 def \mbox{\hyperlink{namespacetranslate__emoji_afae66df7f3dd15c1fbd037ae52db05d3}{eng\+\_\+to\+\_\+rus}} (text)
-\item 
+\begin{DoxyCompactList}\small\item\em Переводит текст с английского на русский \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{namespacetranslate__emoji_aa6f7cb09e268b110c2c415fdb61c3632}{emoji\+\_\+to\+\_\+text}} (emoji)
-\item 
+\begin{DoxyCompactList}\small\item\em Переводит эмоджи в текст на русском \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{namespacetranslate__emoji_a3f9542147b85a2cc6ab38b2fd7142234}{de\+\_\+emojify}} (text)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Переводит эмоджи в тексте на русский язык \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Переменные}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{namespacetranslate__emoji_af02e3ee064780b420b1e1db71b7cc09b}{translator}} = google\+\_\+translator()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{namespacetranslate__emoji_afa001b79c2181fb552e8b5ea5476c69b}{translator}} = google\+\_\+translator()
+\begin{DoxyCompactList}\small\item\em Переводчик \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Подробное описание}
+Содержит материалы для обработки эмоджи 
 
 \doxysubsection{Функции}
 \mbox{\Hypertarget{namespacetranslate__emoji_a3f9542147b85a2cc6ab38b2fd7142234}\label{namespacetranslate__emoji_a3f9542147b85a2cc6ab38b2fd7142234}} 
@@ -25,7 +33,22 @@ def \mbox{\hyperlink{namespacetranslate__emoji_a3f9542147b85a2cc6ab38b2fd7142234
 
 
 
-См. определение в файле translate\+\_\+emoji.\+py строка 18
+Переводит эмоджи в тексте на русский язык 
+
+\begin{DoxySeeAlso}{См. также}
+\href{https://unicode.org/emoji/charts/full-emoji-list.html}{\texttt{ https\+://unicode.\+org/emoji/charts/full-\/emoji-\/list.\+html}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Аргументы}
+{\em text} & Текст на русском \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Текст на русском без эмоджи 
+\end{DoxyReturn}
+
+
+См. определение в файле translate\+\_\+emoji.\+py строка 33
 
 \mbox{\Hypertarget{namespacetranslate__emoji_aa6f7cb09e268b110c2c415fdb61c3632}\label{namespacetranslate__emoji_aa6f7cb09e268b110c2c415fdb61c3632}} 
 \index{translate\_emoji@{translate\_emoji}!emoji\_to\_text@{emoji\_to\_text}}
@@ -35,7 +58,22 @@ def \mbox{\hyperlink{namespacetranslate__emoji_a3f9542147b85a2cc6ab38b2fd7142234
 
 
 
-См. определение в файле translate\+\_\+emoji.\+py строка 11
+Переводит эмоджи в текст на русском 
+
+\begin{DoxySeeAlso}{См. также}
+\href{https://unicode.org/emoji/charts/full-emoji-list.html}{\texttt{ https\+://unicode.\+org/emoji/charts/full-\/emoji-\/list.\+html}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Аргументы}
+{\em emoji} & Эмоджи \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Значение эмоджи на русском 
+\end{DoxyReturn}
+
+
+См. определение в файле translate\+\_\+emoji.\+py строка 22
 
 \mbox{\Hypertarget{namespacetranslate__emoji_afae66df7f3dd15c1fbd037ae52db05d3}\label{namespacetranslate__emoji_afae66df7f3dd15c1fbd037ae52db05d3}} 
 \index{translate\_emoji@{translate\_emoji}!eng\_to\_rus@{eng\_to\_rus}}
@@ -45,12 +83,24 @@ def \mbox{\hyperlink{namespacetranslate__emoji_a3f9542147b85a2cc6ab38b2fd7142234
 
 
 
-См. определение в файле translate\+\_\+emoji.\+py строка 7
+Переводит текст с английского на русский 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em text} & Текст на английском \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Текст на русском 
+\end{DoxyReturn}
+
+
+См. определение в файле translate\+\_\+emoji.\+py строка 15
 
 
 
 \doxysubsection{Переменные}
-\mbox{\Hypertarget{namespacetranslate__emoji_af02e3ee064780b420b1e1db71b7cc09b}\label{namespacetranslate__emoji_af02e3ee064780b420b1e1db71b7cc09b}} 
+\mbox{\Hypertarget{namespacetranslate__emoji_afa001b79c2181fb552e8b5ea5476c69b}\label{namespacetranslate__emoji_afa001b79c2181fb552e8b5ea5476c69b}} 
 \index{translate\_emoji@{translate\_emoji}!translator@{translator}}
 \index{translator@{translator}!translate\_emoji@{translate\_emoji}}
 \doxysubsubsection{\texorpdfstring{translator}{translator}}
@@ -58,5 +108,9 @@ def \mbox{\hyperlink{namespacetranslate__emoji_a3f9542147b85a2cc6ab38b2fd7142234
 
 
 
-См. определение в файле translate\+\_\+emoji.\+py строка 6
+Переводчик 
+
+
+
+См. определение в файле translate\+\_\+emoji.\+py строка 10
 

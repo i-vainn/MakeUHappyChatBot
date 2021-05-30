@@ -1,143 +1,158 @@
 \@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
 \babel@toc {russian}{}
-\contentsline {chapter}{\numberline {1}Make\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}U\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Happy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Chat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Bot}{1}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Алфавитный указатель пространств имен}{3}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Пространства имен}{3}{section.2.1}%
-\contentsline {chapter}{\numberline {3}Алфавитный указатель классов}{5}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Классы}{5}{section.3.1}%
-\contentsline {chapter}{\numberline {4}Список файлов}{7}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Файлы}{7}{section.4.1}%
-\contentsline {chapter}{\numberline {5}Пространства имен}{9}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Пространство имен bad\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}language}{9}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Пространство имен dialogpt}{9}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Пространство имен embeddings}{9}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Пространство имен prod}{9}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Переменные}{10}{subsection.5.4.1}%
-\contentsline {subsubsection}{\numberline {5.4.1.1}args}{10}{subsubsection.5.4.1.1}%
-\contentsline {subsubsection}{\numberline {5.4.1.2}help}{10}{subsubsection.5.4.1.2}%
-\contentsline {subsubsection}{\numberline {5.4.1.3}parser}{10}{subsubsection.5.4.1.3}%
-\contentsline {subsubsection}{\numberline {5.4.1.4}required}{10}{subsubsection.5.4.1.4}%
-\contentsline {subsubsection}{\numberline {5.4.1.5}True}{10}{subsubsection.5.4.1.5}%
-\contentsline {section}{\numberline {5.5}Пространство имен prod.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}worker}{11}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Пространство имен text}{11}{section.5.6}%
-\contentsline {subsection}{\numberline {5.6.1}Подробное описание}{11}{subsection.5.6.1}%
-\contentsline {subsection}{\numberline {5.6.2}Функции}{11}{subsection.5.6.2}%
-\contentsline {subsubsection}{\numberline {5.6.2.1}extract\_text()}{11}{subsubsection.5.6.2.1}%
-\contentsline {subsubsection}{\numberline {5.6.2.2}get\_text()}{12}{subsubsection.5.6.2.2}%
-\contentsline {section}{\numberline {5.7}Пространство имен translate\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}emoji}{12}{section.5.7}%
-\contentsline {subsection}{\numberline {5.7.1}Функции}{12}{subsection.5.7.1}%
-\contentsline {subsubsection}{\numberline {5.7.1.1}de\_emojify()}{12}{subsubsection.5.7.1.1}%
-\contentsline {subsubsection}{\numberline {5.7.1.2}emoji\_to\_text()}{12}{subsubsection.5.7.1.2}%
-\contentsline {subsubsection}{\numberline {5.7.1.3}eng\_to\_rus()}{13}{subsubsection.5.7.1.3}%
-\contentsline {subsection}{\numberline {5.7.2}Переменные}{13}{subsection.5.7.2}%
-\contentsline {subsubsection}{\numberline {5.7.2.1}translator}{13}{subsubsection.5.7.2.1}%
-\contentsline {section}{\numberline {5.8}Пространство имен web}{13}{section.5.8}%
-\contentsline {subsection}{\numberline {5.8.1}Подробное описание}{13}{subsection.5.8.1}%
-\contentsline {subsection}{\numberline {5.8.2}Функции}{13}{subsection.5.8.2}%
-\contentsline {subsubsection}{\numberline {5.8.2.1}get\_updates()}{13}{subsubsection.5.8.2.1}%
-\contentsline {subsubsection}{\numberline {5.8.2.2}send\_message()}{14}{subsubsection.5.8.2.2}%
-\contentsline {subsection}{\numberline {5.8.3}Переменные}{14}{subsection.5.8.3}%
-\contentsline {subsubsection}{\numberline {5.8.3.1}api\_url}{14}{subsubsection.5.8.3.1}%
-\contentsline {chapter}{\numberline {6}Классы}{15}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Класс dialogpt.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dialo\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PT}{15}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Подробное описание}{15}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Конструктор(ы)}{15}{subsection.6.1.2}%
-\contentsline {subsubsection}{\numberline {6.1.2.1}\_\_init\_\_()}{16}{subsubsection.6.1.2.1}%
-\contentsline {subsection}{\numberline {6.1.3}Методы}{16}{subsection.6.1.3}%
-\contentsline {subsubsection}{\numberline {6.1.3.1}generate()}{16}{subsubsection.6.1.3.1}%
-\contentsline {subsubsection}{\numberline {6.1.3.2}get\_length\_param()}{16}{subsubsection.6.1.3.2}%
-\contentsline {subsubsection}{\numberline {6.1.3.3}get\_response()}{16}{subsubsection.6.1.3.3}%
-\contentsline {subsubsection}{\numberline {6.1.3.4}process\_text()}{17}{subsubsection.6.1.3.4}%
-\contentsline {subsubsection}{\numberline {6.1.3.5}restart()}{17}{subsubsection.6.1.3.5}%
-\contentsline {subsection}{\numberline {6.1.4}Данные класса}{17}{subsection.6.1.4}%
-\contentsline {subsubsection}{\numberline {6.1.4.1}chat\_history}{17}{subsubsection.6.1.4.1}%
-\contentsline {subsubsection}{\numberline {6.1.4.2}model}{17}{subsubsection.6.1.4.2}%
-\contentsline {subsubsection}{\numberline {6.1.4.3}tokenizer}{17}{subsubsection.6.1.4.3}%
-\contentsline {subsubsection}{\numberline {6.1.4.4}user\_input\_size}{18}{subsubsection.6.1.4.4}%
-\contentsline {subsubsection}{\numberline {6.1.4.5}window\_size}{18}{subsubsection.6.1.4.5}%
-\contentsline {section}{\numberline {6.2}Класс embeddings.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Embedding\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Creator}{18}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Подробное описание}{18}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Конструктор(ы)}{18}{subsection.6.2.2}%
-\contentsline {subsubsection}{\numberline {6.2.2.1}\_\_init\_\_()}{19}{subsubsection.6.2.2.1}%
-\contentsline {subsection}{\numberline {6.2.3}Методы}{19}{subsection.6.2.3}%
-\contentsline {subsubsection}{\numberline {6.2.3.1}get\_by\_index()}{19}{subsubsection.6.2.3.1}%
-\contentsline {subsubsection}{\numberline {6.2.3.2}get\_phrase\_embedding()}{19}{subsubsection.6.2.3.2}%
-\contentsline {subsubsection}{\numberline {6.2.3.3}make\_embeddings()}{19}{subsubsection.6.2.3.3}%
-\contentsline {subsubsection}{\numberline {6.2.3.4}run()}{20}{subsubsection.6.2.3.4}%
-\contentsline {subsubsection}{\numberline {6.2.3.5}tokenize()}{20}{subsubsection.6.2.3.5}%
-\contentsline {subsubsection}{\numberline {6.2.3.6}write\_matrix()}{20}{subsubsection.6.2.3.6}%
-\contentsline {subsection}{\numberline {6.2.4}Данные класса}{20}{subsection.6.2.4}%
-\contentsline {subsubsection}{\numberline {6.2.4.1}device}{20}{subsubsection.6.2.4.1}%
-\contentsline {subsubsection}{\numberline {6.2.4.2}embeddings}{20}{subsubsection.6.2.4.2}%
-\contentsline {subsubsection}{\numberline {6.2.4.3}model}{21}{subsubsection.6.2.4.3}%
-\contentsline {subsubsection}{\numberline {6.2.4.4}tokenized}{21}{subsubsection.6.2.4.4}%
-\contentsline {subsubsection}{\numberline {6.2.4.5}tokenizer}{21}{subsubsection.6.2.4.5}%
-\contentsline {subsubsection}{\numberline {6.2.4.6}words}{21}{subsubsection.6.2.4.6}%
-\contentsline {section}{\numberline {6.3}Класс bad\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}language.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Merger}{21}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Подробное описание}{22}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Конструктор(ы)}{22}{subsection.6.3.2}%
-\contentsline {subsubsection}{\numberline {6.3.2.1}\_\_init\_\_()}{22}{subsubsection.6.3.2.1}%
-\contentsline {subsection}{\numberline {6.3.3}Методы}{22}{subsection.6.3.3}%
-\contentsline {subsubsection}{\numberline {6.3.3.1}\_\_call\_\_()}{22}{subsubsection.6.3.3.1}%
-\contentsline {subsection}{\numberline {6.3.4}Данные класса}{22}{subsection.6.3.4}%
-\contentsline {subsubsection}{\numberline {6.3.4.1}classifiers}{22}{subsubsection.6.3.4.1}%
-\contentsline {subsubsection}{\numberline {6.3.4.2}is\_soft}{22}{subsubsection.6.3.4.2}%
-\contentsline {section}{\numberline {6.4}Класс embeddings.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Question\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Finder}{23}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Подробное описание}{23}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Конструктор(ы)}{23}{subsection.6.4.2}%
-\contentsline {subsubsection}{\numberline {6.4.2.1}\_\_init\_\_()}{23}{subsubsection.6.4.2.1}%
-\contentsline {subsection}{\numberline {6.4.3}Методы}{23}{subsection.6.4.3}%
-\contentsline {subsubsection}{\numberline {6.4.3.1}find\_closest()}{23}{subsubsection.6.4.3.1}%
-\contentsline {subsection}{\numberline {6.4.4}Данные класса}{24}{subsection.6.4.4}%
-\contentsline {subsubsection}{\numberline {6.4.4.1}dim}{24}{subsubsection.6.4.4.1}%
-\contentsline {subsubsection}{\numberline {6.4.4.2}embeddings}{24}{subsubsection.6.4.4.2}%
-\contentsline {subsubsection}{\numberline {6.4.4.3}labels}{24}{subsubsection.6.4.4.3}%
-\contentsline {subsubsection}{\numberline {6.4.4.4}num}{24}{subsubsection.6.4.4.4}%
-\contentsline {subsubsection}{\numberline {6.4.4.5}p}{24}{subsubsection.6.4.4.5}%
-\contentsline {section}{\numberline {6.5}Класс bad\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}language.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Swear\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Detector}{25}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}Подробное описание}{25}{subsection.6.5.1}%
-\contentsline {subsection}{\numberline {6.5.2}Конструктор(ы)}{25}{subsection.6.5.2}%
-\contentsline {subsubsection}{\numberline {6.5.2.1}\_\_init\_\_()}{25}{subsubsection.6.5.2.1}%
-\contentsline {subsection}{\numberline {6.5.3}Методы}{25}{subsection.6.5.3}%
-\contentsline {subsubsection}{\numberline {6.5.3.1}\_\_call\_\_()}{25}{subsubsection.6.5.3.1}%
-\contentsline {subsubsection}{\numberline {6.5.3.2}clear()}{26}{subsubsection.6.5.3.2}%
-\contentsline {subsubsection}{\numberline {6.5.3.3}find\_swear()}{26}{subsubsection.6.5.3.3}%
-\contentsline {subsubsection}{\numberline {6.5.3.4}has\_swear()}{26}{subsubsection.6.5.3.4}%
-\contentsline {subsection}{\numberline {6.5.4}Данные класса}{26}{subsection.6.5.4}%
-\contentsline {subsubsection}{\numberline {6.5.4.1}blocklist}{26}{subsubsection.6.5.4.1}%
-\contentsline {subsubsection}{\numberline {6.5.4.2}lemmatizer}{26}{subsubsection.6.5.4.2}%
-\contentsline {section}{\numberline {6.6}Класс bad\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}language.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Toxic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Classifier}{27}{section.6.6}%
-\contentsline {subsection}{\numberline {6.6.1}Подробное описание}{27}{subsection.6.6.1}%
-\contentsline {subsection}{\numberline {6.6.2}Конструктор(ы)}{27}{subsection.6.6.2}%
-\contentsline {subsubsection}{\numberline {6.6.2.1}\_\_init\_\_()}{27}{subsubsection.6.6.2.1}%
-\contentsline {subsection}{\numberline {6.6.3}Методы}{27}{subsection.6.6.3}%
-\contentsline {subsubsection}{\numberline {6.6.3.1}\_\_call\_\_()}{27}{subsubsection.6.6.3.1}%
-\contentsline {subsubsection}{\numberline {6.6.3.2}how\_toxic()}{28}{subsubsection.6.6.3.2}%
-\contentsline {subsubsection}{\numberline {6.6.3.3}is\_toxic()}{28}{subsubsection.6.6.3.3}%
-\contentsline {subsection}{\numberline {6.6.4}Данные класса}{28}{subsection.6.6.4}%
-\contentsline {subsubsection}{\numberline {6.6.4.1}toxic\_bert}{28}{subsubsection.6.6.4.1}%
-\contentsline {subsubsection}{\numberline {6.6.4.2}toxic\_tokenizer}{28}{subsubsection.6.6.4.2}%
-\contentsline {section}{\numberline {6.7}Класс prod.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}worker.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Worker}{28}{section.6.7}%
-\contentsline {subsection}{\numberline {6.7.1}Подробное описание}{29}{subsection.6.7.1}%
-\contentsline {subsection}{\numberline {6.7.2}Конструктор(ы)}{29}{subsection.6.7.2}%
-\contentsline {subsubsection}{\numberline {6.7.2.1}\_\_init\_\_()}{29}{subsubsection.6.7.2.1}%
-\contentsline {subsection}{\numberline {6.7.3}Методы}{29}{subsection.6.7.3}%
-\contentsline {subsubsection}{\numberline {6.7.3.1}work()}{29}{subsubsection.6.7.3.1}%
-\contentsline {subsubsection}{\numberline {6.7.3.2}work\_once()}{29}{subsubsection.6.7.3.2}%
-\contentsline {subsection}{\numberline {6.7.4}Данные класса}{29}{subsection.6.7.4}%
-\contentsline {subsubsection}{\numberline {6.7.4.1}chat\_bots}{30}{subsubsection.6.7.4.1}%
-\contentsline {subsubsection}{\numberline {6.7.4.2}offset}{30}{subsubsection.6.7.4.2}%
-\contentsline {subsubsection}{\numberline {6.7.4.3}token}{30}{subsubsection.6.7.4.3}%
-\contentsline {chapter}{\numberline {7}Файлы}{31}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Файл data/swear.txt}{31}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Файл prod/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py}{31}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Файл prod/utils/bad\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}language.py}{31}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Файл prod/utils/embeddings.py}{32}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Файл prod/utils/telegram/dialogpt.py}{32}{section.7.5}%
-\contentsline {section}{\numberline {7.6}Файл prod/utils/telegram/text.py}{32}{section.7.6}%
-\contentsline {section}{\numberline {7.7}Файл prod/utils/telegram/translate\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}emoji.py}{32}{section.7.7}%
-\contentsline {section}{\numberline {7.8}Файл prod/utils/telegram/web.py}{33}{section.7.8}%
-\contentsline {section}{\numberline {7.9}Файл prod/worker.py}{33}{section.7.9}%
-\contentsline {section}{\numberline {7.10}Файл R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}E\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}D\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}M\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}E.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md}{33}{section.7.10}%
-\contentsline {section}{\numberline {7.11}Файл requirements.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}txt}{33}{section.7.11}%
-\contentsline {chapter}{{\cyrillictext \CYRP \cyrr \cyre \cyrd \cyrm \cyre \cyrt \cyrn \cyrery \cyrishrt \ \cyru \cyrk \cyra \cyrz \cyra \cyrt \cyre \cyrl \cyrsftsn }}{35}{section*.45}%
+\contentsline {chapter}{\numberline {1}Алфавитный указатель пространств имен}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Пространства имен}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Алфавитный указатель классов}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Классы}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Список файлов}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Файлы}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Пространства имен}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Пространство имен bad\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}language}{7}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Пространство имен dialogpt}{7}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Подробное описание}{7}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}Пространство имен embeddings}{7}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Пространство имен Joke\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Classifier}{8}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Пространство имен prod}{8}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Подробное описание}{8}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Переменные}{8}{subsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.1}args}{8}{subsubsection.4.5.2.1}%
+\contentsline {subsubsection}{\numberline {4.5.2.2}help}{8}{subsubsection.4.5.2.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.3}parser}{9}{subsubsection.4.5.2.3}%
+\contentsline {subsubsection}{\numberline {4.5.2.4}required}{9}{subsubsection.4.5.2.4}%
+\contentsline {subsubsection}{\numberline {4.5.2.5}True}{9}{subsubsection.4.5.2.5}%
+\contentsline {section}{\numberline {4.6}Пространство имен prod.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}worker}{9}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Подробное описание}{9}{subsection.4.6.1}%
+\contentsline {section}{\numberline {4.7}Пространство имен text}{9}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Подробное описание}{10}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Функции}{10}{subsection.4.7.2}%
+\contentsline {subsubsection}{\numberline {4.7.2.1}extract\_text()}{10}{subsubsection.4.7.2.1}%
+\contentsline {subsubsection}{\numberline {4.7.2.2}get\_joke()}{10}{subsubsection.4.7.2.2}%
+\contentsline {subsubsection}{\numberline {4.7.2.3}get\_text()}{10}{subsubsection.4.7.2.3}%
+\contentsline {section}{\numberline {4.8}Пространство имен translate\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}emoji}{11}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Подробное описание}{11}{subsection.4.8.1}%
+\contentsline {subsection}{\numberline {4.8.2}Функции}{11}{subsection.4.8.2}%
+\contentsline {subsubsection}{\numberline {4.8.2.1}de\_emojify()}{11}{subsubsection.4.8.2.1}%
+\contentsline {subsubsection}{\numberline {4.8.2.2}emoji\_to\_text()}{12}{subsubsection.4.8.2.2}%
+\contentsline {subsubsection}{\numberline {4.8.2.3}eng\_to\_rus()}{12}{subsubsection.4.8.2.3}%
+\contentsline {subsection}{\numberline {4.8.3}Переменные}{13}{subsection.4.8.3}%
+\contentsline {subsubsection}{\numberline {4.8.3.1}translator}{13}{subsubsection.4.8.3.1}%
+\contentsline {section}{\numberline {4.9}Пространство имен web}{13}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Подробное описание}{13}{subsection.4.9.1}%
+\contentsline {subsection}{\numberline {4.9.2}Функции}{13}{subsection.4.9.2}%
+\contentsline {subsubsection}{\numberline {4.9.2.1}get\_advice()}{14}{subsubsection.4.9.2.1}%
+\contentsline {subsubsection}{\numberline {4.9.2.2}get\_updates()}{14}{subsubsection.4.9.2.2}%
+\contentsline {subsubsection}{\numberline {4.9.2.3}send\_message()}{14}{subsubsection.4.9.2.3}%
+\contentsline {subsection}{\numberline {4.9.3}Переменные}{15}{subsection.4.9.3}%
+\contentsline {subsubsection}{\numberline {4.9.3.1}api\_url}{15}{subsubsection.4.9.3.1}%
+\contentsline {chapter}{\numberline {5}Классы}{17}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Класс dialogpt.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dialo\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PT}{17}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Подробное описание}{18}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Конструктор(ы)}{18}{subsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.1}\_\_init\_\_()}{18}{subsubsection.5.1.2.1}%
+\contentsline {subsection}{\numberline {5.1.3}Методы}{18}{subsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.3.1}generate()}{18}{subsubsection.5.1.3.1}%
+\contentsline {subsubsection}{\numberline {5.1.3.2}get\_length\_param()}{19}{subsubsection.5.1.3.2}%
+\contentsline {subsubsection}{\numberline {5.1.3.3}get\_response()}{19}{subsubsection.5.1.3.3}%
+\contentsline {subsubsection}{\numberline {5.1.3.4}process\_text()}{20}{subsubsection.5.1.3.4}%
+\contentsline {subsubsection}{\numberline {5.1.3.5}restart()}{20}{subsubsection.5.1.3.5}%
+\contentsline {subsection}{\numberline {5.1.4}Данные класса}{20}{subsection.5.1.4}%
+\contentsline {subsubsection}{\numberline {5.1.4.1}chat\_history}{20}{subsubsection.5.1.4.1}%
+\contentsline {subsubsection}{\numberline {5.1.4.2}model}{20}{subsubsection.5.1.4.2}%
+\contentsline {subsubsection}{\numberline {5.1.4.3}tokenizer}{21}{subsubsection.5.1.4.3}%
+\contentsline {subsubsection}{\numberline {5.1.4.4}user\_input\_size}{21}{subsubsection.5.1.4.4}%
+\contentsline {subsubsection}{\numberline {5.1.4.5}window\_size}{21}{subsubsection.5.1.4.5}%
+\contentsline {section}{\numberline {5.2}Класс embeddings.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Embedding\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Creator}{21}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Подробное описание}{22}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Конструктор(ы)}{22}{subsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.1}\_\_init\_\_()}{22}{subsubsection.5.2.2.1}%
+\contentsline {subsection}{\numberline {5.2.3}Методы}{22}{subsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.3.1}get\_by\_index()}{22}{subsubsection.5.2.3.1}%
+\contentsline {subsubsection}{\numberline {5.2.3.2}get\_phrase\_embedding()}{22}{subsubsection.5.2.3.2}%
+\contentsline {subsubsection}{\numberline {5.2.3.3}make\_embeddings()}{23}{subsubsection.5.2.3.3}%
+\contentsline {subsubsection}{\numberline {5.2.3.4}run()}{23}{subsubsection.5.2.3.4}%
+\contentsline {subsubsection}{\numberline {5.2.3.5}tokenize()}{23}{subsubsection.5.2.3.5}%
+\contentsline {subsubsection}{\numberline {5.2.3.6}write\_matrix()}{23}{subsubsection.5.2.3.6}%
+\contentsline {subsection}{\numberline {5.2.4}Данные класса}{23}{subsection.5.2.4}%
+\contentsline {subsubsection}{\numberline {5.2.4.1}device}{23}{subsubsection.5.2.4.1}%
+\contentsline {subsubsection}{\numberline {5.2.4.2}embeddings}{24}{subsubsection.5.2.4.2}%
+\contentsline {subsubsection}{\numberline {5.2.4.3}model}{24}{subsubsection.5.2.4.3}%
+\contentsline {subsubsection}{\numberline {5.2.4.4}tokenized}{24}{subsubsection.5.2.4.4}%
+\contentsline {subsubsection}{\numberline {5.2.4.5}tokenizer}{24}{subsubsection.5.2.4.5}%
+\contentsline {subsubsection}{\numberline {5.2.4.6}words}{24}{subsubsection.5.2.4.6}%
+\contentsline {section}{\numberline {5.3}Класс Joke\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Classifier}{24}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Подробное описание}{25}{subsection.5.3.1}%
+\contentsline {section}{\numberline {5.4}Класс Joke\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Classifier.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Joke\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Classifier}{25}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Подробное описание}{25}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Конструктор(ы)}{25}{subsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.2.1}\_\_init\_\_()}{25}{subsubsection.5.4.2.1}%
+\contentsline {subsection}{\numberline {5.4.3}Методы}{26}{subsection.5.4.3}%
+\contentsline {subsubsection}{\numberline {5.4.3.1}\_\_call\_\_()}{26}{subsubsection.5.4.3.1}%
+\contentsline {subsection}{\numberline {5.4.4}Данные класса}{26}{subsection.5.4.4}%
+\contentsline {subsubsection}{\numberline {5.4.4.1}model}{26}{subsubsection.5.4.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.4.2}tokenizer}{26}{subsubsection.5.4.4.2}%
+\contentsline {section}{\numberline {5.5}Класс bad\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}language.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Merger}{27}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Подробное описание}{27}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Конструктор(ы)}{27}{subsection.5.5.2}%
+\contentsline {subsubsection}{\numberline {5.5.2.1}\_\_init\_\_()}{27}{subsubsection.5.5.2.1}%
+\contentsline {subsection}{\numberline {5.5.3}Методы}{27}{subsection.5.5.3}%
+\contentsline {subsubsection}{\numberline {5.5.3.1}\_\_call\_\_()}{27}{subsubsection.5.5.3.1}%
+\contentsline {subsection}{\numberline {5.5.4}Данные класса}{27}{subsection.5.5.4}%
+\contentsline {subsubsection}{\numberline {5.5.4.1}classifiers}{28}{subsubsection.5.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.5.4.2}is\_soft}{28}{subsubsection.5.5.4.2}%
+\contentsline {section}{\numberline {5.6}Класс embeddings.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Question\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Finder}{28}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Подробное описание}{28}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Конструктор(ы)}{28}{subsection.5.6.2}%
+\contentsline {subsubsection}{\numberline {5.6.2.1}\_\_init\_\_()}{28}{subsubsection.5.6.2.1}%
+\contentsline {subsection}{\numberline {5.6.3}Методы}{29}{subsection.5.6.3}%
+\contentsline {subsubsection}{\numberline {5.6.3.1}find\_closest()}{29}{subsubsection.5.6.3.1}%
+\contentsline {subsection}{\numberline {5.6.4}Данные класса}{29}{subsection.5.6.4}%
+\contentsline {subsubsection}{\numberline {5.6.4.1}dim}{29}{subsubsection.5.6.4.1}%
+\contentsline {subsubsection}{\numberline {5.6.4.2}embeddings}{29}{subsubsection.5.6.4.2}%
+\contentsline {subsubsection}{\numberline {5.6.4.3}labels}{29}{subsubsection.5.6.4.3}%
+\contentsline {subsubsection}{\numberline {5.6.4.4}num}{29}{subsubsection.5.6.4.4}%
+\contentsline {subsubsection}{\numberline {5.6.4.5}p}{30}{subsubsection.5.6.4.5}%
+\contentsline {section}{\numberline {5.7}Класс bad\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}language.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Swear\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Detector}{30}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Подробное описание}{30}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Конструктор(ы)}{30}{subsection.5.7.2}%
+\contentsline {subsubsection}{\numberline {5.7.2.1}\_\_init\_\_()}{30}{subsubsection.5.7.2.1}%
+\contentsline {subsection}{\numberline {5.7.3}Методы}{30}{subsection.5.7.3}%
+\contentsline {subsubsection}{\numberline {5.7.3.1}\_\_call\_\_()}{31}{subsubsection.5.7.3.1}%
+\contentsline {subsubsection}{\numberline {5.7.3.2}clear()}{31}{subsubsection.5.7.3.2}%
+\contentsline {subsubsection}{\numberline {5.7.3.3}find\_swear()}{31}{subsubsection.5.7.3.3}%
+\contentsline {subsubsection}{\numberline {5.7.3.4}has\_swear()}{31}{subsubsection.5.7.3.4}%
+\contentsline {subsection}{\numberline {5.7.4}Данные класса}{31}{subsection.5.7.4}%
+\contentsline {subsubsection}{\numberline {5.7.4.1}blocklist}{31}{subsubsection.5.7.4.1}%
+\contentsline {subsubsection}{\numberline {5.7.4.2}lemmatizer}{32}{subsubsection.5.7.4.2}%
+\contentsline {section}{\numberline {5.8}Класс bad\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}language.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Toxic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Classifier}{32}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}Подробное описание}{32}{subsection.5.8.1}%
+\contentsline {subsection}{\numberline {5.8.2}Конструктор(ы)}{32}{subsection.5.8.2}%
+\contentsline {subsubsection}{\numberline {5.8.2.1}\_\_init\_\_()}{32}{subsubsection.5.8.2.1}%
+\contentsline {subsection}{\numberline {5.8.3}Методы}{32}{subsection.5.8.3}%
+\contentsline {subsubsection}{\numberline {5.8.3.1}\_\_call\_\_()}{33}{subsubsection.5.8.3.1}%
+\contentsline {subsubsection}{\numberline {5.8.3.2}how\_toxic()}{33}{subsubsection.5.8.3.2}%
+\contentsline {subsubsection}{\numberline {5.8.3.3}is\_toxic()}{33}{subsubsection.5.8.3.3}%
+\contentsline {subsection}{\numberline {5.8.4}Данные класса}{33}{subsection.5.8.4}%
+\contentsline {subsubsection}{\numberline {5.8.4.1}toxic\_bert}{33}{subsubsection.5.8.4.1}%
+\contentsline {subsubsection}{\numberline {5.8.4.2}toxic\_tokenizer}{33}{subsubsection.5.8.4.2}%
+\contentsline {section}{\numberline {5.9}Класс prod.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}worker.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Worker}{34}{section.5.9}%
+\contentsline {subsection}{\numberline {5.9.1}Подробное описание}{34}{subsection.5.9.1}%
+\contentsline {subsection}{\numberline {5.9.2}Конструктор(ы)}{34}{subsection.5.9.2}%
+\contentsline {subsubsection}{\numberline {5.9.2.1}\_\_init\_\_()}{34}{subsubsection.5.9.2.1}%
+\contentsline {subsection}{\numberline {5.9.3}Методы}{35}{subsection.5.9.3}%
+\contentsline {subsubsection}{\numberline {5.9.3.1}work()}{35}{subsubsection.5.9.3.1}%
+\contentsline {subsubsection}{\numberline {5.9.3.2}work\_once()}{35}{subsubsection.5.9.3.2}%
+\contentsline {subsection}{\numberline {5.9.4}Данные класса}{35}{subsection.5.9.4}%
+\contentsline {subsubsection}{\numberline {5.9.4.1}chat\_bots}{35}{subsubsection.5.9.4.1}%
+\contentsline {subsubsection}{\numberline {5.9.4.2}offset}{35}{subsubsection.5.9.4.2}%
+\contentsline {subsubsection}{\numberline {5.9.4.3}token}{35}{subsubsection.5.9.4.3}%
+\contentsline {chapter}{\numberline {6}Файлы}{37}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Файл \discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}py}{37}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Файл utils/bad\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}language.py}{37}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Файл utils/embeddings.py}{37}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Файл utils/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Joke\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Classifier.py}{38}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Файл utils/telegram/dialogpt.py}{38}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Файл utils/telegram/text.py}{38}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Файл utils/telegram/translate\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}emoji.py}{39}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Файл utils/telegram/web.py}{39}{section.6.8}%
+\contentsline {section}{\numberline {6.9}Файл worker.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}py}{39}{section.6.9}%
+\contentsline {chapter}{{\cyrillictext \CYRP \cyrr \cyre \cyrd \cyrm \cyre \cyrt \cyrn \cyrery \cyrishrt \ \cyru \cyrk \cyra \cyrz \cyra \cyrt \cyre \cyrl \cyrsftsn }}{41}{section*.50}%

@@ -1,29 +1,34 @@
 \hypertarget{classprod_1_1worker_1_1_worker}{}\doxysection{Класс prod.\+worker.\+Worker}
 \label{classprod_1_1worker_1_1_worker}\index{prod.worker.Worker@{prod.worker.Worker}}
+
+
+Класс для работы с Telegram A\+PI.  
+
+
 \doxysubsection*{Открытые члены}
 \begin{DoxyCompactItemize}
 \item 
 def \mbox{\hyperlink{classprod_1_1worker_1_1_worker_afd1d65a664b721b4e334c1a56bc55930}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classprod_1_1worker_1_1_worker_a3ee94778ab40140bcd295deaf4a4d476}{token}})
-\item 
+\begin{DoxyCompactList}\small\item\em Создаёт объект класса \mbox{\hyperlink{classprod_1_1worker_1_1_worker}{Worker}} и достаёт необходимые для работы файлы \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classprod_1_1worker_1_1_worker_a2a1183fd24624339b4e50e66925b5b42}{work\+\_\+once}} (self)
-\item 
+\begin{DoxyCompactList}\small\item\em Получает текущее состояние чат-\/бота и обрабатывает одно сообщение \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classprod_1_1worker_1_1_worker_a8751539d166f4a21a0fce4ef600cdb3e}{work}} (self)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Основной цикл работы программы \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Открытые атрибуты}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classprod_1_1worker_1_1_worker_a4aa3870b1e5e57da762f7c3061491567}{chat\+\_\+bots}}
-\item 
+\begin{DoxyCompactList}\small\item\em Словарь из id чата в чат-\/бот по работе с этим чатом \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classprod_1_1worker_1_1_worker_a080626801b43f3eb72a862b4daf3462d}{offset}}
-\item 
+\begin{DoxyCompactList}\small\item\em Текущее отклонение от сообщений Необходимо, чтобы старые сообщения не обрабатывались \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classprod_1_1worker_1_1_worker_a3ee94778ab40140bcd295deaf4a4d476}{token}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Токен для работы с Telegram A\+PI. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Подробное описание}
+Класс для работы с Telegram A\+PI. 
 
-
-См. определение в файле worker.\+py строка 6
+См. определение в файле worker.\+py строка 13
 
 
 
@@ -36,7 +41,16 @@ def \mbox{\hyperlink{classprod_1_1worker_1_1_worker_a8751539d166f4a21a0fce4ef600
 
 
 
-См. определение в файле worker.\+py строка 7
+Создаёт объект класса \mbox{\hyperlink{classprod_1_1worker_1_1_worker}{Worker}} и достаёт необходимые для работы файлы 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em token} & Токен для работы с Telegram A\+PI \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле worker.\+py строка 17
 
 
 
@@ -49,7 +63,11 @@ def \mbox{\hyperlink{classprod_1_1worker_1_1_worker_a8751539d166f4a21a0fce4ef600
 
 
 
-См. определение в файле worker.\+py строка 37
+Основной цикл работы программы 
+
+
+
+См. определение в файле worker.\+py строка 64
 
 \mbox{\Hypertarget{classprod_1_1worker_1_1_worker_a2a1183fd24624339b4e50e66925b5b42}\label{classprod_1_1worker_1_1_worker_a2a1183fd24624339b4e50e66925b5b42}} 
 \index{prod.worker.Worker@{prod.worker.Worker}!work\_once@{work\_once}}
@@ -59,7 +77,11 @@ def \mbox{\hyperlink{classprod_1_1worker_1_1_worker_a8751539d166f4a21a0fce4ef600
 
 
 
-См. определение в файле worker.\+py строка 12
+Получает текущее состояние чат-\/бота и обрабатывает одно сообщение 
+
+
+
+См. определение в файле worker.\+py строка 38
 
 
 
@@ -72,7 +94,11 @@ def \mbox{\hyperlink{classprod_1_1worker_1_1_worker_a8751539d166f4a21a0fce4ef600
 
 
 
-См. определение в файле worker.\+py строка 8
+Словарь из id чата в чат-\/бот по работе с этим чатом 
+
+
+
+См. определение в файле worker.\+py строка 20
 
 \mbox{\Hypertarget{classprod_1_1worker_1_1_worker_a080626801b43f3eb72a862b4daf3462d}\label{classprod_1_1worker_1_1_worker_a080626801b43f3eb72a862b4daf3462d}} 
 \index{prod.worker.Worker@{prod.worker.Worker}!offset@{offset}}
@@ -82,7 +108,11 @@ def \mbox{\hyperlink{classprod_1_1worker_1_1_worker_a8751539d166f4a21a0fce4ef600
 
 
 
-См. определение в файле worker.\+py строка 9
+Текущее отклонение от сообщений Необходимо, чтобы старые сообщения не обрабатывались 
+
+
+
+См. определение в файле worker.\+py строка 25
 
 \mbox{\Hypertarget{classprod_1_1worker_1_1_worker_a3ee94778ab40140bcd295deaf4a4d476}\label{classprod_1_1worker_1_1_worker_a3ee94778ab40140bcd295deaf4a4d476}} 
 \index{prod.worker.Worker@{prod.worker.Worker}!token@{token}}
@@ -92,10 +122,14 @@ def \mbox{\hyperlink{classprod_1_1worker_1_1_worker_a8751539d166f4a21a0fce4ef600
 
 
 
-См. определение в файле worker.\+py строка 10
+Токен для работы с Telegram A\+PI. 
+
+
+
+См. определение в файле worker.\+py строка 29
 
 
 
 Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
 \item 
-prod/\mbox{\hyperlink{worker_8py}{worker.\+py}}\end{DoxyCompactItemize}
+\mbox{\hyperlink{worker_8py}{worker.\+py}}\end{DoxyCompactItemize}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7420 64-bit) (preloaded format=pdflatex 2020.5.14)  29 MAY 2021 11:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7420 64-bit) (preloaded format=pdflatex 2020.5.14)  30 MAY 2021 16:23
 entering extended mode
 **./refman.tex
 (refman.tex
@@ -1098,28 +1098,24 @@ Package hyperref Info: Option `pageanchor' set `true' on input line 175.
 LaTeX Font Warning: Font shape `T2A/phv/bc/n' undefined
 (Font)              using `T2A/phv/m/n' instead on input line 178.
 
-(md__r_e_a_d_m_e.tex) [1
+(namespaces.tex) [1
 
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.99994pt on input line 182.
+(Font)              scaled to size 8.99994pt on input line 180.
  [2
 
 ]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 2.
-(namespaces.tex) [3] [4
+(annotated.tex) [3] [4
 
 ]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 3.
-(annotated.tex) [5] [6
+(files.tex) [5] [6
 
 ]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 4.
-(files.tex) [7] [8
-
-]
-{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 5.
 (namespacebad__language.tex
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 6
 .
@@ -1130,40 +1126,47 @@ File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 6.
 )
-(namespacedialogpt.tex) (namespaceembeddings.tex) (namespaceprod.tex
-LaTeX Font Info:    Trying to load font information for T2A+pcr on input line 2
-8.
-LaTeX Font Info:    No file T2Apcr.fd. on input line 28.
-
-
-LaTeX Font Warning: Font shape `T2A/pcr/m/n' undefined
-(Font)              using `T2A/cmr/m/n' instead on input line 28.
-
-[9]) (namespaceprod_1_1worker.tex) (namespacetext.tex [10]
+(namespacedialogpt.tex
 
 LaTeX Font Warning: Font shape `T2A/phv/m/it' undefined
 (Font)              using `T2A/phv/m/n' instead on input line 12.
 
+) (namespaceembeddings.tex) (namespace_joke_classifier.tex) (namespaceprod.tex
+[7]
+LaTeX Font Info:    Trying to load font information for T2A+pcr on input line 3
+6.
+LaTeX Font Info:    No file T2Apcr.fd. on input line 36.
+
+
+LaTeX Font Warning: Font shape `T2A/pcr/m/n' undefined
+(Font)              using `T2A/cmr/m/n' instead on input line 36.
+
+[8]) (namespaceprod_1_1worker.tex) (namespacetext.tex
 
 LaTeX Font Warning: Font shape `T2A/pcr/m/it' undefined
-(Font)              using `T2A/pcr/m/n' instead on input line 25.
+(Font)              using `T2A/pcr/m/n' instead on input line 27.
+
+[9]
+Underfull \hbox (badness 10000) detected at line 38
+[][][]
+ []
 
 
-Underfull \hbox (badness 10000) detected at line 36
+Underfull \hbox (badness 10000) detected at line 55
+[][][]
+ []
+
+[10]
+Underfull \hbox (badness 10000) detected at line 77
+[][][]
+ []
+
+) (namespacetranslate__emoji.tex
+Underfull \hbox (badness 10000) detected at line 38
 [][][]
  []
 
 [11]
-Underfull \hbox (badness 10000) detected at line 58
-[][][]
- []
-
-) (namespacetranslate__emoji.tex [12]) (namespaceweb.tex
-Underfull \hbox (badness 10000) detected at line 36
-[][][]
- []
-
-[13]
 Underfull \hbox (badness 10000) detected at line 46
 [][][]
  []
@@ -1173,62 +1176,121 @@ Underfull \hbox (badness 10000) detected at line 63
 [][][]
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 8
-6.
+
+Underfull \hbox (badness 10000) detected at line 71
+[][][]
+ []
+
+[12]
+Underfull \hbox (badness 10000) detected at line 93
+[][][]
+ []
+
+) (namespaceweb.tex
+Underfull \hbox (badness 10000) detected at line 38
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 41
+[][][]
+ []
+
+[13]
+Underfull \hbox (badness 10000) detected at line 58
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 68
+[][][]
+ []
+
+[14]
+Underfull \hbox (badness 10000) detected at line 85
+[][][]
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 1
+08.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\ts1pcr.fd"
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
-)) [14]
-{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 6.
+)) [15] [16
+
+]
+{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 5.
 (classdialogpt_1_1_dialo_g_p_t.tex
-Underfull \hbox (badness 10000) in paragraph at lines 10--12
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
 []\T2A/pcr/m/n/10 def [] (self, bot[]_[]input[]_[]ids, num[]_[]return[]_[]seque
 nces=1, max[]_[]length=512, no[]_[]
  []
 
 
-Underfull \hbox (badness 2591) in paragraph at lines 10--12
+Underfull \hbox (badness 2591) in paragraph at lines 15--16
 \T2A/pcr/m/n/10 repeat[]_[]ngram[]_[]size=3, do[]_[]sample=True, top[]_[]k=50, 
 top[]_[]p=0.[]9, temperature=0.[]6, mask[]
  []
 
 
-Underfull \hbox (badness 5667) in paragraph at lines 10--12
+Underfull \hbox (badness 5667) in paragraph at lines 15--16
 \T2A/pcr/m/n/10 _[]token[]_[]id=tokenizer.[]mask[]_[]token[]_[]id, eos[]_[]toke
 n[]_[]id=tokenizer.[]eos[]_[]token[]_[]id, unk[]_[]token[]_[]
  []
 
 
-Underfull \hbox (badness 7379) in paragraph at lines 30--32
+Underfull \hbox (badness 7379) in paragraph at lines 35--36
 [][] \T2A/pcr/m/n/10 = Auto[]Tokenizer.[]from[]_[]pretrained("Grossmend/rudialo
 gpt3[]_[]medium[]_[]based[]_[]on[]_[]
  []
 
-[15
-
-]
+[17]
 LaTeX Font Info:    Font shape `TS1/pcr/m/it' in size <8> not available
-(Font)              Font shape `TS1/pcr/m/sl' tried instead on input line 61.
- [16]
-Underfull \hbox (badness 7379) in paragraph at lines 134--135
+(Font)              Font shape `TS1/pcr/m/sl' tried instead on input line 75.
+ [18]
+Underfull \hbox (badness 10000) detected at line 86
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 118
+[][][]
+ []
+
+[19]
+Underfull \hbox (badness 10000) detected at line 140
+[][][]
+ []
+
+
+Underfull \hbox (badness 7379) in paragraph at lines 196--197
 \T2A/pcr/m/it/8 dialogpt.[]Dialo[]G[]P[]T.[]tokenizer = Auto[]Tokenizer.[]from[
 ]_[]pretrained("Grossmend/rudialogpt3[]_[]medium[]_[]based[]_[]on[]_[]gpt2")
  []
 
-) (classembeddings_1_1_embedding_creator.tex [17] [18] [19] [20])
-(classbad__language_1_1_merger.tex [21])
-(classembeddings_1_1_question_finder.tex [22] [23])
-(classbad__language_1_1_swear_detector.tex [24] [25])
-(classbad__language_1_1_toxic_classifier.tex [26] [27])
-(classprod_1_1worker_1_1_worker.tex [28] [29]) [30]
-{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 7.
-(swear_8txt.tex) (____init_____8py.tex) (bad__language_8py.tex)
-(embeddings_8py.tex) (dialogpt_8py.tex [31
+[20]) (classembeddings_1_1_embedding_creator.tex [21] [22] [23])
+(class_joke_classifier.tex) (class_joke_classifier_1_1_joke_classifier.tex
+[24]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-]) (text_8py.tex)
-(translate__emoji_8py.tex) (web_8py.tex [32]) (worker_8py.tex)
-(_r_e_a_d_m_e_8md.tex) (requirements_8txt.tex) [33] [34
+ [25]
+Underfull \hbox (badness 10000) detected at line 66
+[][][]
+ []
 
-] (refman.ind [35
+) (classbad__language_1_1_merger.tex [26] [27])
+(classembeddings_1_1_question_finder.tex [28])
+(classbad__language_1_1_swear_detector.tex [29] [30])
+(classbad__language_1_1_toxic_classifier.tex [31] [32])
+(classprod_1_1worker_1_1_worker.tex [33] [34]) [35] [36
+
+]
+{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 6.
+(____init_____8py.tex) (bad__language_8py.tex) (embeddings_8py.tex)
+(_joke_classifier_8py.tex [37]) (dialogpt_8py.tex) (text_8py.tex)
+(translate__emoji_8py.tex [38]) (web_8py.tex) (worker_8py.tex) [39] [40
+
+]
+(refman.ind [41
 
 
 ]
@@ -1238,32 +1300,32 @@ Make it at least 12.51453pt.
 We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
-[36] [37
+[42] [43
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 227.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 227.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 224.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 224.
  (refman.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 227.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 227.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 224.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 224.
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: A6591723B69E2247074AB114881CA782;26915.
+(rerunfilecheck)             Checksum: 98CCD19A00123DFA1E86F4E7F16EBCBD;30026.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 18591 strings out of 480811
- 281934 string characters out of 2905898
- 579393 words of memory out of 3000000
- 33868 multiletter control sequences out of 15000+200000
+ 18663 strings out of 480811
+ 283775 string characters out of 2905898
+ 584214 words of memory out of 3000000
+ 33898 multiletter control sequences out of 15000+200000
  548098 words of font info for 53 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,16n,97p,1009b,659s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,16n,97p,1009b,699s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc} <C:\Users\dvasilev\
-AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0900.pk> <C:\User
-s\dvasilev\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0800.p
+AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0800.pk> <C:\User
+s\dvasilev\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0900.p
 k> <C:\Users\dvasilev\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600
 \larm2488.pk> <C:\Users\dvasilev\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh
 -t2a/dpi600\larm2074.pk> <C:\Users\dvasilev\AppData\Local\MiKTeX\2.9\fonts/pk/l
@@ -1276,9 +1338,9 @@ KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw
 /courier/ucrro8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr
 8a.pfb>
-Output written on refman.pdf (43 pages, 407995 bytes).
+Output written on refman.pdf (49 pages, 450484 bytes).
 PDF statistics:
- 1892 PDF objects out of 2073 (max. 8388607)
- 323 named destinations out of 1000 (max. 500000)
- 1129 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2102 PDF objects out of 2487 (max. 8388607)
+ 365 named destinations out of 1000 (max. 500000)
+ 1249 words of extra memory for PDF output out of 10000 (max. 10000000)
 

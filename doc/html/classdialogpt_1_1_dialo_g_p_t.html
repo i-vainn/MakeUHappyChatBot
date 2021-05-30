@@ -85,7 +85,6 @@ $(function() {
 <tr class="memdesc:a9f7e85ba1eb378df1bf57bbeef151e35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаёт объект класса <a class="el" href="classdialogpt_1_1_dialo_g_p_t.html" title="Класс, содержащий в себе интерфейс работы с DialoGPT.">DialoGPT</a> для отдельного чата  <a href="classdialogpt_1_1_dialo_g_p_t.html#a9f7e85ba1eb378df1bf57bbeef151e35">Подробнее...</a><br /></td></tr>
 <tr class="separator:a9f7e85ba1eb378df1bf57bbeef151e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9030169428af69ffd3bde4d88fa1db94"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdialogpt_1_1_dialo_g_p_t.html#a9030169428af69ffd3bde4d88fa1db94">get_length_param</a> (self, str text)</td></tr>
-<tr class="memdesc:a9030169428af69ffd3bde4d88fa1db94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает длину текста, которую стоит сгенерировать боту  <a href="classdialogpt_1_1_dialo_g_p_t.html#a9030169428af69ffd3bde4d88fa1db94">Подробнее...</a><br /></td></tr>
 <tr class="separator:a9030169428af69ffd3bde4d88fa1db94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a710d7e40d32e1571a54c06414632cfee"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdialogpt_1_1_dialo_g_p_t.html#a710d7e40d32e1571a54c06414632cfee">generate</a> (self, bot_input_ids, num_return_sequences=1, max_length=512, no_repeat_ngram_size=3, do_sample=True, top_k=50, top_p=0.9, temperature=0.6, mask_token_id=tokenizer.mask_token_id, eos_token_id=tokenizer.eos_token_id, unk_token_id=tokenizer.unk_token_id, pad_token_id=tokenizer.pad_token_id, device='cuda')</td></tr>
 <tr class="memdesc:a710d7e40d32e1571a54c06414632cfee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Передаёт агрументы в функцию self.model.generate и вызывает её  <a href="classdialogpt_1_1_dialo_g_p_t.html#a710d7e40d32e1571a54c06414632cfee">Подробнее...</a><br /></td></tr>
@@ -97,16 +96,19 @@ $(function() {
 <tr class="memdesc:af125e54ecf1b927033c723046c82f7a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает текст с возможной командой  <a href="classdialogpt_1_1_dialo_g_p_t.html#af125e54ecf1b927033c723046c82f7a2">Подробнее...</a><br /></td></tr>
 <tr class="separator:af125e54ecf1b927033c723046c82f7a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15964d6becb1f994fadb54fed7e00814"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdialogpt_1_1_dialo_g_p_t.html#a15964d6becb1f994fadb54fed7e00814">restart</a> (self)</td></tr>
-<tr class="memdesc:a15964d6becb1f994fadb54fed7e00814"><td class="mdescLeft">&#160;</td><td class="mdescRight">Забывает предыдущий диалог  <a href="classdialogpt_1_1_dialo_g_p_t.html#a15964d6becb1f994fadb54fed7e00814">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:a15964d6becb1f994fadb54fed7e00814"><td class="mdescLeft">&#160;</td><td class="mdescRight">Забывает все предыдущие фразы в диалоге  <a href="classdialogpt_1_1_dialo_g_p_t.html#a15964d6becb1f994fadb54fed7e00814">Подробнее...</a><br /></td></tr>
 <tr class="separator:a15964d6becb1f994fadb54fed7e00814"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Открытые атрибуты</h2></td></tr>
 <tr class="memitem:a0f98d39513cc558c9a33ed89675e610f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdialogpt_1_1_dialo_g_p_t.html#a0f98d39513cc558c9a33ed89675e610f">chat_history</a></td></tr>
+<tr class="memdesc:a0f98d39513cc558c9a33ed89675e610f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Содержимое текущего диалога  <a href="classdialogpt_1_1_dialo_g_p_t.html#a0f98d39513cc558c9a33ed89675e610f">Подробнее...</a><br /></td></tr>
 <tr class="separator:a0f98d39513cc558c9a33ed89675e610f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae554b8aa68bce5de3e6138b172201aeb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdialogpt_1_1_dialo_g_p_t.html#ae554b8aa68bce5de3e6138b172201aeb">user_input_size</a></td></tr>
+<tr class="memdesc:ae554b8aa68bce5de3e6138b172201aeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Размеры каждой фразы диалога  <a href="classdialogpt_1_1_dialo_g_p_t.html#ae554b8aa68bce5de3e6138b172201aeb">Подробнее...</a><br /></td></tr>
 <tr class="separator:ae554b8aa68bce5de3e6138b172201aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a530bab86aab98e328ddb7f4bc18dce98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdialogpt_1_1_dialo_g_p_t.html#a530bab86aab98e328ddb7f4bc18dce98">window_size</a></td></tr>
+<tr class="memdesc:a530bab86aab98e328ddb7f4bc18dce98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Число запоминаемых фраз в диалоге  <a href="classdialogpt_1_1_dialo_g_p_t.html#a530bab86aab98e328ddb7f4bc18dce98">Подробнее...</a><br /></td></tr>
 <tr class="separator:a530bab86aab98e328ddb7f4bc18dce98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
@@ -115,13 +117,13 @@ $(function() {
 <tr class="memdesc:a027a43bc2a377fcdf0537e78a9c72277"><td class="mdescLeft">&#160;</td><td class="mdescRight">Токенайзер модели <a class="el" href="classdialogpt_1_1_dialo_g_p_t.html" title="Класс, содержащий в себе интерфейс работы с DialoGPT.">DialoGPT</a>.  <a href="classdialogpt_1_1_dialo_g_p_t.html#a027a43bc2a377fcdf0537e78a9c72277">Подробнее...</a><br /></td></tr>
 <tr class="separator:a027a43bc2a377fcdf0537e78a9c72277"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9603b216b1ed4304e674f872f2c4a995"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdialogpt_1_1_dialo_g_p_t.html#a9603b216b1ed4304e674f872f2c4a995">model</a> = AutoModelForCausalLM.from_pretrained(&quot;Grossmend/rudialogpt3_medium_based_on_gpt2&quot;)</td></tr>
-<tr class="memdesc:a9603b216b1ed4304e674f872f2c4a995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Токенайзер модели <a class="el" href="classdialogpt_1_1_dialo_g_p_t.html" title="Класс, содержащий в себе интерфейс работы с DialoGPT.">DialoGPT</a>.  <a href="classdialogpt_1_1_dialo_g_p_t.html#a9603b216b1ed4304e674f872f2c4a995">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:a9603b216b1ed4304e674f872f2c4a995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сама модель <a class="el" href="classdialogpt_1_1_dialo_g_p_t.html" title="Класс, содержащий в себе интерфейс работы с DialoGPT.">DialoGPT</a>.  <a href="classdialogpt_1_1_dialo_g_p_t.html#a9603b216b1ed4304e674f872f2c4a995">Подробнее...</a><br /></td></tr>
 <tr class="separator:a9603b216b1ed4304e674f872f2c4a995"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <div class="textblock"><p>Класс, содержащий в себе интерфейс работы с <a class="el" href="classdialogpt_1_1_dialo_g_p_t.html" title="Класс, содержащий в себе интерфейс работы с DialoGPT.">DialoGPT</a>. </p>
 
-<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00010">10</a></p>
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00011">11</a></p>
 </div><h2 class="groupheader">Конструктор(ы)</h2>
 <a id="a9f7e85ba1eb378df1bf57bbeef151e35"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9f7e85ba1eb378df1bf57bbeef151e35">&#9670;&nbsp;</a></span>__init__()</h2>
@@ -157,7 +159,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00020">20</a></p>
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00022">22</a></p>
 
 </div>
 </div>
@@ -269,7 +271,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd>Токены, сгенерированные моделью </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00043">43</a></p>
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00050">50</a></p>
 
 </div>
 </div>
@@ -299,16 +301,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p>Возвращает длину текста, которую стоит сгенерировать боту </p>
-<dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">text</td><td>Текст пользователя без команды </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Возвращает</dt><dd>Длину текста, которую стоит сгенерировать боту, или - если она безгранична </dd></dl>
-
-<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00028">28</a></p>
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00035">35</a></p>
 
 </div>
 </div>
@@ -347,7 +340,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd>Итоговый текст </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00102">102</a></p>
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00109">109</a></p>
 
 </div>
 </div>
@@ -386,7 +379,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd>Ответ на текст </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00075">75</a></p>
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00082">82</a></p>
 
 </div>
 </div>
@@ -406,9 +399,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p>Забывает предыдущий диалог </p>
+<p>Забывает все предыдущие фразы в диалоге </p>
 
-<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00133">133</a></p>
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00144">144</a></p>
 
 </div>
 </div>
@@ -425,7 +418,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00021">21</a></p>
+<p>Содержимое текущего диалога </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00025">25</a></p>
 
 </div>
 </div>
@@ -449,9 +444,9 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p>Токенайзер модели <a class="el" href="classdialogpt_1_1_dialo_g_p_t.html" title="Класс, содержащий в себе интерфейс работы с DialoGPT.">DialoGPT</a>. </p>
+<p>Сама модель <a class="el" href="classdialogpt_1_1_dialo_g_p_t.html" title="Класс, содержащий в себе интерфейс работы с DialoGPT.">DialoGPT</a>. </p>
 
-<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00016">16</a></p>
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00017">17</a></p>
 
 </div>
 </div>
@@ -477,7 +472,7 @@ $(function() {
 
 <p>Токенайзер модели <a class="el" href="classdialogpt_1_1_dialo_g_p_t.html" title="Класс, содержащий в себе интерфейс работы с DialoGPT.">DialoGPT</a>. </p>
 
-<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00013">13</a></p>
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00014">14</a></p>
 
 </div>
 </div>
@@ -493,7 +488,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00022">22</a></p>
+<p>Размеры каждой фразы диалога </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00029">29</a></p>
 
 </div>
 </div>
@@ -509,12 +506,14 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00023">23</a></p>
+<p>Число запоминаемых фраз в диалоге </p>
+
+<p class="definition">См. определение в файле <a class="el" href="dialogpt_8py_source.html">dialogpt.py</a> строка <a class="el" href="dialogpt_8py_source.html#l00033">33</a></p>
 
 </div>
 </div>
 <hr/>Объявления и описания членов класса находятся в файле:<ul>
-<li>prod/utils/telegram/<a class="el" href="dialogpt_8py_source.html">dialogpt.py</a></li>
+<li>utils/telegram/<a class="el" href="dialogpt_8py_source.html">dialogpt.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

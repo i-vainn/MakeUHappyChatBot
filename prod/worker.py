@@ -2,13 +2,39 @@ from utils.telegram.dialogpt import DialoGPT
 from utils.telegram.web import *
 from utils.telegram.text import *
 
+from pathlib import Path
+import gdown
 
+## @package prod.worker
+# Содержит класс Worker
+
+## @class Worker
+# Класс для работы с Telegram API
 class Worker:
+    
+    ## Создаёт объект класса Worker и достаёт необходимые для работы файлы
+    # @param token Токен для работы с Telegram API
     def __init__(self, token):
+        ## @var chat_bots
+        # Словарь из id чата в чат-бот по работе с этим чатом
         self.chat_bots = {}
+        
+        ## @var offset
+        # Текущее отклонение от сообщений
+        # Необходимо, чтобы старые сообщения не обрабатывались
         self.offset = 0
+        
+        ## @var token
+        # Токен для работы с Telegram API
         self.token = token
+        
+        Path('models/joke_classifier').mkdir(parents=True, exist_ok=True)
+        url = 'https://drive.google.com/uc?id-1-3IxKzOlWu32uZ-mk2OI7mF6S4101b8n'
+        gdown.download(url, 'models/joke_classifier/config.json', quiet=False)
+        url = 'https://drive.google.com/uc?id=1-6AN-3KbLHNH6w0Kmy3Hbp2WEWdCfhdA'
+        gdown.download(url, 'models/joke_classifier/pytorch_model.bin', quiet=False)
 
+    ## Получает текущее состояние чат-бота и обрабатывает одно сообщение
     def work_once(self):
         result = get_updates(self.token, self.offset)
         if len(result['result']) == 0:
@@ -34,6 +60,7 @@ class Worker:
             print()
         self.offset = int(result['update_id']) + 1
 
+    ## Основной цикл работы программы
     def work(self):
         try:
             print('Chat-bot started')

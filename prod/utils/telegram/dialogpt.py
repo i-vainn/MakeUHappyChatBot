@@ -23,9 +23,13 @@ class DialoGPT:
         ## @var chat_history
         # Содержимое текущего диалога
         self.chat_history = []
+        
         ## @var user_input_size
         # Размеры каждой фразы диалога
         self.user_input_size = []
+        
+        ## @var window_size
+        # Число запоминаемых фраз в диалоге
         self.window_size = window_size
 
     def get_length_param(self, text: str) -> str:
@@ -136,6 +140,7 @@ class DialoGPT:
         else:
             return self.process_text(text)
     
+    ## Забывает все предыдущие фразы в диалоге
     def restart(self):
         self.chat_history = []
         self.user_input_size = []
