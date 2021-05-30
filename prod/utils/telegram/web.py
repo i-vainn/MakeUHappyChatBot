@@ -34,14 +34,23 @@ def send_message(token, chat_id, text):
 # @param chat_id id чата
 # @param url Ссылка на фотографию
 def send_photo(token, chat_id, url):
-    send_photo_url = f'{api_url}{token}/sendPhoto?chat_id={chat_id}&photo={photo}'
+    send_photo_url = f'{api_url}{token}/sendPhoto?chat_id={chat_id}&photo={url}'
     requests.get(send_photo_url)
 
 
-## Вовзращает ссылку на случайную картинку с котиком
+## Вовзращает ссылку на случайную картинку с котиком.
 # @returns Ссылка на картинку с котиком
 def get_cat():
     return 'https://i.redd.it/yzwguryrul421.jpg'
+
+
+## Отправляет картинку с котиком в чат.
+# @param token Токен для чат-бота
+# @param chat_id id чата
+def send_cat(token, chat_id):
+    photo = get_cat()
+    send_photo(token, chat_id, get_cat())
+
 
 
 ## Достаёт случайный совет

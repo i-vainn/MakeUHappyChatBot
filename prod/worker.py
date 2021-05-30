@@ -46,7 +46,7 @@ class Worker:
             chat_id = message['chat']['id']
             
             if chat_id not in self.chat_bots:
-                self.chat_bots[chat_id] = DialoGPT()
+                self.chat_bots[chat_id] = DialoGPT(self.token, chat_id)
             chat_bot = self.chat_bots[chat_id]
 
             text = get_text(message)

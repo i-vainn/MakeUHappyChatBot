@@ -22,8 +22,18 @@ class DialoGPT:
     
     
     ## Создаёт объект класса DialoGPT для отдельного чата
+    # @param token Токен чат-бота
+    # @param chat_id id чата
     # @param window_size Число диалогов, которых запоминает бот
-    def __init__(self, window_size=10):
+    def __init__(self, token, chat_id, window_size=10):
+        ## @var token
+        # Токен, по которому бот может связаться с Telegram API
+        self.token = token
+
+        ## @var chat_id
+        # Id чата, в котором общается бот
+        self.chat_id = chat_id
+        
         self.joke_classifier = JokeClassifier(bert_path='models/joke_classifier')
         
         ## @var chat_history
@@ -146,7 +156,7 @@ class DialoGPT:
         elif text.startswith(advice):
             return get_advice()
         elif text.startswith(cat):
-            send_cat()
+            send_cat(self.token, self.chat_id)
             return ''
         elif text.startswith(joke):
             return get_joke()
