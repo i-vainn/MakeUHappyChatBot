@@ -50,7 +50,8 @@ class Worker:
             chat_bot = self.chat_bots[chat_id]
 
             text = get_text(message)
-            print('Received message from:', message['from']['first_name'], message['from']['last_name'])
+            from_user = message['from']
+            print('Received message from:', from_user['first_name'] if 'first_name' in from_user else '', from_user['last_name'] if 'last_name' in from_user else '')
             print('Working with chat:', chat_id)
             print('Received message:', text)
             

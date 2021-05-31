@@ -1,7 +1,7 @@
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from utils.telegram.web import *
-from utils.telegram.text import get_joke
+from utils.telegram.text import *
 from utils.JokeClassifier import JokeClassifier
 
 ## @package dialogpt
@@ -140,6 +140,8 @@ class DialoGPT:
     # @param text Текст, в котором может содержаться команда
     # @returns Итоговый текст
     def get_response(self, text):
+        text = parse_command(text)
+
         start = '/start'
         restart = '/restart'
         advice = '/advice'

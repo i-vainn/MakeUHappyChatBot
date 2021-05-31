@@ -30,3 +30,49 @@ def get_text(message):
 def get_joke():
     jokes = open('../data/jokes_good.txt').readlines()
     return random.choice(jokes).strip()
+
+
+## @var cmd_to_text
+# Словарь из пар (команда, способы скрыть команду в тексте)
+cmd_to_text = {
+    '/restart' : [
+        'забудь все что я сказал',
+        'забудь все, что я сказал'
+    ],
+
+    '/advice' : [
+        'дай совет',
+        'дай случайный совет',
+        'посоветуй мне'
+    ],
+
+    '/joke' : [
+        'расскажи анекдот',
+        'расскажи шутку',
+        'скажи анекдот',
+        'скинь анекдот',
+        'повесели меня'
+    ],
+
+    '/cat' : [
+        'скинь котиков',
+        'скинь котика',
+        'скинь картинки котиков',
+        'скинь картинку котика'
+    ]
+}
+
+## Определяет, скрыта ли команда в тексте.
+# Если да, то заменяет текст на эту команду.
+# @param Текст пользователя
+# @returns Текст пользователя или команда пользователя
+def parse_command(text):
+    text_parse = text.strip()
+    text_parse = text_parse.replace('ё', 'е').lower()
+    for key in cmd_to_text.keys():
+        if text.startswith(key):
+            return key
+        for substr in cmd_to_text[key]:
+            if substr in text:
+                return key
+    return text
