@@ -2,7 +2,7 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from utils.telegram.web import *
 from utils.telegram.text import *
-from utils.JokeClassifier import JokeClassifier
+from utils.joke_classifier import JokeClassifier
 
 ## @package dialogpt
 # Содержит класс чат-бота DialoGPT

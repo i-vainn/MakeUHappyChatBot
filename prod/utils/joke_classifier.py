@@ -25,10 +25,10 @@ class JokeClassifier:
                  tokenizer_path = 'DeepPavlov/rubert-base-cased',
                  ):
         
-        if self.tokenizer != None:
+        if self.tokenizer == None:
             self.tokenizer = BertTokenizer.from_pretrained(tokenizer_path)
         
-        if self.model != None:
+        if self.model == None:
             self.model = BertForSequenceClassification.from_pretrained(bert_path).cuda()
 
     ## Выдаёт вероятность наличия шутки во входном сообщении
