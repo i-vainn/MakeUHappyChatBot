@@ -13,7 +13,16 @@ def \mbox{\hyperlink{namespacetext_adece9a8b90ff4430edf5e1fc9452fe96}{extract\+\
 def \mbox{\hyperlink{namespacetext_a68c3c7d336638d9970123c3d53bff67a}{get\+\_\+text}} (message)
 \begin{DoxyCompactList}\small\item\em Получает и обрабатывает текст из сообщения \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{namespacetext_a909cc637dec2343063ccfa3e7e81bb44}{get\+\_\+joke}} ()
-\begin{DoxyCompactList}\small\item\em Выводит случайный анекдот из набора случайных анекдотов \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Выводит случайный анекдот из набора случайных анекдотов \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacetext_a03b34397a7d81b37a5fb93d8cf2c7c39}{parse\+\_\+command}} (text)
+\begin{DoxyCompactList}\small\item\em Определяет, скрыта ли команда в тексте. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{namespacetext_ad40f800432ee11e0b6b5166a686586dc}{verbs}}
+\begin{DoxyCompactList}\small\item\em Глаголы для активации команд \end{DoxyCompactList}\item 
+dictionary \mbox{\hyperlink{namespacetext_a7afa814aba142921ec5cce6acccf7237}{cmd\+\_\+to\+\_\+text}}
+\begin{DoxyCompactList}\small\item\em Словарь из пар (команда, способы скрыть команду в тексте) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Подробное описание}
@@ -80,4 +89,74 @@ def \mbox{\hyperlink{namespacetext_a909cc637dec2343063ccfa3e7e81bb44}{get\+\_\+j
 
 
 См. определение в файле text.\+py строка 24
+
+\mbox{\Hypertarget{namespacetext_a03b34397a7d81b37a5fb93d8cf2c7c39}\label{namespacetext_a03b34397a7d81b37a5fb93d8cf2c7c39}} 
+\index{text@{text}!parse\_command@{parse\_command}}
+\index{parse\_command@{parse\_command}!text@{text}}
+\doxysubsubsection{\texorpdfstring{parse\_command()}{parse\_command()}}
+{\footnotesize\ttfamily def text.\+parse\+\_\+command (\begin{DoxyParamCaption}\item[{}]{text }\end{DoxyParamCaption})}
+
+
+
+Определяет, скрыта ли команда в тексте. 
+
+Если да, то заменяет текст на эту команду. 
+\begin{DoxyParams}{Аргументы}
+{\em Текст} & пользователя \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Текст пользователя или команда пользователя 
+\end{DoxyReturn}
+
+
+См. определение в файле text.\+py строка 93
+
+
+
+\doxysubsection{Переменные}
+\mbox{\Hypertarget{namespacetext_a7afa814aba142921ec5cce6acccf7237}\label{namespacetext_a7afa814aba142921ec5cce6acccf7237}} 
+\index{text@{text}!cmd\_to\_text@{cmd\_to\_text}}
+\index{cmd\_to\_text@{cmd\_to\_text}!text@{text}}
+\doxysubsubsection{\texorpdfstring{cmd\_to\_text}{cmd\_to\_text}}
+{\footnotesize\ttfamily text.\+cmd\+\_\+to\+\_\+text}
+
+
+
+Словарь из пар (команда, способы скрыть команду в тексте) 
+
+
+
+См. определение в файле text.\+py строка 54
+
+\mbox{\Hypertarget{namespacetext_ad40f800432ee11e0b6b5166a686586dc}\label{namespacetext_ad40f800432ee11e0b6b5166a686586dc}} 
+\index{text@{text}!verbs@{verbs}}
+\index{verbs@{verbs}!text@{text}}
+\doxysubsubsection{\texorpdfstring{verbs}{verbs}}
+{\footnotesize\ttfamily text.\+verbs}
+
+{\bfseries Инициализатор}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  [}
+\DoxyCodeLine{2     \textcolor{stringliteral}{'дай'},}
+\DoxyCodeLine{3     \textcolor{stringliteral}{'скинь'},}
+\DoxyCodeLine{4     \textcolor{stringliteral}{'расскажи'},}
+\DoxyCodeLine{5     \textcolor{stringliteral}{'покажи'},}
+\DoxyCodeLine{6     \textcolor{stringliteral}{'скажи'},}
+\DoxyCodeLine{7     \textcolor{stringliteral}{'го'},}
+\DoxyCodeLine{8     \textcolor{stringliteral}{'давай'},}
+\DoxyCodeLine{9     \textcolor{stringliteral}{'хочу'},}
+\DoxyCodeLine{10     \textcolor{stringliteral}{'напиши'},}
+\DoxyCodeLine{11     \textcolor{stringliteral}{'еще'},}
+\DoxyCodeLine{12     \textcolor{stringliteral}{'желаю'}}
+\DoxyCodeLine{13 ]}
+
+\end{DoxyCode}
+
+
+Глаголы для активации команд 
+
+
+
+См. определение в файле text.\+py строка 37
 

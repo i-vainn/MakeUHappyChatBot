@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['labels_149',['labels',['../classembeddings_1_1_question_finder.html#a18530c73b2ba54c28be6987021c1e975',1,'embeddings::QuestionFinder']]],
-  ['lemmatizer_150',['lemmatizer',['../classbad__language_1_1_swear_detector.html#a9647a224573466f0e36aa3cf25344b35',1,'bad_language::SwearDetector']]]
+  ['joke_5fclassifier_163',['joke_classifier',['../classdialogpt_1_1_dialo_g_p_t.html#a217e46fddb284e8bbd89947a954f9998',1,'dialogpt::DialoGPT']]]
 ];

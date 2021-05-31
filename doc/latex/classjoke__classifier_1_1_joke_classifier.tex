@@ -1,0 +1,113 @@
+\hypertarget{classjoke__classifier_1_1_joke_classifier}{}\doxysection{Класс joke\+\_\+classifier.\+Joke\+Classifier}
+\label{classjoke__classifier_1_1_joke_classifier}\index{joke\_classifier.JokeClassifier@{joke\_classifier.JokeClassifier}}
+
+
+Класс для определения, является ли сообщение шуткой  
+
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classjoke__classifier_1_1_joke_classifier_ac3d9019c18a97da84a6433c610433ad6}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, bert\+\_\+path, tokenizer\+\_\+path=\textquotesingle{}Deep\+Pavlov/rubert-\/base-\/cased\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Создаёт объект класса \mbox{\hyperlink{classjoke__classifier_1_1_joke_classifier}{Joke\+Classifier}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classjoke__classifier_1_1_joke_classifier_a8a8cd255d02fb48a1cc68970f02c4b87}{\+\_\+\+\_\+call\+\_\+\+\_\+}} (self, sentence)
+\begin{DoxyCompactList}\small\item\em Выдаёт вероятность наличия шутки во входном сообщении \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Статические открытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classjoke__classifier_1_1_joke_classifier_af6b42c9962cb4e6bc1b1968bd597a5b9}{tokenizer}} = None
+\begin{DoxyCompactList}\small\item\em Токенайзер \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classjoke__classifier_1_1_joke_classifier_aa486aeb226f9d507f276b921f30d6749}{model}} = None
+\begin{DoxyCompactList}\small\item\em Модель классификатора \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для определения, является ли сообщение шуткой 
+
+См. определение в файле joke\+\_\+classifier.\+py строка 10
+
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classjoke__classifier_1_1_joke_classifier_ac3d9019c18a97da84a6433c610433ad6}\label{classjoke__classifier_1_1_joke_classifier_ac3d9019c18a97da84a6433c610433ad6}} 
+\index{joke\_classifier.JokeClassifier@{joke\_classifier.JokeClassifier}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!joke\_classifier.JokeClassifier@{joke\_classifier.JokeClassifier}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def joke\+\_\+classifier.\+Joke\+Classifier.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{bert\+\_\+path,  }\item[{}]{tokenizer\+\_\+path = {\ttfamily \textquotesingle{}DeepPavlov/rubert-\/base-\/cased\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+Создаёт объект класса \mbox{\hyperlink{classjoke__classifier_1_1_joke_classifier}{Joke\+Classifier}}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em tokenizer\+\_\+path} & Путь к токенайзеру \\
+\hline
+{\em bert\+\_\+path} & Путь к модели B\+E\+RT \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле joke\+\_\+classifier.\+py строка 23
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classjoke__classifier_1_1_joke_classifier_a8a8cd255d02fb48a1cc68970f02c4b87}\label{classjoke__classifier_1_1_joke_classifier_a8a8cd255d02fb48a1cc68970f02c4b87}} 
+\index{joke\_classifier.JokeClassifier@{joke\_classifier.JokeClassifier}!\_\_call\_\_@{\_\_call\_\_}}
+\index{\_\_call\_\_@{\_\_call\_\_}!joke\_classifier.JokeClassifier@{joke\_classifier.JokeClassifier}}
+\doxysubsubsection{\texorpdfstring{\_\_call\_\_()}{\_\_call\_\_()}}
+{\footnotesize\ttfamily def joke\+\_\+classifier.\+Joke\+Classifier.\+\_\+\+\_\+call\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sentence }\end{DoxyParamCaption})}
+
+
+
+Выдаёт вероятность наличия шутки во входном сообщении 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em sentence} & Входное предложение \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Вероятность наличия шутки 
+\end{DoxyReturn}
+
+
+См. определение в файле joke\+\_\+classifier.\+py строка 37
+
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classjoke__classifier_1_1_joke_classifier_aa486aeb226f9d507f276b921f30d6749}\label{classjoke__classifier_1_1_joke_classifier_aa486aeb226f9d507f276b921f30d6749}} 
+\index{joke\_classifier.JokeClassifier@{joke\_classifier.JokeClassifier}!model@{model}}
+\index{model@{model}!joke\_classifier.JokeClassifier@{joke\_classifier.JokeClassifier}}
+\doxysubsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily joke\+\_\+classifier.\+Joke\+Classifier.\+model = None\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Модель классификатора 
+
+
+
+См. определение в файле joke\+\_\+classifier.\+py строка 18
+
+\mbox{\Hypertarget{classjoke__classifier_1_1_joke_classifier_af6b42c9962cb4e6bc1b1968bd597a5b9}\label{classjoke__classifier_1_1_joke_classifier_af6b42c9962cb4e6bc1b1968bd597a5b9}} 
+\index{joke\_classifier.JokeClassifier@{joke\_classifier.JokeClassifier}!tokenizer@{tokenizer}}
+\index{tokenizer@{tokenizer}!joke\_classifier.JokeClassifier@{joke\_classifier.JokeClassifier}}
+\doxysubsubsection{\texorpdfstring{tokenizer}{tokenizer}}
+{\footnotesize\ttfamily joke\+\_\+classifier.\+Joke\+Classifier.\+tokenizer = None\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Токенайзер 
+
+
+
+См. определение в файле joke\+\_\+classifier.\+py строка 13
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+utils/\mbox{\hyperlink{joke__classifier_8py}{joke\+\_\+classifier.\+py}}\end{DoxyCompactItemize}

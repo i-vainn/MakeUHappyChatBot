@@ -88,21 +88,43 @@ $(function() {
 <div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="namespaceweb.html#a6d4dd83110ade714b30fee8005cb9301">   27</a></span>&#160;<span class="keyword">def </span><a class="code" href="namespaceweb.html#a6d4dd83110ade714b30fee8005cb9301">send_message</a>(token, chat_id, text):</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    send_message_url = f<span class="stringliteral">&#39;{api_url}{token}/sendMessage?chat_id={chat_id}&amp;text={text}&#39;</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    requests.get(send_message_url)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="namespaceweb.html#a5c5d91e6fad937a40882d72bb7486061">   35</a></span>&#160;<span class="keyword">def </span><a class="code" href="namespaceweb.html#a5c5d91e6fad937a40882d72bb7486061">get_advice</a>():</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    magic_word = <span class="stringliteral">&#39;блять&#39;</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">while</span> <span class="keyword">True</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        possible_advice = requests.get(<span class="stringliteral">&#39;http://fucking-great-advice.ru/api/random&#39;</span>).json()</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        advice = possible_advice[<span class="stringliteral">&#39;text&#39;</span>]</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">if</span> magic_word <span class="keywordflow">in</span> advice:</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            advice = <span class="stringliteral">&#39;&#39;</span>.join(advice.split(magic_word))</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            advice = <span class="stringliteral">&#39; &#39;</span>.join(filter(bool, advice.split()))</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">return</span> advice</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="namespaceweb.html#a160d916290070b1b8dd635823cec775a">   36</a></span>&#160;<span class="keyword">def </span><a class="code" href="namespaceweb.html#a160d916290070b1b8dd635823cec775a">send_photo</a>(token, chat_id, url):</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    send_photo_url = f<span class="stringliteral">&#39;{api_url}{token}/sendPhoto?chat_id={chat_id}&amp;photo={url}&#39;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    requests.get(send_photo_url)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="namespaceweb.html#a7f02ef5ba3530781d3d43e0dc2c1ef32">   43</a></span>&#160;<span class="keyword">def </span><a class="code" href="namespaceweb.html#a7f02ef5ba3530781d3d43e0dc2c1ef32">get_cat</a>():</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&#39;https://i.redd.it/yzwguryrul421.jpg&#39;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="namespaceweb.html#a16d63b92316e73d7f9cbd4219b8bc841">   50</a></span>&#160;<span class="keyword">def </span><a class="code" href="namespaceweb.html#a16d63b92316e73d7f9cbd4219b8bc841">send_cat</a>(token, chat_id):</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    photo = <a class="code" href="namespaceweb.html#a7f02ef5ba3530781d3d43e0dc2c1ef32">get_cat</a>()</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="namespaceweb.html#a160d916290070b1b8dd635823cec775a">send_photo</a>(token, chat_id, <a class="code" href="namespaceweb.html#a7f02ef5ba3530781d3d43e0dc2c1ef32">get_cat</a>())</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="namespaceweb.html#a5c5d91e6fad937a40882d72bb7486061">   59</a></span>&#160;<span class="keyword">def </span><a class="code" href="namespaceweb.html#a5c5d91e6fad937a40882d72bb7486061">get_advice</a>():</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    magic_word = <span class="stringliteral">&#39;блять&#39;</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">while</span> <span class="keyword">True</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        possible_advice = requests.get(<span class="stringliteral">&#39;http://fucking-great-advice.ru/api/random&#39;</span>).json()</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        advice = possible_advice[<span class="stringliteral">&#39;text&#39;</span>]</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">if</span> magic_word <span class="keywordflow">in</span> advice:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            advice = <span class="stringliteral">&#39;&#39;</span>.join(advice.split(magic_word))</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            advice = <span class="stringliteral">&#39; &#39;</span>.join(filter(bool, advice.split()))</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">return</span> advice</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespaceweb_html_a1a102b66c78b7857d6e70eb2cc4a751c"><div class="ttname"><a href="namespaceweb.html#a1a102b66c78b7857d6e70eb2cc4a751c">web.get_updates</a></div><div class="ttdeci">def get_updates(token, offset)</div><div class="ttdoc">Получает новые сообщения с сервера.</div><div class="ttdef"><b>Definition:</b> <a href="web_8py_source.html#l00017">web.py:17</a></div></div>
-<div class="ttc" id="anamespaceweb_html_a5c5d91e6fad937a40882d72bb7486061"><div class="ttname"><a href="namespaceweb.html#a5c5d91e6fad937a40882d72bb7486061">web.get_advice</a></div><div class="ttdeci">def get_advice()</div><div class="ttdoc">Достаёт случайный совет</div><div class="ttdef"><b>Definition:</b> <a href="web_8py_source.html#l00035">web.py:35</a></div></div>
+<div class="ttc" id="anamespaceweb_html_a16d63b92316e73d7f9cbd4219b8bc841"><div class="ttname"><a href="namespaceweb.html#a16d63b92316e73d7f9cbd4219b8bc841">web.send_cat</a></div><div class="ttdeci">def send_cat(token, chat_id)</div><div class="ttdoc">Отправляет картинку с котиком в чат.</div><div class="ttdef"><b>Definition:</b> <a href="web_8py_source.html#l00050">web.py:50</a></div></div>
+<div class="ttc" id="anamespaceweb_html_a7f02ef5ba3530781d3d43e0dc2c1ef32"><div class="ttname"><a href="namespaceweb.html#a7f02ef5ba3530781d3d43e0dc2c1ef32">web.get_cat</a></div><div class="ttdeci">def get_cat()</div><div class="ttdoc">Вовзращает ссылку на случайную картинку с котиком.</div><div class="ttdef"><b>Definition:</b> <a href="web_8py_source.html#l00043">web.py:43</a></div></div>
+<div class="ttc" id="anamespaceweb_html_a160d916290070b1b8dd635823cec775a"><div class="ttname"><a href="namespaceweb.html#a160d916290070b1b8dd635823cec775a">web.send_photo</a></div><div class="ttdeci">def send_photo(token, chat_id, url)</div><div class="ttdoc">Отправляет фотографию в чат.</div><div class="ttdef"><b>Definition:</b> <a href="web_8py_source.html#l00036">web.py:36</a></div></div>
+<div class="ttc" id="anamespaceweb_html_a5c5d91e6fad937a40882d72bb7486061"><div class="ttname"><a href="namespaceweb.html#a5c5d91e6fad937a40882d72bb7486061">web.get_advice</a></div><div class="ttdeci">def get_advice()</div><div class="ttdoc">Достаёт случайный совет</div><div class="ttdef"><b>Definition:</b> <a href="web_8py_source.html#l00059">web.py:59</a></div></div>
 <div class="ttc" id="anamespaceweb_html_a6d4dd83110ade714b30fee8005cb9301"><div class="ttname"><a href="namespaceweb.html#a6d4dd83110ade714b30fee8005cb9301">web.send_message</a></div><div class="ttdeci">def send_message(token, chat_id, text)</div><div class="ttdoc">Отправляет сообщение в чат.</div><div class="ttdef"><b>Definition:</b> <a href="web_8py_source.html#l00027">web.py:27</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

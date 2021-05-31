@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['p_154',['p',['../classembeddings_1_1_question_finder.html#a64af479b44ee3df7675ff7b3f504312b',1,'embeddings::QuestionFinder']]],
-  ['parser_155',['parser',['../namespaceprod.html#aa794539202f8f0ef81588de5a986c12e',1,'prod']]]
+  ['offset_168',['offset',['../classprod_1_1worker_1_1_worker.html#a080626801b43f3eb72a862b4daf3462d',1,'prod::worker::Worker']]]
 ];

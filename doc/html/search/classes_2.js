@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jokeclassifier_84',['JokeClassifier',['../class_joke_classifier.html',1,'JokeClassifier'],['../class_joke_classifier_1_1_joke_classifier.html',1,'JokeClassifier.JokeClassifier']]]
+  ['jokeclassifier_92',['JokeClassifier',['../classjoke__classifier_1_1_joke_classifier.html',1,'joke_classifier']]]
 ];

@@ -2,9 +2,21 @@ import torch
 from transformers import BertTokenizer
 from transformers import BertForSequenceClassification
 
+## @package joke_classifier
+# Содержит класс для определения шуток JokeClassifier
+
 ## @class JokeClassifier
-# Класс для определения является ли сообщение шуткой
+# Класс для определения, является ли сообщение шуткой
 class JokeClassifier:
+    ## @var tokenizer
+    # Токенайзер
+    tokenizer = None
+    
+    
+    ## @var model
+    # Модель классификатора 
+    model = None
+
     ## Создаёт объект класса JokeClassifier
     # @param tokenizer_path Путь к токенайзеру
     # @param bert_path Путь к модели BERT
@@ -12,13 +24,12 @@ class JokeClassifier:
                  bert_path,
                  tokenizer_path = 'DeepPavlov/rubert-base-cased',
                  ):
-        ## @var tokenizer
-        # Токенайзер
-        self.tokenizer = BertTokenizer.from_pretrained(tokenizer_path)
         
-        ## @var model
-        # Модель классификатора 
-        self.model = BertForSequenceClassification.from_pretrained(bert_path).cuda()
+        if self.tokenizer != None:
+            self.tokenizer = BertTokenizer.from_pretrained(tokenizer_path)
+        
+        if self.model != None:
+            self.model = BertForSequenceClassification.from_pretrained(bert_path).cuda()
 
     ## Выдаёт вероятность наличия шутки во входном сообщении
     # @param sentence Входное предложение

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['text_96',['text',['../namespacetext.html',1,'']]],
-  ['translate_5femoji_97',['translate_emoji',['../namespacetranslate__emoji.html',1,'']]]
+  ['text_104',['text',['../namespacetext.html',1,'']]],
+  ['translate_5femoji_105',['translate_emoji',['../namespacetranslate__emoji.html',1,'']]]
 ];
