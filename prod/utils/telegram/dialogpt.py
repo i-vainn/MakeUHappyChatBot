@@ -15,7 +15,7 @@ class DialoGPT:
     tokenizer = AutoTokenizer.from_pretrained("Grossmend/rudialogpt3_medium_based_on_gpt2")
     ## @var model
     # Сама модель DialoGPT
-    model = AutoModelForCausalLM.from_pretrained("Grossmend/rudialogpt3_medium_based_on_gpt2")
+    model = AutoModelForCausalLM.from_pretrained("Grossmend/rudialogpt3_medium_based_on_gpt2").cuda()
     ## @var joke_classifier
     # Модель JokeClassifier
     joke_classifier = None
@@ -102,7 +102,7 @@ class DialoGPT:
         
         # encode the new user input, add parameters and return a tensor in Pytorch
         new_user_input = f"|0|{self.get_length_param(input_user)}|" + input_user + tokenizer.eos_token +  "|1|1|"
-        new_user_input_ids = tokenizer.encode(new_user_input, return_tensors="pt")
+        new_user_input_ids = tokenizer.encode(new_user_input, return_tensors="pt").cuda()
         
         # append the new user input tokens to the chat history
         bot_input_ids = torch.cat([self.chat_history, new_user_input_ids], dim=-1) if len(self.chat_history) else new_user_input_ids

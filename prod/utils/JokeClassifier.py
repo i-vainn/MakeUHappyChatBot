@@ -18,14 +18,14 @@ class JokeClassifier:
         
         ## @var model
         # Модель классификатора 
-        self.model = BertForSequenceClassification.from_pretrained(bert_path)
+        self.model = BertForSequenceClassification.from_pretrained(bert_path).cuda()
 
     ## Выдаёт вероятность наличия шутки во входном сообщении
     # @param sentence Входное предложение
     # @returns Вероятность наличия шутки
     def __call__(self,
                  sentence):
-        tokenized = self.tokenizer(sentence, return_tensors="pt")
+        tokenized = self.tokenizer(sentence, return_tensors="pt").to(device='cuda')
         outputs = self.model(**tokenized)
         prob = torch.softmax(outputs['logits'], dim=1);
         return prob[0][1].item()
