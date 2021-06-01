@@ -1,9 +1,13 @@
 from utils.dialogpt import DialoGPT
+from utils.joke_classifier import JokeClassifier
+from utils.bad_language import SwearMerger
 from utils.web import *
 from utils.text import *
 
 from pathlib import Path
 import gdown
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
 
 ## @package prod.worker
 # Содержит класс Worker
@@ -27,6 +31,11 @@ class Worker:
         ## @var token
         # Токен для работы с Telegram API
         self.token = token
+
+        DialoGPT.joke_classifier = JokeClassifier(bert_path='models/joke_classifier')
+        DialoGPT.has_swear = SwearMerger()
+        DialoGPT.tokenizer = AutoTokenizer.from_pretrained("Grossmend/rudialogpt3_medium_based_on_gpt2")
+        DialoGPT.model = AutoModelForCausalLM.from_pretrained("Grossmend/rudialogpt3_medium_based_on_gpt2").cuda()
         
         Path('models/joke_classifier').mkdir(parents=True, exist_ok=True)
         url = 'https://drive.google.com/uc?id=1-3IxKzOlWu32uZ-mk2OI7mF6S4101b8n'
