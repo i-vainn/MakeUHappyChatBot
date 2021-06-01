@@ -1,4 +1,4 @@
-from .translate_emoji import de_emojify
+from utils.translate_emoji import de_emojify
 import random
 import re
 import string

@@ -1,6 +1,6 @@
 import yaml
 
-from prod.utils.telegram.text import clear_text
+from utils.text import clear_text
 
 ## @package read_config
 # Содержит класс CongigReader

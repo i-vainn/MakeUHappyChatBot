@@ -1,6 +1,6 @@
-from utils.telegram.dialogpt import DialoGPT
-from utils.telegram.web import *
-from utils.telegram.text import *
+from utils.dialogpt import DialoGPT
+from utils.web import *
+from utils.text import *
 
 from pathlib import Path
 import gdown

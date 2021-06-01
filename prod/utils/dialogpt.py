@@ -1,7 +1,7 @@
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
-from utils.telegram.web import *
-from utils.telegram.text import *
+from utils.web import *
+from utils.text import *
 from utils.joke_classifier import JokeClassifier
 from utils.read_config import ConfigReader
 
