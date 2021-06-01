@@ -52,7 +52,7 @@ class SwearDetector:
     def find_swear(self, sentence):
         clean = self.clear(sentence)
         swear = []
-        for word in clean.lower().split():
+        for idx, word in enumerate(clean.lower().split()):
             lemmatized = word
             if self.lemmatizer:
                 lemmatized = self.lemmatizer.lemmatize(word)[0]
@@ -60,7 +60,7 @@ class SwearDetector:
                 swear.append(word)
         return swear
 
-class Merger:
+class SwearMerger:
     def __init__(self, classifiers=[ToxicClassifier(), SwearDetector()], is_soft=False):
         self.classifiers = classifiers
         self.is_soft = is_soft

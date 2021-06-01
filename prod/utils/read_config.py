@@ -14,12 +14,6 @@ class ConfigReader:
         with open(config_path, 'r') as f:
             self.config = yaml.load(f, Loader=yaml.SafeLoader)
 
-    ## Обрабатывает словарь и говорит что из него надо вернуть
-    # @param desc словарь из self.config
-    # @returns Итоговый текст
-    def get_response(self, desc):
-        return desc['execute']
-
     ## Обрабатывает текст с возможной командой
     # @param text Текст, в котором может содержаться команда
     # @returns Команду, которую нужно исполнить,
@@ -29,18 +23,18 @@ class ConfigReader:
         
         for option, desc in self.config['options'].items():
             if text.startswith('/' + option):
-                return self.get_response(desc)
+                return desc['execute']
             if 'special_alias' in desc:
                 for alias in desc['special_alias']:
                     if alias.lower() in text:
                         print(alias.lower(), text)
-                        return self.get_response(desc)
+                        return desc['execute']
             if 'common_alias' in desc:
                 for verb in self.config['verbs']:
                     if verb in text:
                         for alias in desc['common_alias']:
                             if alias in text:
-                                return self.get_response(desc)
+                                return desc['execute']
         return None
 
     ## Обрабатывает текст с возможной командой,

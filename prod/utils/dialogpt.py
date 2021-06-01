@@ -4,6 +4,7 @@ from utils.web import *
 from utils.text import *
 from utils.joke_classifier import JokeClassifier
 from utils.read_config import ConfigReader
+from utils.bad_language import SwearMerger
 
 ## @package dialogpt
 # Содержит класс чат-бота DialoGPT
@@ -17,11 +18,16 @@ class DialoGPT:
     ## @var model
     # Сама модель DialoGPT
     model = AutoModelForCausalLM.from_pretrained("Grossmend/rudialogpt3_medium_based_on_gpt2").cuda()
-    ## @var joke_classifier
-    # Модель JokeClassifier
-    joke_classifier = None
     
-    
+    @classmethod
+    def load_models(cls, joke_model='models/joke_classifier'):
+        ## @var joke_classifier
+        # Модель предсказания удачности высказывания
+        cls.joke_classifier = JokeClassifier(bert_path='models/joke_classifier')
+        ## @var has_swear
+        # Классификатор наличия ненормативной лексики
+        cls.has_swear = SwearMerger()
+            
     ## Создаёт объект класса DialoGPT для отдельного чата
     # @param token Токен чат-бота
     # @param chat_id id чата
@@ -34,8 +40,6 @@ class DialoGPT:
         ## @var chat_id
         # Id чата, в котором общается бот
         self.chat_id = chat_id
-        
-        self.joke_classifier = JokeClassifier(bert_path='models/joke_classifier')
         
         ## @var chat_history
         # Содержимое текущего диалога
@@ -80,22 +84,46 @@ class DialoGPT:
                 eos_token_id=tokenizer.eos_token_id,
                 unk_token_id=tokenizer.unk_token_id,
                 pad_token_id=tokenizer.pad_token_id,
-                device='cuda'):
-        return self.model.generate(
-                bot_input_ids,
-                num_return_sequences=num_return_sequences,
-                max_length=max_length,
-                no_repeat_ngram_size=no_repeat_ngram_size,
-                do_sample=do_sample,
-                top_k=top_k,
-                top_p=top_p,
-                temperature = temperature,
-                mask_token_id=mask_token_id,
-                eos_token_id=eos_token_id,
-                unk_token_id=unk_token_id,
-                pad_token_id=pad_token_id,
-                device=device,
-            )
+                device='cuda'
+    ):
+        generated = self.model.generate(
+                        bot_input_ids,
+                        num_return_sequences=num_return_sequences,
+                        max_length=max_length,
+                        no_repeat_ngram_size=no_repeat_ngram_size,
+                        do_sample=do_sample,
+                        top_k=top_k,
+                        top_p=top_p,
+                        temperature = temperature,
+                        mask_token_id=mask_token_id,
+                        eos_token_id=eos_token_id,
+                        unk_token_id=unk_token_id,
+                        pad_token_id=pad_token_id,
+                        device=device,
+                    ) # генерируем k возможных ответов
+        
+        ok_seq = [] # осуществляем отбор по признаку наличия мата
+        for cur_chat_history in generated:
+            decoded = tokenizer.decode(cur_chat_history[:, bot_input_ids.shape[-1]:][0], skip_special_tokens=True)
+            if not has_swear(decoded):
+                ok_seq.append([cur_chat_history, decoded])
+            else:
+                print("We found swear here:", decoded)
+
+        results = [] # ранжируем оставшиеся предложения
+        for cur_chat_history, cur_result in ok_seq:
+            cur_score = self.joke_classifier(cur_result)
+            results.append([cur_chat_history, cur_result, cur_score])
+        results.sort(key=lambda x:x[2])
+
+        if len(results) == 0:
+            result = 'Хммм'
+            token = tokenizer.encode(result, return_tensors="pt").cuda()
+            results.append([token, result])
+        
+        self.chat_history = results[-1][0]
+
+        return results[:2]
     
     ## Обрабатывает текст без команды
     # @param input_user Текст без команды
@@ -113,25 +141,7 @@ class DialoGPT:
         bot_input_ids = torch.cat([self.chat_history, new_user_input_ids], dim=-1) if len(self.chat_history) else new_user_input_ids
         
         # generated a response
-        if (cnt_JokeClassifier > 0):
-            results = []
-            for iter in range(cnt_JokeClassifier):
-                cur_chat_history = self.generate(bot_input_ids)
-                cur_result = tokenizer.decode(cur_chat_history[:, bot_input_ids.shape[-1]:][0], skip_special_tokens=True)
-                cur_score = self.joke_classifier(cur_result)
-                results.append([cur_chat_history, cur_result, cur_score])
-            results.sort(key=lambda x:x[2])
-            
-            self.chat_history = results[-1][0]
-            result = results[-1][1]
-            worst_score = results[0][2]
-            best_score = results[-1][2]
-            for elem in results:
-                print('Possible answer:', elem[1], elem[2] * 100)
-            print('Best score:', best_score * 100, 'Worst score:', worst_score * 100)
-        else:
-            self.chat_history = self.generate(bot_input_ids)
-            result = tokenizer.decode(self.chat_history[:, bot_input_ids.shape[-1]:][0], skip_special_tokens=True)
+        result = generate(bot_input_ids, num_return_sequences=cnt_JokeClassifier)
         
         self.user_input_size.append(new_user_input_ids.shape[-1])
         if len(self.user_input_size) > self.window_size:
