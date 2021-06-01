@@ -47,9 +47,11 @@ def get_cat():
 ## Отправляет картинку с котиком в чат.
 # @param token Токен для чат-бота
 # @param chat_id id чата
+# @returns Пустая строка
 def send_cat(token, chat_id):
     photo = get_cat()
     send_photo(token, chat_id, get_cat())
+    return ''
 
 
 

@@ -3,6 +3,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from utils.telegram.web import *
 from utils.telegram.text import *
 from utils.joke_classifier import JokeClassifier
+from utils.read_config import ConfigReader
 
 ## @package dialogpt
 # Содержит класс чат-бота DialoGPT
@@ -47,6 +48,10 @@ class DialoGPT:
         ## @var window_size
         # Число запоминаемых фраз в диалоге
         self.window_size = window_size
+
+        ## @var config_reader
+        # Объект, читающий конфигурацию для обработки команд
+        self.config_reader = ConfigReader()
 
     def get_length_param(self, text: str) -> str:
         tokens_count = len(self.tokenizer.encode(text))
@@ -140,47 +145,18 @@ class DialoGPT:
     # @param text Текст, в котором может содержаться команда
     # @returns Итоговый текст
     def get_response(self, text):
-        text = parse_command(text)
+        command = self.config_reader(text)
+        if command:
+            return eval(command)
 
-        start = '/start'
-        restart = '/restart'
-        advice = '/advice'
-        joke = '/joke'
-        cat = '/cat'
         ref = '/make_u_happy_bot'
-        help_cmd = '/help'
-
-        if text.startswith(start):
-            return 'Привет! Хочешь о чём-нибудь поговорить?'
-        elif text.startswith(restart):
-            self.restart()
-            return 'Предыдущие сообщения забыты'
-        elif text.startswith(advice):
-            return get_advice()
-        elif text.startswith(cat):
-            send_cat(self.token, self.chat_id)
-            return ''
-        elif text.startswith(joke):
-            return get_joke()
-        elif text.startswith(help_cmd):
-            return '''
-Привет!
-Я чат-бот, который улучшает людям настроение)
-Со мной легко работать: ты пишешь сообщение, а я на него отвечаю.
-
-Список полезных команд:
-/advice - Дать совет
-/cat - Выдать фотографию котика
-/joke - Рассказать возможно нецензурный анекдот
-/help - Вывести это сообщение
-/restart - Забыть предыдущие сообщения
-'''
-        
         if text.startswith(ref):
             text = text[len(ref):]
         return self.process_text(text, cnt_JokeClassifier=5)
     
     ## Забывает все предыдущие фразы в диалоге
+    # @returns Пустая строка
     def restart(self):
         self.chat_history = []
         self.user_input_size = []
+        return ''

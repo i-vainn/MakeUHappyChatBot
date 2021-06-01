@@ -34,77 +34,25 @@ def get_joke():
     return random.choice(jokes).strip()
 
 
-## @var verbs
-# Глаголы для активации команд
-verbs = [
-    'дай',
-    'скинь',
-    'расскажи',
-    'покажи',
-    'скажи',
-    'го',
-    'давай',
-    'хочу',
-    'напиши',
-    'еще',
-    'желаю'
-]
+## Возвращает сообщение о помощи
+# @param config_reader ConfigReader, в котором содержится информация о командах
+# @returns Сообщение о помощи
+def get_help_message(config_reader):
+    start_message = '''
+Привет!
+Я чат-бот, который улучшает людям настроение)
+Со мной легко работать: ты пишешь сообщение, а я на него отвечаю.
+Список полезных команд:
+get_options
+'''
+    return config_reader.get_options(context=start_message)
 
 
-## @var cmd_to_text
-# Словарь из пар (команда, способы скрыть команду в тексте)
-cmd_to_text = {
-    '/restart' : [
-        'забудь все что я сказал',
-        'забудь все, что я сказал'
-    ],
+## Возвращает сообщение о старте
+# @returns Сообщение о старте
+def get_start_message():
+    return 'Привет! Хочешь о чём-нибудь поговорить?'
 
-    '/advice' : [
-        'совет',
-        'случайный совет'
-    ],
-
-    '/joke' : [
-        'шутку',
-        'анекдот',
-        'случайную шутку',
-        'случайный анекдот',
-        'шутейку',
-        'смешнявку',
-        'прикол',
-        'смешное',
-        'смеяться'
-    ],
-
-    '/cat' : [
-        'котиков',
-        'котика',
-        'картинки котиков',
-        'картинку котика',
-        'кошек',
-        'кошку',
-        'картинки кошек',
-        'картинку кошки',
-    ]
-}
-
-## Определяет, скрыта ли команда в тексте.
-# Если да, то заменяет текст на эту команду.
-# @param Текст пользователя
-# @returns Текст пользователя или команда пользователя
-def parse_command(text):
-    text_parse = text.strip()
-    text_parse = text_parse.replace('ё', 'е').lower()
-    for key in cmd_to_text.keys():
-        if text.startswith(key):
-            return key
-        for substr in cmd_to_text[key]:
-            if key == '/restart' and substr in text:
-                return key
-            for verb in verbs:
-                if verb in text and substr in text:
-                    return key
-    return text
 
 ## Очищает текст от заданных символов.
 # Например, может использоваться для удаления пунктуации
