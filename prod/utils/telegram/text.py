@@ -1,5 +1,7 @@
 from .translate_emoji import de_emojify
 import random
+import re
+import string
 
 ## @namespace text
 # Содержит функции для работы с текстами и с Telegram
@@ -103,3 +105,17 @@ def parse_command(text):
                 if verb in text and substr in text:
                     return key
     return text
+
+## Очищает текст от заданных символов.
+# Например, может использоваться для удаления пунктуации
+# с параметром symbols по умолчанию.
+# @param text - Текст, который хотим почистить
+# @param symbols - строка, содержащая все символы, которые хотим удалить
+# @param dont_kill_slash - если True, то символ `/` из строки не удаляем
+# @returns Очищенный текст
+def clear_text(text, symbols=None, dont_kill_slash=True):
+    if symbols is None:
+        symbols = string.punctuation
+    if dont_kill_slash:
+        symbols = symbols.replace('/', '')
+    return re.sub(f'[{symbols}]', '', text).replace('ё', 'е').lower()
