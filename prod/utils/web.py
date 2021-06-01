@@ -1,4 +1,5 @@
 import requests
+import random
 
 ## @namespace web
 # Содержит функции для взаимодействия с веб-сервисами
@@ -41,7 +42,7 @@ def send_photo(token, chat_id, url):
 ## Вовзращает ссылку на случайную картинку с котиком.
 # @returns Ссылка на картинку с котиком
 def get_cat():
-    return 'https://i.redd.it/yzwguryrul421.jpg'
+    return 'https://cataas.com/cat?junk=' + str(random.randint(1, 11123456))
 
 
 ## Отправляет картинку с котиком в чат.
