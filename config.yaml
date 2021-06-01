@@ -1,0 +1,66 @@
+options:
+  advice:
+    common_alias:
+    - совет
+    - случайный совет
+    description: Дать совет
+    execute: get_advice()
+    special_alias:
+    - Помоги советом
+    - Что мне делать
+  cat:
+    common_alias:
+    - котика
+    - кота
+    - котенка
+    - киску
+    - котиков
+    - кошек
+    - кошку
+    description: Отправить фотографию котика
+    execute: send_cat(self.token, self.chat_id)
+    special_alias: []
+  help:
+    description: Вывести это сообщение
+    execute: get_help_message()
+    special_alias:
+    - Что ты умеешь
+    - Помощь
+  joke:
+    common_alias:
+    - шутку
+    - анекдот
+    - случайную шутку
+    - случайный анекдот
+    - шутейку
+    - смешнявку
+    - прикол
+    - смешное
+    - смеяться
+    description: Рассказать возможно нецензурный анекдот
+    execute: get_joke()
+  restart:
+    description: Забыть предыдущие сообщения
+    execute: self.restart()
+    output_text: Хорошо, начнём сначала
+    special_alias:
+    - Забудь историю диалога
+    - забудь все что я сказал
+    - забудь все, что я сказал
+  start:
+    description: Начать диалог
+    execute: get_start_message()
+    special_alias: Начать диалог
+verbs:
+- дай
+- скинь
+- отправь
+- расскажи
+- покажи
+- скажи
+- го
+- давай
+- хочу
+- напиши
+- еще
+- желаю

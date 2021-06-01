@@ -65,7 +65,7 @@ class DialoGPT:
     # @returns Токены, сгенерированные моделью
     def generate(self, bot_input_ids,
                 num_return_sequences=1,
-                max_length=512,
+                max_length=2048,
                 no_repeat_ngram_size=3,
                 do_sample=True,
                 top_k=50,
