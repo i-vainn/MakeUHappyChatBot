@@ -5,12 +5,12 @@ from utils.text import clear_text
 ## @package read_config
 # Содержит класс CongigReader
  
-## @class CongigReader
+## @class ConfigReader
 # Позволяет считывать информацию из конфига для rule-based ответов
-class CongigReader:
+class ConfigReader:
     ## Создает объект класса CongigReader
     # @param config_path Путь до конфига
-    def __init__(self, config_path='config.json'):
+    def __init__(self, config_path='config.yaml'):
         with open(config_path, 'r') as f:
             self.config = yaml.load(f, Loader=yaml.SafeLoader)
 
@@ -28,18 +28,19 @@ class CongigReader:
         text = clear_text(text)
         
         for option, desc in self.config['options'].items():
-            if text.index('/' + option) == 0:
+            if text.startswith('/' + option):
                 return self.get_response(desc)
             if 'special_alias' in desc:
                 for alias in desc['special_alias']:
-                    if text.count(alias.lower()):
+                    if alias.lower() in text:
+                        print(alias.lower(), text)
                         return self.get_response(desc)
             if 'common_alias' in desc:
                 for verb in self.config['verbs']:
-                    for alias in desc['common_alias']:
-                        new_alias = verb + ' ' + alias
-                        if text.count(new_alias.lower()):
-                            return self.get_response(desc)
+                    if verb in text:
+                        for alias in desc['common_alias']:
+                            if alias in text:
+                                return self.get_response(desc)
         return None
 
     ## Обрабатывает текст с возможной командой,
@@ -48,7 +49,7 @@ class CongigReader:
     # @param text Текст, в котором может содержаться команда
     # @returns Итоговый текст
     def __call__(self, text):
-        self.parse_command(text)
+        return self.parse_command(text)
 
     ## Возвращает названия и описания всех опций из self.config['Options']
     # @param context Текст, в который надо вставить описания опций

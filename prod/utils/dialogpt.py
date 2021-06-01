@@ -146,7 +146,8 @@ class DialoGPT:
     # @returns Итоговый текст
     def get_response(self, text):
         command = self.config_reader(text)
-        if command:
+        print('Executing command:', command)
+        if command != None:
             return eval(command)
 
         ref = '/make_u_happy_bot'
@@ -155,8 +156,8 @@ class DialoGPT:
         return self.process_text(text, cnt_JokeClassifier=5)
     
     ## Забывает все предыдущие фразы в диалоге
-    # @returns Пустая строка
+    # @returns Сообщение о рестарте
     def restart(self):
         self.chat_history = []
         self.user_input_size = []
-        return ''
+        return 'Хорошо, начнём сначала'
