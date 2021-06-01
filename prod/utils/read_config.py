@@ -46,7 +46,15 @@ class CongigReader:
                         new_alias = verb + ' ' + alias
                         if text.count(new_alias.lower()):
                             return self.get_response(desc)
-    
+
+    ## Обрабатывает текст с возможной командой,
+    # полный аналог self.parse_command, используется для
+    # унификации интерфейса
+    # @param text Текст, в котором может содержаться команда
+    # @returns Итоговый текст
+    def __call__(self, text):
+        self.parse_command(text)
+
     ## Печатает названия и описания всех опций из self.config['Options']
     # @param context Текст, в который надо вставить описания опций
     # @param to_replace токен, который необходимо заменить на описания опций
