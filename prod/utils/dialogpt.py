@@ -26,7 +26,7 @@ class DialoGPT:
     # @param token Токен чат-бота
     # @param chat_id id чата
     # @param window_size Число диалогов, которых запоминает бот
-    def __init__(self, token, chat_id, window_size=10):
+    def __init__(self, token, chat_id, window_size=6):
         ## @var token
         # Токен, по которому бот может связаться с Telegram API
         self.token = token
@@ -76,9 +76,9 @@ class DialoGPT:
                 temperature = 0.6,
                 device='cuda'
     ):
-        generated = DialoGPT.model.generate(
+        generated = [DialoGPT.model.generate(
                         bot_input_ids,
-                        num_return_sequences=num_return_sequences,
+                        num_return_sequences=1,
                         max_length=max_length,
                         no_repeat_ngram_size=no_repeat_ngram_size,
                         do_sample=do_sample,
@@ -90,12 +90,11 @@ class DialoGPT:
                         unk_token_id=DialoGPT.tokenizer.unk_token_id,
                         pad_token_id=DialoGPT.tokenizer.pad_token_id,
                         device=device,
-                    ) # генерируем k возможных ответов
+                    ) for _ in range(num_return_sequences)]# генерируем k возможных ответов
         
         ok_seq = [] # осуществляем отбор по признаку наличия мата
         for cur_chat_history in generated:
-            decoded = DialoGPT.tokenizer.decode(cur_chat_history[:, bot_input_ids.shape[-1]:], skip_special_tokens=True)
-            print(decoded)
+            decoded = DialoGPT.tokenizer.decode(cur_chat_history[:, bot_input_ids.shape[-1]:][0], skip_special_tokens=True)
             if not DialoGPT.has_swear(decoded):
                 ok_seq.append([cur_chat_history, decoded])
             else:

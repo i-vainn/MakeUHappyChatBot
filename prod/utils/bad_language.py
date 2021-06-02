@@ -62,7 +62,7 @@ class SwearDetector:
         return swear
 
 class SwearMerger:
-    def __init__(self, classifiers=[ToxicClassifier(), SwearDetector(use_stemming=False)], is_soft=False):
+    def __init__(self, classifiers=[ToxicClassifier(), SwearDetector(use_stemming=False)], is_soft=True):
         self.classifiers = classifiers
         self.is_soft = is_soft
 
