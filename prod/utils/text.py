@@ -32,6 +32,11 @@ def get_compliment():
     compliments = open('../data/compliments.txt').readlines()
     return random.choice(compliments).strip()
 
+## Выводит номер психологической помощи
+# @returns номер психологической помощи
+def get_sos():
+    return "Вот телефон психологической поддержки, +7 (499) 173-09-09, ты не один"
+
 
 ## Выводит случайный анекдот из набора случайных анекдотов
 # @returns Случайный анекдот
