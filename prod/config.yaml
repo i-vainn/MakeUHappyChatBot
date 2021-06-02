@@ -3,7 +3,7 @@ options:
     description: Сделать комплимент
     execute: get_compliment()
     common_alias:
-   - ты всегда можешь на меня положиться
+    - ты всегда можешь на меня положиться
     special_alias: 
     - комплимент
     - грустненько
@@ -14,9 +14,9 @@ options:
     description: Помочь
     execute: get_sos()
     common_alias:
-      - Все наладится
+    - Все наладится
     special_alias:
-      - Я не хочу жить
+    - Я не хочу жить
   advice:
     description: Дать случайный совет
     execute: get_advice()
