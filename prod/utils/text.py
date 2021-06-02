@@ -26,6 +26,12 @@ def extract_text(message):
 def get_text(message):
     return de_emojify(extract_text(message))
 
+## Выводит случайный комплимент из набора случайных комплиментов
+# @returns Случайный комплимент
+def get_compliment():
+    compliments = open('../data/compliments.txt').readlines()
+    return random.choice(compliments).strip()
+
 
 ## Выводит случайный анекдот из набора случайных анекдотов
 # @returns Случайный анекдот
