@@ -32,16 +32,19 @@ class Worker:
         # Токен для работы с Telegram API
         self.token = token
 
-        DialoGPT.joke_classifier = JokeClassifier(bert_path='models/joke_classifier')
-        DialoGPT.has_swear = SwearMerger()
-        DialoGPT.tokenizer = AutoTokenizer.from_pretrained("Grossmend/rudialogpt3_medium_based_on_gpt2")
-        DialoGPT.model = AutoModelForCausalLM.from_pretrained("Grossmend/rudialogpt3_medium_based_on_gpt2").cuda()
-        
+        ## Загрузка модели с гугл-диска
         Path('models/joke_classifier').mkdir(parents=True, exist_ok=True)
         url = 'https://drive.google.com/uc?id=1-3IxKzOlWu32uZ-mk2OI7mF6S4101b8n'
         gdown.download(url, 'models/joke_classifier/config.json', quiet=False)
         url = 'https://drive.google.com/uc?id=1-6AN-3KbLHNH6w0Kmy3Hbp2WEWdCfhdA'
         gdown.download(url, 'models/joke_classifier/pytorch_model.bin', quiet=False)
+
+        ## Определение статических атрибутов класса DialoGPT
+        DialoGPT.joke_classifier = JokeClassifier(bert_path='models/joke_classifier')
+        DialoGPT.has_swear = SwearMerger()
+        DialoGPT.tokenizer = AutoTokenizer.from_pretrained("Grossmend/rudialogpt3_medium_based_on_gpt2")
+        DialoGPT.model = AutoModelForCausalLM.from_pretrained("Grossmend/rudialogpt3_medium_based_on_gpt2").cuda()
+        
 
     ## Получает текущее состояние чат-бота и обрабатывает одно сообщение
     def work_once(self):

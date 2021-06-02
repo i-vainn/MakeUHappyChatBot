@@ -94,7 +94,7 @@ class DialoGPT:
         
         ok_seq = [] # осуществляем отбор по признаку наличия мата
         for cur_chat_history in generated:
-            decoded = DialoGPT.tokenizer.decode(cur_chat_history[bot_input_ids.shape[-1]:], skip_special_tokens=True)
+            decoded = DialoGPT.tokenizer.decode(cur_chat_history[:, bot_input_ids.shape[-1]:], skip_special_tokens=True)
             print(decoded)
             if not DialoGPT.has_swear(decoded):
                 ok_seq.append([cur_chat_history, decoded])
