@@ -10,6 +10,13 @@ options:
     - Мне грустно
     special_alias:
     - ты всегда можешь на меня положиться
+  sos:
+    description: Помочь
+    execute: get_sos()
+    common_alias:
+    - Я не хочу жить
+    special_alias:
+    - Все наладится
   advice:
     description: Дать случайный совет
     execute: get_advice()
