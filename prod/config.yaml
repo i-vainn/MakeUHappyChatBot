@@ -10,13 +10,6 @@ options:
     - Ой все
     - Похвали меня
     - Мне грустно
-  sos:
-    description: Помочь
-    execute: get_sos()
-    common_alias:
-    - Все наладится
-    special_alias:
-    - Я не хочу жить
   advice:
     description: Дать случайный совет
     execute: get_advice()
