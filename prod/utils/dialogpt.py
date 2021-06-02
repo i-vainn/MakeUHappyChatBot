@@ -1,7 +1,6 @@
 import torch
 from utils.web import *
 from utils.text import *
-from utils.read_config import ConfigReader
 
 ## @package dialogpt
 # Содержит класс чат-бота DialoGPT
@@ -21,6 +20,9 @@ class DialoGPT:
     ## @var model
     # Сама модель DialoGPT
     model = None
+    ## @var config_reader
+    # Объект, читающий конфигурацию для обработки команд
+    config_reader = None
             
     ## Создаёт объект класса DialoGPT для отдельного чата
     # @param token Токен чат-бота
@@ -47,9 +49,9 @@ class DialoGPT:
         # Число запоминаемых фраз в диалоге
         self.window_size = window_size
 
-        ## @var config_reader
-        # Объект, читающий конфигурацию для обработки команд
-        self.config_reader = ConfigReader()
+        ## @var trash
+        # Если False, то применяется фильтр неприемлемой лексики
+        self.trash = False
 
     def get_length_param(self, text: str) -> str:
         tokens_count = len(DialoGPT.tokenizer.encode(text))
@@ -95,10 +97,10 @@ class DialoGPT:
         ok_seq = [] # осуществляем отбор по признаку наличия мата
         for cur_chat_history in generated:
             decoded = DialoGPT.tokenizer.decode(cur_chat_history[:, bot_input_ids.shape[-1]:][0], skip_special_tokens=True)
-            if not DialoGPT.has_swear(decoded):
+            if self.trash or not DialoGPT.has_swear(decoded):
                 ok_seq.append([cur_chat_history, decoded])
             else:
-                print("We found swear here:", decoded)
+                print("We found swear here:", decoded) # logging
 
         results = [] # ранжируем оставшиеся предложения
         for cur_chat_history, cur_result in ok_seq:
@@ -106,8 +108,8 @@ class DialoGPT:
             results.append([cur_chat_history, cur_result, cur_score])
         results.sort(key=lambda x:x[2])
 
-        if len(results) == 0:
-            result = 'Хммм'
+        if len(results) == 0: # ответ по умолчанию если не знаем что сказать
+            result = config_reader.get_default_answer() 
             token = DialoGPT.tokenizer.encode(result, return_tensors="pt").cuda()
             results.append([token, result])
         
@@ -144,7 +146,7 @@ class DialoGPT:
     # @param text Текст, в котором может содержаться команда
     # @returns Итоговый текст
     def get_response(self, text):
-        command = self.config_reader(text)
+        command = config_reader(text)
         print('Executing command:', command)
         if command != None:
             return eval(command)

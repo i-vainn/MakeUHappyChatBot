@@ -1,6 +1,7 @@
 from utils.dialogpt import DialoGPT
 from utils.joke_classifier import JokeClassifier
 from utils.bad_language import SwearMerger
+from utils.read_config import ConfigReader
 from utils.web import *
 from utils.text import *
 
@@ -44,6 +45,7 @@ class Worker:
         DialoGPT.has_swear = SwearMerger()
         DialoGPT.tokenizer = AutoTokenizer.from_pretrained("Grossmend/rudialogpt3_medium_based_on_gpt2")
         DialoGPT.model = AutoModelForCausalLM.from_pretrained("Grossmend/rudialogpt3_medium_based_on_gpt2").cuda()
+        DialoGPT.config_reader = ConfigReader()
         
 
     ## Получает текущее состояние чат-бота и обрабатывает одно сообщение

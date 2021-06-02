@@ -1,4 +1,5 @@
 import yaml
+import random
 
 from utils.text import clear_text
 
@@ -57,3 +58,8 @@ class ConfigReader:
             return context.replace(to_replace, text)
         else:
             return context + text
+
+    ## Возвращает случайную фразу из поля Default в config.yaml
+    # @returns фраза по-умолчанию для ответа на сложные вопросы
+    def get_default_answer(self):
+        return random.choice(self.config['Default'])

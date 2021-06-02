@@ -24,7 +24,6 @@ options:
     execute: get_help_message(self.config_reader)
     special_alias:
     - Что ты умеешь
-    - Помощь
   joke:
     description: Рассказать возможно нецензурный анекдот
     execute: get_joke()
@@ -63,3 +62,9 @@ verbs:
 - напиши
 - еще
 - желаю
+Default:
+- Хммм
+- Даже не знаю что и сказать
+- Ты загнал меня в тупик
+- Я в тупике
+- Сложно
