@@ -4,11 +4,12 @@ options:
     execute: get_compliment()
     common_alias:
     - комплимент
-    special_alias:
     - грустненько
     - Ой все
     - Похвали меня
     - Мне грустно
+    special_alias:
+    - ты всегда можешь на меня положиться
   advice:
     description: Дать случайный совет
     execute: get_advice()
