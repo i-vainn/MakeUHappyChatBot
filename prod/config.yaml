@@ -3,20 +3,20 @@ options:
     description: Сделать комплимент
     execute: get_compliment()
     common_alias:
+   - ты всегда можешь на меня положиться
+    special_alias: 
     - комплимент
     - грустненько
     - Ой все
     - Похвали меня
     - Мне грустно
-    special_alias:
-    - ты всегда можешь на меня положиться
   sos:
     description: Помочь
     execute: get_sos()
     common_alias:
-    - Я не хочу жить
+      - Все наладится
     special_alias:
-    - Все наладится
+      - Я не хочу жить
   advice:
     description: Дать случайный совет
     execute: get_advice()
