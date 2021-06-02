@@ -109,7 +109,7 @@ class DialoGPT:
         results.sort(key=lambda x:x[2])
 
         if len(results) == 0: # ответ по умолчанию если не знаем что сказать
-            result = config_reader.get_default_answer() 
+            result = DialoGPT.config_reader.get_default_answer() 
             token = DialoGPT.tokenizer.encode(result, return_tensors="pt").cuda()
             results.append([token, result])
         
@@ -146,7 +146,7 @@ class DialoGPT:
     # @param text Текст, в котором может содержаться команда
     # @returns Итоговый текст
     def get_response(self, text):
-        command = config_reader(text)
+        command = DialoGPT.config_reader(text)
         print('Executing command:', command)
         if command != None:
             return eval(command)
@@ -165,4 +165,7 @@ class DialoGPT:
 
     def switch_trash_mode(self):
         self.trash = not self.trash
-        return "Уберите детей от экранов"
+        output = "Уберите детей от экранов"
+        if not self.trash:
+            output = "Можете звать детей обратно"
+        return output
