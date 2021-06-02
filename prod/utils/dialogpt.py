@@ -162,3 +162,7 @@ class DialoGPT:
         self.chat_history = []
         self.user_input_size = []
         return 'Хорошо, начнём сначала'
+
+    def switch_trash_mode(self):
+        self.trash = not self.trash
+        return "Уберите детей от экранов"
