@@ -51,7 +51,7 @@ options:
     - Начать диалог
   trash:
     description: Изменить режим фильтра мата
-    execute: self.swich_trash_mode()
+    execute: self.switch_trash_mode()
 verbs:
 - дай
 - скинь
