@@ -63,13 +63,14 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Функции</a>  </div>
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
   <div class="headertitle">
 <div class="title">Пространство имен text</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Cодержит функции для обработки текстов, полученных по Telegram API.  
+<p>Содержит функции для работы с текстами и с Telegram.  
 <a href="namespacetext.html#details">Подробнее...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -80,9 +81,24 @@ $(function() {
 <tr class="memitem:a68c3c7d336638d9970123c3d53bff67a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetext.html#a68c3c7d336638d9970123c3d53bff67a">get_text</a> (message)</td></tr>
 <tr class="memdesc:a68c3c7d336638d9970123c3d53bff67a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает и обрабатывает текст из сообщения  <a href="namespacetext.html#a68c3c7d336638d9970123c3d53bff67a">Подробнее...</a><br /></td></tr>
 <tr class="separator:a68c3c7d336638d9970123c3d53bff67a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a909cc637dec2343063ccfa3e7e81bb44"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetext.html#a909cc637dec2343063ccfa3e7e81bb44">get_joke</a> ()</td></tr>
+<tr class="memdesc:a909cc637dec2343063ccfa3e7e81bb44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит случайный анекдот из набора случайных анекдотов  <a href="namespacetext.html#a909cc637dec2343063ccfa3e7e81bb44">Подробнее...</a><br /></td></tr>
+<tr class="separator:a909cc637dec2343063ccfa3e7e81bb44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03b34397a7d81b37a5fb93d8cf2c7c39"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetext.html#a03b34397a7d81b37a5fb93d8cf2c7c39">parse_command</a> (text)</td></tr>
+<tr class="memdesc:a03b34397a7d81b37a5fb93d8cf2c7c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Определяет, скрыта ли команда в тексте.  <a href="namespacetext.html#a03b34397a7d81b37a5fb93d8cf2c7c39">Подробнее...</a><br /></td></tr>
+<tr class="separator:a03b34397a7d81b37a5fb93d8cf2c7c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:ad40f800432ee11e0b6b5166a686586dc"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetext.html#ad40f800432ee11e0b6b5166a686586dc">verbs</a></td></tr>
+<tr class="memdesc:ad40f800432ee11e0b6b5166a686586dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Глаголы для активации команд  <a href="namespacetext.html#ad40f800432ee11e0b6b5166a686586dc">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad40f800432ee11e0b6b5166a686586dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7afa814aba142921ec5cce6acccf7237"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetext.html#a7afa814aba142921ec5cce6acccf7237">cmd_to_text</a></td></tr>
+<tr class="memdesc:a7afa814aba142921ec5cce6acccf7237"><td class="mdescLeft">&#160;</td><td class="mdescRight">Словарь из пар (команда, способы скрыть команду в тексте)  <a href="namespacetext.html#a7afa814aba142921ec5cce6acccf7237">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7afa814aba142921ec5cce6acccf7237"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock"><p>Cодержит функции для обработки текстов, полученных по Telegram API. </p>
+<div class="textblock"><p>Содержит функции для работы с текстами и с Telegram. </p>
 </div><h2 class="groupheader">Функции</h2>
 <a id="adece9a8b90ff4430edf5e1fc9452fe96"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adece9a8b90ff4430edf5e1fc9452fe96">&#9670;&nbsp;</a></span>extract_text()</h2>
@@ -109,7 +125,29 @@ $(function() {
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd>Текст из сообщения </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="text_8py_source.html">text.py</a> строка <a class="el" href="text_8py_source.html#l00009">9</a></p>
+<p class="definition">См. определение в файле <a class="el" href="text_8py_source.html">text.py</a> строка <a class="el" href="text_8py_source.html#l00010">10</a></p>
+
+</div>
+</div>
+<a id="a909cc637dec2343063ccfa3e7e81bb44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a909cc637dec2343063ccfa3e7e81bb44">&#9670;&nbsp;</a></span>get_joke()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def text.get_joke </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Выводит случайный анекдот из набора случайных анекдотов </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Случайный анекдот </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="text_8py_source.html">text.py</a> строка <a class="el" href="text_8py_source.html#l00030">30</a></p>
 
 </div>
 </div>
@@ -138,7 +176,86 @@ $(function() {
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd>Обработанный текст </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="text_8py_source.html">text.py</a> строка <a class="el" href="text_8py_source.html#l00023">23</a></p>
+<p class="definition">См. определение в файле <a class="el" href="text_8py_source.html">text.py</a> строка <a class="el" href="text_8py_source.html#l00024">24</a></p>
+
+</div>
+</div>
+<a id="a03b34397a7d81b37a5fb93d8cf2c7c39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03b34397a7d81b37a5fb93d8cf2c7c39">&#9670;&nbsp;</a></span>parse_command()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def text.parse_command </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Определяет, скрыта ли команда в тексте. </p>
+<p>Если да, то заменяет текст на эту команду. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Текст</td><td>пользователя </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Текст пользователя или команда пользователя </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="text_8py_source.html">text.py</a> строка <a class="el" href="text_8py_source.html#l00093">93</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="a7afa814aba142921ec5cce6acccf7237"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7afa814aba142921ec5cce6acccf7237">&#9670;&nbsp;</a></span>cmd_to_text</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">text.cmd_to_text</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Словарь из пар (команда, способы скрыть команду в тексте) </p>
+
+<p class="definition">См. определение в файле <a class="el" href="text_8py_source.html">text.py</a> строка <a class="el" href="text_8py_source.html#l00054">54</a></p>
+
+</div>
+</div>
+<a id="ad40f800432ee11e0b6b5166a686586dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad40f800432ee11e0b6b5166a686586dc">&#9670;&nbsp;</a></span>verbs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">text.verbs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  [</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <span class="stringliteral">&#39;дай&#39;</span>,</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <span class="stringliteral">&#39;скинь&#39;</span>,</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="stringliteral">&#39;расскажи&#39;</span>,</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="stringliteral">&#39;покажи&#39;</span>,</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="stringliteral">&#39;скажи&#39;</span>,</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="stringliteral">&#39;го&#39;</span>,</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="stringliteral">&#39;давай&#39;</span>,</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="stringliteral">&#39;хочу&#39;</span>,</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="stringliteral">&#39;напиши&#39;</span>,</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="stringliteral">&#39;еще&#39;</span>,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="stringliteral">&#39;желаю&#39;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;]</div>
+</div><!-- fragment -->
+<p>Глаголы для активации команд </p>
+
+<p class="definition">См. определение в файле <a class="el" href="text_8py_source.html">text.py</a> строка <a class="el" href="text_8py_source.html#l00037">37</a></p>
 
 </div>
 </div>

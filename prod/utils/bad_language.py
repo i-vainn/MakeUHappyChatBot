@@ -3,6 +3,7 @@ from pymystem3 import Mystem
 
 import re
 import string
+import torch
 
 class ToxicClassifier:
     def __init__(self, model_path='sismetanin/rubert-toxic-pikabu-2ch'):
@@ -13,7 +14,7 @@ class ToxicClassifier:
         return self.is_toxic(message)
     
     def is_toxic(self, message):
-        return self.how_toxic(message).argmax()
+        return self.how_toxic(message).argmax().item()
 
     def how_toxic(self, message):
         token = self.toxic_tokenizer.encode(message, return_tensors="pt")
@@ -52,7 +53,7 @@ class SwearDetector:
     def find_swear(self, sentence):
         clean = self.clear(sentence)
         swear = []
-        for word in clean.lower().split():
+        for idx, word in enumerate(clean.lower().split()):
             lemmatized = word
             if self.lemmatizer:
                 lemmatized = self.lemmatizer.lemmatize(word)[0]
@@ -60,8 +61,8 @@ class SwearDetector:
                 swear.append(word)
         return swear
 
-class Merger:
-    def __init__(self, classifiers=[ToxicClassifier(), SwearDetector()], is_soft=False):
+class SwearMerger:
+    def __init__(self, classifiers=[ToxicClassifier(), SwearDetector(use_stemming=False)], is_soft=True):
         self.classifiers = classifiers
         self.is_soft = is_soft
 

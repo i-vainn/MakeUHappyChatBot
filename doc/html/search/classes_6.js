@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['worker_89',['Worker',['../classprod_1_1worker_1_1_worker.html',1,'prod::worker']]]
+  ['toxicclassifier_96',['ToxicClassifier',['../classbad__language_1_1_toxic_classifier.html',1,'bad_language']]]
 ];

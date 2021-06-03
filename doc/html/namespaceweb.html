@@ -81,6 +81,15 @@ $(function() {
 <tr class="memitem:a6d4dd83110ade714b30fee8005cb9301"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceweb.html#a6d4dd83110ade714b30fee8005cb9301">send_message</a> (token, chat_id, text)</td></tr>
 <tr class="memdesc:a6d4dd83110ade714b30fee8005cb9301"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отправляет сообщение в чат.  <a href="namespaceweb.html#a6d4dd83110ade714b30fee8005cb9301">Подробнее...</a><br /></td></tr>
 <tr class="separator:a6d4dd83110ade714b30fee8005cb9301"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a160d916290070b1b8dd635823cec775a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceweb.html#a160d916290070b1b8dd635823cec775a">send_photo</a> (token, chat_id, url)</td></tr>
+<tr class="memdesc:a160d916290070b1b8dd635823cec775a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отправляет фотографию в чат.  <a href="namespaceweb.html#a160d916290070b1b8dd635823cec775a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a160d916290070b1b8dd635823cec775a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f02ef5ba3530781d3d43e0dc2c1ef32"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceweb.html#a7f02ef5ba3530781d3d43e0dc2c1ef32">get_cat</a> ()</td></tr>
+<tr class="memdesc:a7f02ef5ba3530781d3d43e0dc2c1ef32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вовзращает ссылку на случайную картинку с котиком.  <a href="namespaceweb.html#a7f02ef5ba3530781d3d43e0dc2c1ef32">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7f02ef5ba3530781d3d43e0dc2c1ef32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16d63b92316e73d7f9cbd4219b8bc841"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceweb.html#a16d63b92316e73d7f9cbd4219b8bc841">send_cat</a> (token, chat_id)</td></tr>
+<tr class="memdesc:a16d63b92316e73d7f9cbd4219b8bc841"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отправляет картинку с котиком в чат.  <a href="namespaceweb.html#a16d63b92316e73d7f9cbd4219b8bc841">Подробнее...</a><br /></td></tr>
+<tr class="separator:a16d63b92316e73d7f9cbd4219b8bc841"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c5d91e6fad937a40882d72bb7486061"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceweb.html#a5c5d91e6fad937a40882d72bb7486061">get_advice</a> ()</td></tr>
 <tr class="memdesc:a5c5d91e6fad937a40882d72bb7486061"><td class="mdescLeft">&#160;</td><td class="mdescRight">Достаёт случайный совет  <a href="namespaceweb.html#a5c5d91e6fad937a40882d72bb7486061">Подробнее...</a><br /></td></tr>
 <tr class="separator:a5c5d91e6fad937a40882d72bb7486061"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -113,7 +122,29 @@ $(function() {
 <dl class="section see"><dt>См. также</dt><dd><a href="https://fucking-great-advice.ru/api">https://fucking-great-advice.ru/api</a> </dd></dl>
 <dl class="section return"><dt>Возвращает</dt><dd>Случайный совет в виде строки </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="web_8py_source.html">web.py</a> строка <a class="el" href="web_8py_source.html#l00035">35</a></p>
+<p class="definition">См. определение в файле <a class="el" href="web_8py_source.html">web.py</a> строка <a class="el" href="web_8py_source.html#l00059">59</a></p>
+
+</div>
+</div>
+<a id="a7f02ef5ba3530781d3d43e0dc2c1ef32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f02ef5ba3530781d3d43e0dc2c1ef32">&#9670;&nbsp;</a></span>get_cat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def web.get_cat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Вовзращает ссылку на случайную картинку с котиком. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Ссылка на картинку с котиком </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="web_8py_source.html">web.py</a> строка <a class="el" href="web_8py_source.html#l00043">43</a></p>
 
 </div>
 </div>
@@ -155,6 +186,45 @@ $(function() {
 <dl class="section return"><dt>Возвращает</dt><dd>Массив с последними сообщениями </dd></dl>
 
 <p class="definition">См. определение в файле <a class="el" href="web_8py_source.html">web.py</a> строка <a class="el" href="web_8py_source.html#l00017">17</a></p>
+
+</div>
+</div>
+<a id="a16d63b92316e73d7f9cbd4219b8bc841"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16d63b92316e73d7f9cbd4219b8bc841">&#9670;&nbsp;</a></span>send_cat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def web.send_cat </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>token</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>chat_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отправляет картинку с котиком в чат. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">token</td><td>Токен для чат-бота </td></tr>
+    <tr><td class="paramname">chat_id</td><td>id чата </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="web_8py_source.html">web.py</a> строка <a class="el" href="web_8py_source.html#l00050">50</a></p>
 
 </div>
 </div>
@@ -202,6 +272,52 @@ $(function() {
 </dl>
 
 <p class="definition">См. определение в файле <a class="el" href="web_8py_source.html">web.py</a> строка <a class="el" href="web_8py_source.html#l00027">27</a></p>
+
+</div>
+</div>
+<a id="a160d916290070b1b8dd635823cec775a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a160d916290070b1b8dd635823cec775a">&#9670;&nbsp;</a></span>send_photo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def web.send_photo </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>token</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>chat_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>url</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отправляет фотографию в чат. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">token</td><td>Токен для чат-бота </td></tr>
+    <tr><td class="paramname">chat_id</td><td>id чата </td></tr>
+    <tr><td class="paramname">url</td><td>Ссылка на фотографию </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="web_8py_source.html">web.py</a> строка <a class="el" href="web_8py_source.html#l00036">36</a></p>
 
 </div>
 </div>

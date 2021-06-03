@@ -1,4 +1,5 @@
 emoji
+gdown
 google_trans_new
 hnswlib
 numpy

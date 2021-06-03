@@ -1,0 +1,90 @@
+options:
+  compliment:
+    description: Сделать комплимент
+    execute: get_compliment()
+    common_alias:
+    - ты всегда можешь на меня положиться
+    special_alias: 
+    - комплимент
+    - грустненько
+    - Ой все
+    - Похвали меня
+    - Мне грустно
+  advice:
+    description: Дать случайный совет
+    execute: get_advice()
+    common_alias:
+    - совет
+    - случайный совет
+    special_alias:
+    - Помоги советом
+    - Что мне делать
+  cat:
+    description: Отправить фотографию котика
+    execute: send_cat(self.token, self.chat_id)
+    common_alias:
+    - котика
+    - кота
+    - котенка
+    - киску
+    - котиков
+    - кошек
+    - кошку
+  help:
+    description: Как пользоваться ботом
+    execute: get_help_message(self.config_reader)
+    special_alias:
+    - Что ты умеешь
+  joke:
+    description: Рассказать возможно нецензурный анекдот
+    execute: get_joke()
+    common_alias:
+    - шутку
+    - анекдот
+    - случайную шутку
+    - случайный анекдот
+    - шутейку
+    - смешнявку
+    - прикол
+    - смешное
+    - смеяться
+  restart:
+    description: Забыть предыдущие сообщения
+    execute: self.restart()
+    special_alias:
+    - Забудь историю диалога
+    - забудь все что я сказал
+    - забудь все, что я сказал
+  start:
+    description: Начать диалог
+    execute: get_start_message()
+    special_alias:
+    - Начать диалог
+  trash:
+    description: Изменить режим фильтра мата
+    execute: self.switch_trash_mode()
+verbs:
+- дай
+- скинь
+- отправь
+- расскажи
+- покажи
+- скажи
+- го
+- давай
+- хочу
+- напиши
+- еще
+- желаю
+Default:
+- Хммм
+- Даже не знаю что и сказать
+- Ты загнал меня в тупик
+- Я в тупике
+- Сложно
+- Надо подумать
+- Интересная мысль
+- Расскажи поподробнее
+- Ничего не понятно
+- Ничего не понял
+- Вот это да!

@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MakeUHappy Chat-bot: Исходный файл utils/joke_classifier.py</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">MakeUHappy Chat-bot
+   </div>
+   <div id="projectbrief">Чат-бот для улучшения настроения клиента</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html">utils</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">joke_classifier.py</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="joke__classifier_8py.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespacejoke__classifier.html">    1</a></span>&#160;<span class="keyword">import</span> torch</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">from</span> transformers <span class="keyword">import</span> BertTokenizer</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">from</span> transformers <span class="keyword">import</span> BertForSequenceClassification</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classjoke__classifier_1_1_joke_classifier.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classjoke__classifier_1_1_joke_classifier.html">JokeClassifier</a>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classjoke__classifier_1_1_joke_classifier.html#af6b42c9962cb4e6bc1b1968bd597a5b9">   13</a></span>&#160;    tokenizer = <span class="keywordtype">None</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classjoke__classifier_1_1_joke_classifier.html#aa486aeb226f9d507f276b921f30d6749">   18</a></span>&#160;    model = <span class="keywordtype">None</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classjoke__classifier_1_1_joke_classifier.html#ac3d9019c18a97da84a6433c610433ad6">   23</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classjoke__classifier_1_1_joke_classifier.html#ac3d9019c18a97da84a6433c610433ad6">__init__</a>(self, </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                 bert_path,</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                 tokenizer_path = &#39;DeepPavlov/rubert-base-cased&#39;,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                 ):</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">if</span> self.<a class="code" href="classjoke__classifier_1_1_joke_classifier.html#af6b42c9962cb4e6bc1b1968bd597a5b9">tokenizer</a> != <span class="keywordtype">None</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            self.<a class="code" href="classjoke__classifier_1_1_joke_classifier.html#af6b42c9962cb4e6bc1b1968bd597a5b9">tokenizer</a> = BertTokenizer.from_pretrained(tokenizer_path)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">if</span> self.<a class="code" href="classjoke__classifier_1_1_joke_classifier.html#aa486aeb226f9d507f276b921f30d6749">model</a> != <span class="keywordtype">None</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            self.<a class="code" href="classjoke__classifier_1_1_joke_classifier.html#aa486aeb226f9d507f276b921f30d6749">model</a> = BertForSequenceClassification.from_pretrained(bert_path).cuda()</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classjoke__classifier_1_1_joke_classifier.html#a8a8cd255d02fb48a1cc68970f02c4b87">   37</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classjoke__classifier_1_1_joke_classifier.html#a8a8cd255d02fb48a1cc68970f02c4b87">__call__</a>(self,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                 sentence):</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        tokenized = self.<a class="code" href="classjoke__classifier_1_1_joke_classifier.html#af6b42c9962cb4e6bc1b1968bd597a5b9">tokenizer</a>(sentence, return_tensors=<span class="stringliteral">&quot;pt&quot;</span>).to(device=<span class="stringliteral">&#39;cuda&#39;</span>)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        outputs = self.<a class="code" href="classjoke__classifier_1_1_joke_classifier.html#aa486aeb226f9d507f276b921f30d6749">model</a>(**tokenized)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        prob = torch.softmax(outputs[<span class="stringliteral">&#39;logits&#39;</span>], dim=1);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">return</span> prob[0][1].item()</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassjoke__classifier_1_1_joke_classifier_html_aa486aeb226f9d507f276b921f30d6749"><div class="ttname"><a href="classjoke__classifier_1_1_joke_classifier.html#aa486aeb226f9d507f276b921f30d6749">joke_classifier.JokeClassifier.model</a></div><div class="ttdeci">model</div><div class="ttdoc">Модель классификатора</div><div class="ttdef"><b>Definition:</b> <a href="joke__classifier_8py_source.html#l00018">joke_classifier.py:18</a></div></div>
+<div class="ttc" id="aclassjoke__classifier_1_1_joke_classifier_html"><div class="ttname"><a href="classjoke__classifier_1_1_joke_classifier.html">joke_classifier.JokeClassifier</a></div><div class="ttdoc">Класс для определения, является ли сообщение шуткой</div><div class="ttdef"><b>Definition:</b> <a href="joke__classifier_8py_source.html#l00010">joke_classifier.py:10</a></div></div>
+<div class="ttc" id="aclassjoke__classifier_1_1_joke_classifier_html_ac3d9019c18a97da84a6433c610433ad6"><div class="ttname"><a href="classjoke__classifier_1_1_joke_classifier.html#ac3d9019c18a97da84a6433c610433ad6">joke_classifier.JokeClassifier.__init__</a></div><div class="ttdeci">def __init__(self, bert_path, tokenizer_path='DeepPavlov/rubert-base-cased')</div><div class="ttdoc">Создаёт объект класса JokeClassifier.</div><div class="ttdef"><b>Definition:</b> <a href="joke__classifier_8py_source.html#l00023">joke_classifier.py:23</a></div></div>
+<div class="ttc" id="aclassjoke__classifier_1_1_joke_classifier_html_a8a8cd255d02fb48a1cc68970f02c4b87"><div class="ttname"><a href="classjoke__classifier_1_1_joke_classifier.html#a8a8cd255d02fb48a1cc68970f02c4b87">joke_classifier.JokeClassifier.__call__</a></div><div class="ttdeci">def __call__(self, sentence)</div><div class="ttdoc">Выдаёт вероятность наличия шутки во входном сообщении</div><div class="ttdef"><b>Definition:</b> <a href="joke__classifier_8py_source.html#l00037">joke_classifier.py:37</a></div></div>
+<div class="ttc" id="aclassjoke__classifier_1_1_joke_classifier_html_af6b42c9962cb4e6bc1b1968bd597a5b9"><div class="ttname"><a href="classjoke__classifier_1_1_joke_classifier.html#af6b42c9962cb4e6bc1b1968bd597a5b9">joke_classifier.JokeClassifier.tokenizer</a></div><div class="ttdeci">tokenizer</div><div class="ttdoc">Токенайзер</div><div class="ttdef"><b>Definition:</b> <a href="joke__classifier_8py_source.html#l00013">joke_classifier.py:13</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

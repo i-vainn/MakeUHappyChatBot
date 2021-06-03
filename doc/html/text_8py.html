@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MakeUHappy Chat-bot: Файл prod/utils/telegram/text.py</title>
+<title>MakeUHappy Chat-bot: Файл utils/telegram/text.py</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,13 +62,14 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_45bc9e24154575f783458642a53cae39.html">prod</a></li><li class="navelem"><a class="el" href="dir_d535b3f4fd1c271eb1ec47d7eb057a81.html">utils</a></li><li class="navelem"><a class="el" href="dir_0bbe9cc6face6dba04ba23700628295d.html">telegram</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html">utils</a></li><li class="navelem"><a class="el" href="dir_6ffaa7d0e93cdc77ae8bb9a20000da55.html">telegram</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Пространства имен</a> &#124;
-<a href="#func-members">Функции</a>  </div>
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
   <div class="headertitle">
 <div class="title">Файл text.py</div>  </div>
 </div><!--header-->
@@ -79,7 +80,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Пространства имен</h2></td></tr>
 <tr class="memitem:namespacetext"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetext.html">text</a></td></tr>
-<tr class="memdesc:namespacetext"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cодержит функции для обработки текстов, полученных по Telegram API. <br /></td></tr>
+<tr class="memdesc:namespacetext"><td class="mdescLeft">&#160;</td><td class="mdescRight">Содержит функции для работы с текстами и с Telegram. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -90,6 +91,21 @@ $(function() {
 <tr class="memitem:a68c3c7d336638d9970123c3d53bff67a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetext.html#a68c3c7d336638d9970123c3d53bff67a">text.get_text</a> (message)</td></tr>
 <tr class="memdesc:a68c3c7d336638d9970123c3d53bff67a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает и обрабатывает текст из сообщения  <a href="namespacetext.html#a68c3c7d336638d9970123c3d53bff67a">Подробнее...</a><br /></td></tr>
 <tr class="separator:a68c3c7d336638d9970123c3d53bff67a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a909cc637dec2343063ccfa3e7e81bb44"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetext.html#a909cc637dec2343063ccfa3e7e81bb44">text.get_joke</a> ()</td></tr>
+<tr class="memdesc:a909cc637dec2343063ccfa3e7e81bb44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит случайный анекдот из набора случайных анекдотов  <a href="namespacetext.html#a909cc637dec2343063ccfa3e7e81bb44">Подробнее...</a><br /></td></tr>
+<tr class="separator:a909cc637dec2343063ccfa3e7e81bb44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03b34397a7d81b37a5fb93d8cf2c7c39"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetext.html#a03b34397a7d81b37a5fb93d8cf2c7c39">text.parse_command</a> (text)</td></tr>
+<tr class="memdesc:a03b34397a7d81b37a5fb93d8cf2c7c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Определяет, скрыта ли команда в тексте.  <a href="namespacetext.html#a03b34397a7d81b37a5fb93d8cf2c7c39">Подробнее...</a><br /></td></tr>
+<tr class="separator:a03b34397a7d81b37a5fb93d8cf2c7c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:ad40f800432ee11e0b6b5166a686586dc"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetext.html#ad40f800432ee11e0b6b5166a686586dc">text.verbs</a></td></tr>
+<tr class="memdesc:ad40f800432ee11e0b6b5166a686586dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Глаголы для активации команд  <a href="namespacetext.html#ad40f800432ee11e0b6b5166a686586dc">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad40f800432ee11e0b6b5166a686586dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7afa814aba142921ec5cce6acccf7237"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetext.html#a7afa814aba142921ec5cce6acccf7237">text.cmd_to_text</a></td></tr>
+<tr class="memdesc:a7afa814aba142921ec5cce6acccf7237"><td class="mdescLeft">&#160;</td><td class="mdescRight">Словарь из пар (команда, способы скрыть команду в тексте)  <a href="namespacetext.html#a7afa814aba142921ec5cce6acccf7237">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7afa814aba142921ec5cce6acccf7237"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

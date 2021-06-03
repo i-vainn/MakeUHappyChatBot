@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['text_2epy_105',['text.py',['../text_8py.html',1,'']]],
-  ['translate_5femoji_2epy_106',['translate_emoji.py',['../translate__emoji_8py.html',1,'']]]
+  ['web_2epy_114',['web.py',['../web_8py.html',1,'']]],
+  ['worker_2epy_115',['worker.py',['../worker_8py.html',1,'']]]
 ];
